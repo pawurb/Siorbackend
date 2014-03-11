@@ -9,4 +9,8 @@
 /log/*.log
 /tmp
 
+.env.development
+.env.test
+.env.production
+
 /config/database.yml
