@@ -6,7 +6,8 @@ gem 'rails', '4.0.3'
 gem "shelly-dependencies", :group => :production
 
 gem 'omniauth'
-gem 'omniauth-facebook', '~> 1.6.0'
+gem 'omniauth-facebook', '1.4.0'
+gem "koala", "~> 1.8.0rc1"
 
 gem 'pg'
 
