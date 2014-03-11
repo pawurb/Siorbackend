@@ -5,6 +5,9 @@ gem 'rails', '4.0.3'
 
 gem "shelly-dependencies", :group => :production
 
+gem 'omniauth'
+gem 'omniauth-facebook', '~> 1.6.0'
+
 gem 'pg'
 
 # Use SCSS for stylesheets
@@ -14,6 +17,16 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+
+group :test do
+  gem 'capybara','~> 2.2.1'
+  gem 'timecop'
+  gem 'rack-test', require: 'rack/test'
+  gem 'shoulda-matchers', '~> 2.4.0'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'factory_girl_rails'
+end
 
 
 # Use ActiveModel has_secure_password
