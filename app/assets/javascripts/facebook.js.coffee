@@ -1,10 +1,12 @@
 jQuery ->
+  # done in siorb js code already
+
   # $('body').prepend('<div id="fb-root"></div>')
 
-  $.ajax
-    url: "#{window.location.protocol}//connect.facebook.net/en_US/all.js"
-    dataType: 'script'
-    cache: true
+  # $.ajax
+  #   url: "#{window.location.protocol}//connect.facebook.net/en_US/all.js"
+  #   dataType: 'script'
+  #   cache: true
 
 
 window.fbAsyncInit = ->
