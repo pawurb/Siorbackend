@@ -57,6 +57,9 @@ GEM
       railties (>= 3.0.0)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
+    gon (5.0.4)
+      actionpack (>= 2.3.0)
+      json
     hashie (2.0.5)
     hike (1.2.3)
     httpauth (0.2.1)
@@ -172,6 +175,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   dotenv-rails
   factory_girl_rails
+  gon
   jquery-rails
   koala (~> 1.8.0rc1)
   omniauth

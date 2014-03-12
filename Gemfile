@@ -8,6 +8,7 @@ gem "shelly-dependencies", :group => :production
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 gem "koala", "~> 1.8.0rc1"
+gem 'gon'
 
 gem 'pg'
 
