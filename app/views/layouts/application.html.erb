@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Siorbackend</title>
+  <title>Siorb - Droga do Rozbudzenia (Yerba Mate)</title>
   <%= include_gon %>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
@@ -9,16 +9,13 @@
 </head>
 <body>
 
-  <div id="user-widget">
-  <% if current_user %>
-    Welcome <strong><%= current_user.name %></strong>!
-    <%= link_to "Sign out", signout_path, id: "sign_out" %>
-  <% else %>
-    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-  <% end %>
-</div>
+  <%= render 'facebook_login' %>
+  <%= yield %>
+  <%= render 'ranking' %>
 
-<%= yield %>
+  <div id='shelly-logo' >
+    <%= link_to image_tag('shellyLogo.png'), 'https://shellycloud.com/', target: '_blank' %>
+  </div>
 
 </body>
 </html>

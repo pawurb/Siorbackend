@@ -22,6 +22,9 @@ gem 'jquery-rails'
 
 gem "dotenv-rails"
 
+group :development do
+  gem 'guard-livereload', require: false
+end
 
 
 group :test do
