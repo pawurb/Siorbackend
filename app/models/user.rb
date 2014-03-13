@@ -3,6 +3,16 @@ class User < ActiveRecord::Base
   validates :nickname, uniqueness: true
 
 
+  def update_statistics score
+    score = Integer(score)
+    self.best_score = score if score > self.best_score
+    self.gameplays += 1
+    save!
+
+    rescue ArgumentError #score conversiton failure
+      false
+  end
+
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       user.provider = auth[:provider]
