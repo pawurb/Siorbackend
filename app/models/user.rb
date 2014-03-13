@@ -9,6 +9,11 @@ class User < ActiveRecord::Base
       user.uid = auth[:uid]
       user.name = auth[:info][:name]
       user.email = auth[:info][:email]
+      user.location = auth[:info][:location]
+      user.image_url = auth[:info][:image]
+      user.nickname = auth[:info][:nickname]
+      user.best_score = 0
+      user.gameplays = 0
       user.oauth_token = auth[:credentials][:token]
       user.oauth_expires_at = Time.at(auth[:credentials][:expires_at])
       user.save!

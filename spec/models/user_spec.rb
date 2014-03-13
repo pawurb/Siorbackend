@@ -42,8 +42,11 @@ describe User do
     it "creates User with correct data values" do
       user = User.from_omniauth(omniauth_hash)
       expect(user.name).to eq 'Joe Bloggs'
-      expect(user.location).to eq 'Palo Alto California'
+      expect(user.location).to eq 'Palo Alto, California'
       expect(user.image_url).to eq 'http://graph.facebook.com/1234567/picture?type=square'
+      expect(user.nickname).to eq 'jbloggs'
+      expect(user.best_score).to eq 0
+      expect(user.gameplays).to eq 0
     end
   end
 end
