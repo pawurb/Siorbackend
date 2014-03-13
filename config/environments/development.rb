@@ -29,5 +29,6 @@ Siorbackend::Application.configure do
 
   # to avoid flickering images
   config.serve_static_assets = true
+  config.static_cache_control = "public, max-age=31536000"
 end
 
