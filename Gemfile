@@ -26,6 +26,7 @@ gem "dotenv-rails"
 group :development do
   gem 'guard-livereload', require: false
   gem 'awesome_print'
+  gem 'zeus'
 end
 
 
