@@ -9,7 +9,6 @@ describe "Static pages" do
     FactoryGirl.create :user, name: "Zjerbolony358", best_score: 358
   end
 
-
   context "as a guest user" do
     before do
       visit "/"
@@ -34,7 +33,8 @@ describe "Static pages" do
     end
 
     it "shows sign in link" do
-      expect(page).to have_content "Wyloguj się"
+      expect(page).to have_content "Witaj Yerbochłon"
+      expect(page).to have_content "wyloguj się"
     end
   end
 end

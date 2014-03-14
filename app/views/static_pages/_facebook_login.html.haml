@@ -1,8 +1,8 @@
 #facebook-login
   - if current_user
-    Welcome
+    Witaj
     = current_user.name
-    = link_to "Wyloguj się", signout_path, id: "sign_out"
+    = link_to "wyloguj się", signout_path, id: "sign_out"
   - else
     = link_to "Zaloguj się", "/auth/facebook", id: "sign_in"
     aby dołączyć do Mistrzów Siorbania
