@@ -1,10 +1,14 @@
 require 'spec_helper'
 
 describe "Static pages" do
-  before do
+  let!(:user) do
     FactoryGirl.create :user, name: "Yerbochłon", best_score: 123
+  end
+
+  before do
     FactoryGirl.create :user, name: "Zjerbolony358", best_score: 358
   end
+
 
   context "as a guest user" do
     before do
@@ -24,6 +28,13 @@ describe "Static pages" do
   end
 
   context "as a logged in user" do
+    before do
+      sign_in user
+      visit "/"
+    end
 
+    it "shows sign in link" do
+      expect(page).to have_content "Wyloguj się"
+    end
   end
 end

@@ -4,6 +4,7 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 require 'capybara/rspec'
+require 'helpers/authentication_helpers'
 
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
@@ -21,5 +22,6 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.include Capybara::DSL
+  config.include AuthenticationHelpers
 
 end

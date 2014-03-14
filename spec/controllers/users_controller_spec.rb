@@ -20,8 +20,7 @@ describe UsersController do
     end
 
     before do
-      # ugly authentication stubbing...
-      ApplicationController.any_instance.stub(:current_user) { user }
+      sign_in user
     end
 
     it "posting score updates user statictics" do
