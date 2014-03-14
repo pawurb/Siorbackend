@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title Siorb - Droga do Rozbudzenia (Yerba Mate)
+    = include_gon
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    = yield
+    = render 'ranking'
+    #shelly-logo
+      = link_to image_tag('shellyLogo.png'), 'https://shellycloud.com/', target: '_blank'
+  = render 'analytics'

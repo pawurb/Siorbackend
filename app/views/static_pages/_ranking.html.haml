@@ -1,0 +1,10 @@
+#ranking
+  =render 'facebook_login'
+
+  %h2 Mistrzowie Siorbania
+
+  - @players.each do |player|
+    = player.name
+    = player.best_score
+
+
