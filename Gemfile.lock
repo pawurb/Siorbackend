@@ -82,6 +82,8 @@ GEM
       em-websocket (~> 0.5)
       guard (~> 2.0)
       multi_json (~> 1.8)
+    haml (4.0.5)
+      tilt
     hashie (2.0.5)
     hike (1.2.3)
     http_parser.rb (0.5.3)
@@ -221,6 +223,7 @@ DEPENDENCIES
   factory_girl_rails
   gon
   guard-livereload
+  haml
   jquery-rails
   koala (~> 1.8.0rc1)
   omniauth

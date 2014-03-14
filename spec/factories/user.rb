@@ -6,5 +6,8 @@ FactoryGirl.define do
     sequence :name do |n|
       "Pablo #{n}"
     end
+    sequence :nickname do |n|
+      "nickname#{n}"
+    end
   end
 end

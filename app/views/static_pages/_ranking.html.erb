@@ -2,9 +2,11 @@
 
   <%= render 'facebook_login' %>
 
+  <h2>Mistrzowie Siorbania </h2>
+
   <% @players.each do |player| %>
 
-    <%= player.nickname %>
+    <%= player.name %>
     <%= player.best_score %>
 
   <% end %>

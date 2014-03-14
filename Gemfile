@@ -11,6 +11,7 @@ gem "koala", "~> 1.8.0rc1"
 gem 'gon'
 
 gem 'pg'
+gem 'haml'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe "Static pages" do
   before do
-    FactoryGirl.create :user, nickname: "Yerbochłon", best_score: 123
-    FactoryGirl.create :user, nickname: "Zjerbolony358", best_score: 358
+    FactoryGirl.create :user, name: "Yerbochłon", best_score: 123
+    FactoryGirl.create :user, name: "Zjerbolony358", best_score: 358
   end
 
   context "as a guest user" do
