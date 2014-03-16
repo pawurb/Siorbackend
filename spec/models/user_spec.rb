@@ -44,7 +44,7 @@ describe User do
       expect(user.name).to eq 'Joe Bloggs'
       expect(user.location).to eq 'Palo Alto, California'
       expect(user.image_url).to eq 'http://graph.facebook.com/1234567/picture?type=square'
-      expect(user.nickname).to eq 'jbloggs'
+      expect(user.nickname).not_to be_nil
       expect(user.best_score).to eq 0
       expect(user.gameplays).to eq 0
     end

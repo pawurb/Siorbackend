@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe "Static pages" do
   let!(:user) do
-    FactoryGirl.create :user, name: "Pablo", best_score: 123
+    FactoryGirl.create :user, name: "Pablo", best_score: 123, nickname: "Poyerbany"
   end
 
   before do
-    FactoryGirl.create :user, name: "Pueblo", best_score: 358
+    FactoryGirl.create :user, name: "Pueblo", best_score: 358, nickname: "Poyerbany22"
   end
 
   context "as a guest user" do
@@ -19,8 +19,8 @@ describe "Static pages" do
     end
 
     it "displays players ranking" do
-      expect(page).to have_content "Pablo"
-      expect(page).to have_content "Pueblo"
+      expect(page).to have_content "Poyerbany"
+      expect(page).to have_content "Poyerbany22"
       expect(page).to have_content "123"
       expect(page).to have_content "358"
     end
@@ -46,10 +46,24 @@ describe "Static pages" do
     end
 
     describe "changing the nickname" do
-      it "can change the nickname using form" do
-        fill_in :user_nickname, with: 'Yerbochłon'
-        click_button 'Zmień nickname'
-        expect(user.nickname).to eq 'Yerbochłon'
+      context "to the valid nickname" do
+        it "can change the nickname using form" do
+          fill_in :user_nickname, with: 'Yerbochłon'
+          click_button 'Zmień nickname'
+          expect(user.reload.nickname).to eq 'Yerbochłon'
+        end
+      end
+
+      context "to the value which has already been taken" do
+        before do
+          FactoryGirl.create :user, name: "Fernando", nickname: "Poyerbany12"
+        end
+
+        it "does not change the nickname and displays error" do
+          fill_in :user_nickname, with: "Poyerbany12"
+          click_button 'Zmień nickname'
+          expect(user.reload.nickname).to eq "Poyerbany"
+        end
       end
     end
   end
