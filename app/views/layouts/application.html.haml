@@ -7,8 +7,6 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
-    = render 'ranking'
-    #shelly-logo
-      = link_to image_tag('shellyLogo.png'), 'https://shellycloud.com/', target: '_blank'
+    .row
+      = yield
   = render 'analytics'

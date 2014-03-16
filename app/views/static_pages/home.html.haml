@@ -1,7 +1,18 @@
-#game
+#game-wrapper.col-md-6
   #fb-root
+  #game
   %script{src: "libs/jcarousel-min.js"}
   %script{src: "libs/crafty-min.js"}
   %script{src: "libs/siorb-min.js"}
   :javascript
     Game.start();
+
+  .row
+
+    #shelly-logo.col-md-6
+      = link_to image_tag('shellyLogo.png'), 'https://shellycloud.com/', target: '_blank'
+
+    .col-md-3.col-md-offset-2
+      =render 'contact_message_form'
+#ranking-wrapper.col-md-6
+  = render 'ranking'
