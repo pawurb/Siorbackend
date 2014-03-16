@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
       user.name = auth[:info][:name]
       user.email = auth[:info][:email]
       user.location = auth[:info][:location]
-      user.birthday = auth[:extra][:raw_info][:birthday]
+      user.set_birthday auth[:extra][:raw_info][:birthday]
       user.image_url = auth[:info][:image]
       user.oauth_token = auth[:credentials][:token]
       user.oauth_expires_at = Time.at(auth[:credentials][:expires_at])
@@ -35,7 +35,6 @@ class User < ActiveRecord::Base
     end
   end
 
-
   def generate_initial_nickname
     begin
       core = RANDOM_NICKNAMES.sample
@@ -44,6 +43,12 @@ class User < ActiveRecord::Base
     end while !self.valid?
 
     self.save!
+  end
+
+  def set_birthday string_date
+    month, day, year = string_date.split("/")
+    formatted_date = "#{year}-#{month}-#{day}"
+    self.birthday = formatted_date
   end
 
   private

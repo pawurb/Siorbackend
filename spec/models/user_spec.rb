@@ -39,7 +39,7 @@ describe User do
       :extra => {
         :raw_info =>
           {
-            :birthday => "26/04/1989"
+            :birthday => "04/26/1989"
           }
       }
 
