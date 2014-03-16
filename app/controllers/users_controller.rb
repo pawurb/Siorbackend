@@ -2,10 +2,11 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def update
-    if current_user.update_statistics params["score"]
-      render text: 'User statistics updated'
-    else
-      render text: 'Error error'
+    current_user.update params["user"]
+
+    respond_to do |format|
+      format.js { render text: 'User statistics updated' }
+      format.html{ redirect_to root_path }
     end
   end
 end

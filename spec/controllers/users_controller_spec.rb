@@ -3,7 +3,10 @@ require 'spec_helper'
 describe UsersController do
   let(:js_request_data) do
     {
-      "score" => 124
+      "user" =>
+      {
+        "score" => 124
+      }
     }
   end
 
@@ -30,7 +33,7 @@ describe UsersController do
     end
 
     it "posting wrong score format does not update user statistics" do
-      xhr :put, :update, { "score" => 'miliard'}
+      xhr :put, :update, { "user" => { "score" => 'miliard'} }
       user.gameplays.should eq 5
       user.best_score.should eq 123
     end
