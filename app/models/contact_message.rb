@@ -4,12 +4,9 @@ class ContactMessage
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
-
-  #walidacje
-  # validates :email, :content, :author, presence: true
-  # validates :email, format: { with: VALID_EMAIL_REGEX } # obiekt klasy Regexp
-  # validates :content, length: { maximum: 400 }
-  # validates :author, length: { maximum: 30 }
+  attr_accessor :content
+  validates :content, presence: true
+  validates :content, length: { maximum: 400 }
 
 
   def initialize(attributes = {})

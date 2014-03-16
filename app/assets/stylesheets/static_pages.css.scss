@@ -4,14 +4,8 @@
 /* Crafty styling */
 
 
-
-#game {
-  // margin: 30px 0px 0px 30px;
-}
-
-#ranking {
-  // padding: 0px 0px 0px 20px;
-  // height: 600px;
+body {
+  height: 1000px;
 }
 
 #shelly-logo img {
@@ -19,13 +13,23 @@
 }
 
 #contact-message {
+  padding-top: 15px;
+  width: 240px;
+
+  textarea {
+    resize: none;
+    border:1px solid #000000;
+    border-radius:10px;
+    width: 240px;
+    font-size: 15px;
+  }
 }
 
 
 #nickname-form {
   padding: 20px 0px 0px 0px;
   #user_nickname {
-    border:2px solid #000000;
+    border:1px solid #000000;
     border-radius:10px;
     height: 32px;
     width: 180px;
