@@ -35,7 +35,14 @@ describe User do
         :token => 'ABCDEF...',
         :expires_at => 1321747205,
         :expires => true
+      },
+      :extra => {
+        :raw_info =>
+          {
+            :birthday => "26/04/1989"
+          }
       }
+
     }
     end
 
@@ -47,6 +54,7 @@ describe User do
       expect(user.nickname).not_to be_nil
       expect(user.best_score).to eq 0
       expect(user.gameplays).to eq 0
+      expect(user.birthday).to eq "26/04/1989".to_datetime
     end
   end
 end
