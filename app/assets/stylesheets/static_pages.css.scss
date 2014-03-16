@@ -8,6 +8,14 @@ body {
   height: 1000px;
 }
 
+#ranking-wrapper {
+  height: 1000px;
+}
+
+#game-wrapper {
+  height: 1000px;
+}
+
 #shelly-logo img {
   padding: 10px 0px 0px 10px;
 }
@@ -46,9 +54,11 @@ body {
 }
 
 .modal-body {
+  text-align: center;
   font-size: 18px;
 }
 
 #fb-stuff {
   padding: 20px 0px 15px 0px;
 }
+

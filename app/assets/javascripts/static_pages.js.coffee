@@ -11,7 +11,6 @@ jQuery ->
   $(contactForm).hide()
   $('.contact-form-info').hide()
   $('.contact-form-btn').on('click', ->
-    console.log 'dupa'
     $(contactForm).slideToggle()
   )
 
@@ -24,9 +23,6 @@ jQuery ->
     $(contactFormInfo).hide().slideDown('slow')
     setTimeout ->
       $(contactFormInfo).slideUp('slow')
-      setTimeout ->
-        $(contactFormInfo).remove()
-      , 1000
     , 1500
   )
 

@@ -1,0 +1,9 @@
+/*prevent bootstrap modal from shifting content */
+
+.modal {
+  overflow-y: auto;
+}
+
+.modal-scrollbar {
+    margin-right: 15px;
+}
