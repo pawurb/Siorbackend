@@ -1,13 +1,15 @@
-/ Button trigger modal
-%button.btn.btn-primary{"data-target" => "#myModal", "data-toggle" => "modal"}
-  O co cho ?
-/ Modal
-#myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+#infoModal-heading
+  %span.heading Mistrzowie Siorbania
+
+  %button.btn.btn-default.btn-xs#infoModal-btn{"data-target" => "#infoModal", "data-toggle" => "modal"}
+    O co cho ?
+
+#infoModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
   .modal-dialog
     .modal-content
       .modal-header
         %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
-        %h4#myModalLabel.modal-title Mistrzowie Siorbania
+        %h3#myModalLabel.modal-title Mistrzowie Siorbania
       .modal-body
         Mistrzowie Siorbania to elitarna grupa największych yerbochłonów Polski. Po zalogowaniu się przez facebooka będziesz mógł zapisać swój wynik sratatata. Umożliwi ci to też dostęp do najlepszych promocji i konkursów organizowanych przez Dobre Ziele itd. itp. Zapisanie się do Mistrzów Siorbania jest jednoznaczne z subskrypcją Siorbslettera. Obiecujemy, że nie będzie spamu i każdej chwili możesz się z niego wypisać
       .modal-footer

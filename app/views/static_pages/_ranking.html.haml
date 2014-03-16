@@ -1,9 +1,9 @@
 #ranking
-  = render 'facebook_login'
-  = render 'nickname_form'
+  #fb-stuff
+    = render 'facebook_login'
+    = render 'nickname_form'
   = render 'info_modal'
 
-  %h2 Mistrzowie Siorbania
 
   - @players.each_with_index do |player, index|
     = "#{index+1}."

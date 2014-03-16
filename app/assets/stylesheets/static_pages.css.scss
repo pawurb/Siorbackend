@@ -22,14 +22,29 @@
 }
 
 
-.nickname-form #user_nickname {
-  border:2px solid #000000;
-  border-radius:10px;
-  height: 32px;
-  width: 180px;
-  font-size: 18px;
+#nickname-form {
+  padding: 20px 0px 0px 0px;
+  #user_nickname {
+    border:2px solid #000000;
+    border-radius:10px;
+    height: 32px;
+    width: 180px;
+    font-size: 18px;
+  }
+}
+
+
+#infoModal-heading {
+  padding: 10px 0px 15px 0px;
+  .heading {
+    font-size: 30px;
+  }
 }
 
 .modal-body {
   font-size: 18px;
+}
+
+#fb-stuff {
+  padding: 20px 0px 15px 0px;
 }
