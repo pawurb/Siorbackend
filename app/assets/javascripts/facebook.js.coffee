@@ -16,7 +16,6 @@ window.fbAsyncInit = ->
     FB.login ((response) ->
       window.location = '/auth/facebook/callback' if response.authResponse),
       scope: permissions
-    console.log localStorage["highScore"]
 
   $('#sign_out').click (e) ->
     FB.getLoginStatus (response) ->
