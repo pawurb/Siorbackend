@@ -22,13 +22,22 @@ body {
 
 #contact-message {
   padding-top: 15px;
-  width: 240px;
+  width: 260px;
+
+  .contact-form-btn {
+    margin: 0px 0px 10px 155px;
+  }
+
+  .submit {
+    margin: 0px 0px 10px 200px;
+  }
 
   textarea {
+    padding-left: 10px;
     resize: none;
     border:1px solid #000000;
     border-radius:10px;
-    width: 240px;
+    width: 260px;
     font-size: 15px;
   }
 }
