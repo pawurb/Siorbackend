@@ -5,7 +5,7 @@ describe UsersController do
     {
       "user" =>
       {
-        "score" => 124
+        "noturbusiness" => Base64.encode64('124')
       }
     }
   end
@@ -33,7 +33,10 @@ describe UsersController do
     end
 
     it "posting wrong score format does not update user statistics" do
-      xhr :put, :update, { "user" => { "score" => 'miliard'} }
+      xhr :put, :update, { "user" => { "noturbusiness" => 'miliard'} }
+      user.gameplays.should eq 5
+      user.best_score.should eq 123
+      xhr :put, :update, { "user" => { "noturbusiness" => '500'} }
       user.gameplays.should eq 5
       user.best_score.should eq 123
     end

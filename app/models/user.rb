@@ -8,8 +8,8 @@ class User < ActiveRecord::Base
 
 
   def update params
-    if params["score"]
-      update_statistics params["score"]
+    if params["noturbusiness"]
+      update_statistics params["noturbusiness"]
    elsif params["nickname"]
       update_nickname params["nickname"]
     else
@@ -59,7 +59,7 @@ class User < ActiveRecord::Base
   end
 
   def update_statistics score
-    score = Integer(score)
+    score = Integer(Base64.decode64(score))
     self.best_score = score if score > self.best_score
     self.gameplays += 1
     save
