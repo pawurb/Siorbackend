@@ -17,6 +17,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def place_in_ranking
+    User.where('best_score > ?', self.best_score).count + 1
+  end
+
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|

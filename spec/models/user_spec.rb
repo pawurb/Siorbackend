@@ -65,7 +65,7 @@ describe User do
 
     context "there is only one user" do
       it "he is the best of all" do
-        expect(looser_user.place_in_ranking).should eq 1
+        expect(looser_user.place_in_ranking).to eq 1
       end
     end
 
@@ -79,9 +79,22 @@ describe User do
       end
 
       it "gives each user correct place in the ranking" do
-        expect(winner_user.place_in_ranking).to_eq 1
-        expect(mid_user.place_in_ranking).to_eq 2
-        expect(looser_user.place_in_ranking).to_eq 3
+        expect(winner_user.place_in_ranking).to eq 1
+        expect(mid_user.place_in_ranking).to eq 2
+        expect(looser_user.place_in_ranking).to eq 3
+      end
+
+      describe "two users have the same score" do
+        let!(:second_winner_user) do
+          FactoryGirl.create :user, nickname: 'Yerbopijca' , best_score: 23
+        end
+
+        it "gives each user correct place in the ranking" do
+          expect(winner_user.place_in_ranking).to eq 1
+          expect(second_winner_user.place_in_ranking).to eq 1
+          expect(mid_user.place_in_ranking).to eq 3
+          expect(looser_user.place_in_ranking).to eq 4
+        end
       end
     end
   end
