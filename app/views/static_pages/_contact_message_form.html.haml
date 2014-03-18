@@ -1,8 +1,7 @@
-#contact-message
-  .span.contact-form-btn.btn.btn-default Uważam, że
-  = form_for ContactMessage.new, remote: true do |f|
-    = f.text_area :content, placeholder: "Twoje zdanie jest dla nas ważne !", class: 'text', rows: '6'
-    = f.submit "Wyślij", class: 'btn btn-default submit'
+.span.contact-form-btn.btn.btn-default Uważam, że
+= form_for ContactMessage.new, remote: true do |f|
+  = f.text_area :content, placeholder: "Twoje zdanie jest dla nas ważne !", class: 'text', rows: '6'
+  = f.submit "Wyślij", class: 'btn btn-default submit'
 
 
 

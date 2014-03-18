@@ -13,3 +13,10 @@
    padding: 0 !important;
    margin: 0 !important;
 }
+
+.container {
+  margin-right: 0 !important;
+  margin-left: 15px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

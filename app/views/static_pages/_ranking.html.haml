@@ -4,9 +4,9 @@
   = render 'info_modal'
 
 
-  - @players.each_with_index do |player, index|
-    = "#{index+1}."
-    = player.nickname
+  - @players.each do |player|
+    = "#{player.place_in_ranking}."
+    = "#{player.nickname} : "
     = player.best_score
 
 
