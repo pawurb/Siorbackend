@@ -36,13 +36,16 @@ describe "Static pages" do
       visit "/"
     end
 
-    it "shows sign in link" do
+    it "displays user info" do
       expect(page).to have_content "Witaj Pablo"
       expect(page).to have_content "wyloguj się"
+      expect(page).to have_content "miejsce"
+      expect(page).to have_content "Twoje miejsce w rankingu: 2"
+
     end
 
     it "shows nickname field" do
-      expect(page).to have_content "Twój nickname"
+      expect(page).to have_content "Nickname"
     end
 
     describe "changing the nickname" do

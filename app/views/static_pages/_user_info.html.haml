@@ -1,0 +1,5 @@
+= render 'facebook_login'
+- if current_user
+  = render 'nickname_form'
+  Twoje miejsce w rankingu:
+  = current_user.place_in_ranking

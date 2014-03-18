@@ -1,6 +1,4 @@
-- if current_user
-  = form_for current_user, html: { id: "nickname-form"} do |f|
-    Twój nickname
-    = f.text_field :nickname
-    = f.submit "Zmień nickname", class: 'btn btn-default btn-xs'
-- else
+= form_for current_user, html: { id: "nickname-form"} do |f|
+  Nickname:
+  = f.text_field :nickname
+  = f.submit "Zmień nickname", class: 'btn btn-default btn-xs'

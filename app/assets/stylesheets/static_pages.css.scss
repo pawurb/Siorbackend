@@ -37,12 +37,17 @@
 
 #nickname-form {
   padding: 20px 0px 0px 0px;
+
+  input[type=text] {
+   padding-left: 5px;
+  }
+
   #user_nickname {
     border:1px solid #000000;
     border-radius:10px;
-    height: 32px;
+    height: 22px;
     width: 180px;
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 
@@ -55,11 +60,11 @@
 }
 
 .modal-body {
-  text-align: center;
+  text-align: justify;
   font-size: 18px;
 }
 
-#fb-stuff {
+#user-stuff {
   padding: 20px 0px 15px 0px;
 }
 
