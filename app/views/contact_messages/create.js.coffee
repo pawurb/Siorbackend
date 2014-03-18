@@ -1,6 +1,5 @@
-contactFormInfo = '.contact-form-info'
-contactForm = '#contact-message form'
+setTimeout ->
+  $('.contact-form-info').remove()
+, 2000
 
-$(contactFormInfo).remove()
-$("#{contactForm} .text").val('')
-console.log contactForm
+$("#contact-message form .text").val('')

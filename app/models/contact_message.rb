@@ -4,9 +4,12 @@ class ContactMessage
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
+  MAX_CONTENT_LENGTH = 140
+
   attr_accessor :content
+
   validates :content, presence: true
-  validates :content, length: { maximum: 400 }
+  validates :content, length: { maximum: MAX_CONTENT_LENGTH }
 
 
   def initialize(attributes = {})

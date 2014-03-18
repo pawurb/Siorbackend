@@ -1,10 +1,14 @@
 class User < ActiveRecord::Base
 
+  MAX_NICKNAME_LENGTH = 20
+
   RANDOM_NICKNAMES = %w{Yerbochłon Poyerbany}
 
   validates :email, presence: true
   validates :email, uniqueness: true
   validates :nickname, uniqueness: true
+  validates :nickname, uniqueness: true
+  validates :nickname, length: { maximum: MAX_NICKNAME_LENGTH }
 
 
   def update params

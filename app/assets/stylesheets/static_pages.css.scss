@@ -10,25 +10,28 @@
 
 #contact-message {
   padding-top: 15px;
-  width: 410px;
+  width: 415px;
 
   .contact-form-btn {
     margin: 0px 0px 10px 280px;
   }
+  .contact-form-info {
+    padding-left:160px;
+  }
 
   form {
-    margin-left: 120px;
+    margin-left: 125px;
   }
 
   .submit {
-    margin: 0px 0px 10px 200px;
+    margin: 0px 0px 10px 198px;
   }
 
   textarea {
     padding-left: 10px;
     resize: none;
-    border:1px solid #000000;
-    border-radius:10px;
+    border:1px solid #cccccc;
+    border-radius:5px;
     width: 260px;
     font-size: 15px;
   }
@@ -47,8 +50,8 @@
   }
 
   #user_nickname {
-    border:1px solid #000000;
-    border-radius:10px;
+    border:1px solid #cccccc;
+    border-radius:5px;
     height: 22px;
     width: 180px;
     font-size: 15px;
