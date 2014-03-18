@@ -3,14 +3,23 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 messageSentInfo = "<span class='contact-form-info'>Twoja wiadomość została wysłana</span>"
+contactForm = '#contact-message form'
+contactFormInfo = '.contact-form-info'
+contactFormBtn = '.contact-form-btn'
+
+showMessageSentInfo = ->
+  $(contactFormBtn).after(messageSentInfo)
+  $(contactFormInfo).hide().slideDown('slow')
+  setTimeout ->
+    $(contactFormInfo).slideUp('slow')
+  , 1500
+
 
 jQuery ->
-  contactForm = '#contact-message form'
-  contactFormInfo = '.contact-form-info'
-  contactFormBtn = '.contact-form-btn'
   $(contactForm).hide()
-  $('.contact-form-info').hide()
-  $('.contact-form-btn').on('click', ->
+  $(contactFormInfo).hide()
+
+  $(contactFormBtn).on('click', ->
     $(contactForm).slideToggle()
   )
 
@@ -18,11 +27,5 @@ jQuery ->
     $(contactForm).slideUp()
   )
 
-  $(contactForm).on('submit', ->
-    $(contactFormBtn).after(messageSentInfo)
-    $(contactFormInfo).hide().slideDown('slow')
-    setTimeout ->
-      $(contactFormInfo).slideUp('slow')
-    , 1500
-  )
+  $(contactForm).on('submit', showMessageSentInfo)
 
