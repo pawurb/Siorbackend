@@ -57,4 +57,32 @@ describe User do
       expect(user.birthday).to eq "26/04/1989".to_datetime
     end
   end
+
+  describe "place in ranking method" do
+    let!(:looser_user) do
+      FactoryGirl.create :user, nickname: 'Siorbafan', best_score: 0
+    end
+
+    context "there is only one user" do
+      it "he is the best of all" do
+        expect(looser_user.place_in_ranking).should eq 1
+      end
+    end
+
+    context "there are more users" do
+      let!(:mid_user) do
+        FactoryGirl.create :user, nickname: 'Yerbochłon' , best_score: 22
+      end
+
+      let!(:winner_user) do
+        FactoryGirl.create :user, nickname: 'Yerbopij' , best_score: 23
+      end
+
+      it "gives each user correct place in the ranking" do
+        expect(winner_user.place_in_ranking).to_eq 1
+        expect(mid_user.place_in_ranking).to_eq 2
+        expect(looser_user.place_in_ranking).to_eq 3
+      end
+    end
+  end
 end
