@@ -1,4 +1,4 @@
-#game-wrapper.col-md-6
+#game-wrapper.col-lg-8.nopadding
   #fb-root
   #game
   %script{src: "libs/jcarousel-min.js"}
@@ -8,11 +8,10 @@
     Game.start();
 
   .row
-
-    #shelly-logo.col-md-6
+    #shelly-logo.col-lg-6
       = link_to image_tag('shellyLogo.png'), 'https://shellycloud.com/', target: '_blank'
 
-    .col-md-4.col-md-offset-2
+    .col-lg-6
       =render 'contact_message_form'
-#ranking-wrapper.col-md-6
+#ranking-wrapper.col-lg-4.nopadding
   = render 'ranking'

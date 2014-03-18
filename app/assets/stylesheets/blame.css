@@ -7,3 +7,9 @@
 .modal-scrollbar {
     margin-right: 15px;
 }
+
+/* remove padding from bootstrap grid system */
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}

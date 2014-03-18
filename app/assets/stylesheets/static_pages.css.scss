@@ -4,28 +4,20 @@
 /* Crafty styling */
 
 
-body {
-  height: 1000px;
-}
-
-#ranking-wrapper {
-  height: 1000px;
-}
-
-#game-wrapper {
-  height: 1000px;
-}
-
 #shelly-logo img {
   padding: 10px 0px 0px 10px;
 }
 
 #contact-message {
   padding-top: 15px;
-  width: 260px;
+  width: 370px;
 
   .contact-form-btn {
-    margin: 0px 0px 10px 155px;
+    margin: 0px 0px 10px 250px;
+  }
+
+  form {
+    margin-left: 90px;
   }
 
   .submit {
