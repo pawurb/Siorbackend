@@ -64,6 +64,10 @@
   background-repeat: no-repeat;
   background-position:140px 160px;
 
+  .bold {
+    font-weight: 500;
+  }
+
   #user-stuff {
     height: 100px;
 
@@ -71,6 +75,7 @@
       padding-top: 10px;
 
     }
+
   }
 
   #infoModal-heading {

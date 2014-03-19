@@ -9,7 +9,7 @@
       .player-entry
         .place
           = "#{player.place_in_ranking}."
-        .nickname
+        .nickname{class: "#{nickname_class(player)}"}
           = "#{player.nickname}"
         .score
           = player.best_score
