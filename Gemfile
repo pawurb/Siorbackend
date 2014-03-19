@@ -41,7 +41,8 @@ group :test do
   gem 'rspec-rails', '~> 2.0'
 end
 
-group :development, :test do
+#for seeding
+group :development, :test, :production do
   gem 'factory_girl_rails'
 end
 
