@@ -87,6 +87,6 @@ Siorbackend::Application.configure do
     :email => {
       :email_prefix => "[Siorbackend] ",
       :sender_address => %{"Siorbackend error" <pabloweb358@gmail.com>},
-      :exception_recipients => ENV['ERROR_RECIPIENTS']
+      :exception_recipients => [ENV['ERROR_RECIPIENT']]
   }
 end
