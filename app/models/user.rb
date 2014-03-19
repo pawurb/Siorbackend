@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-  MAX_NICKNAME_LENGTH = 20
+  MAX_NICKNAME_LENGTH = 15
 
   RANDOM_NICKNAMES = %w{Yerbochłon}
 

@@ -40,6 +40,7 @@
 #ranking {
   padding-left: 30px;
   height: 500px;
+  font-size: 16px;
   background-image:url('rankingBg.png');
   background-repeat: no-repeat;
   background-position:140px 160px;
@@ -49,8 +50,26 @@
   }
 
   #player-list {
-    padding-top: 160px;
+    padding: 140px 0px 0px 60px;
+    width: 330px;
+  }
 
+  .player-entry {
+    clear: both;
+    .place {
+      width: 30px;
+      float:left;
+    }
+
+    .nickname {
+      float:left;
+      width: 200px;
+    }
+
+    .score {
+      text-align: left;
+      float:right;
+    }
   }
 }
 

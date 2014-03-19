@@ -7,9 +7,12 @@
   #player-list
     - @players.each do |player|
       .player-entry
-        = "#{player.place_in_ranking}."
-        = "#{player.nickname} : "
-        = player.best_score
+        .place
+          = "#{player.place_in_ranking}."
+        .nickname
+          = "#{player.nickname}"
+        .score
+          = player.best_score
 
 
 
