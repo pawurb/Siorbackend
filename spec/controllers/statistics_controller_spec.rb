@@ -23,7 +23,7 @@ describe StatisticsController do
     end
   end
 
-  context "invalid data sent" do
+  context "omnious data sent" do
     let(:js_request_data) do
       {
         "statistic" =>
@@ -40,5 +40,4 @@ describe StatisticsController do
       expect(Statistic.last).to be_nil
     end
   end
-
 end
