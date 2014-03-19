@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
 
   RANDOM_NICKNAMES = %w{Yerbochłon Poyerbany}
 
+  scope :for_ranking, lambda { order('best_score DESC').first(20) }
+
   validates :email, presence: true
   validates :email, uniqueness: true
   validates :nickname, uniqueness: true

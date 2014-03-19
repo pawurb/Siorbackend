@@ -3,7 +3,7 @@ class StaticPagesController < ApplicationController
     gon.facebook_id = ENV['FACEBOOK_ID']
     set_highscore_data if current_user
 
-    @players = User.all.sort_by(&:best_score)
+    @players = User.for_ranking
   end
 
   private

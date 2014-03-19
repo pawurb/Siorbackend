@@ -38,7 +38,20 @@
 }
 
 #ranking {
-  padding-left: 20px;
+  padding-left: 30px;
+  height: 500px;
+  background-image:url('rankingBg.png');
+  background-repeat: no-repeat;
+  background-position:140px 160px;
+
+  #user-stuff {
+    height: 100px;
+  }
+
+  #player-list {
+    padding-top: 160px;
+
+  }
 }
 
 
@@ -61,8 +74,14 @@
 
 #infoModal-heading {
   padding: 10px 0px 15px 0px;
-  .heading {
-    font-size: 30px;
+
+  #infoModal-btn {
+    margin-left: 340px;
+    opacity:0.8;
+  }
+
+  #infoModal-btn:hover {
+    opacity:1.0;
   }
 }
 

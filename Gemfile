@@ -39,6 +39,9 @@ group :test do
   gem 'rack-test', require: 'rack/test'
   gem 'shoulda-matchers', '~> 2.4.0'
   gem 'rspec-rails', '~> 2.0'
+end
+
+group :development, :test do
   gem 'factory_girl_rails'
 end
 

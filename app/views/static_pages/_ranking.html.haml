@@ -4,10 +4,12 @@
   = render 'info_modal'
 
 
-  - @players.each do |player|
-    = "#{player.place_in_ranking}."
-    = "#{player.nickname} : "
-    = player.best_score
+  #player-list
+    - @players.each do |player|
+      .player-entry
+        = "#{player.place_in_ranking}."
+        = "#{player.nickname} : "
+        = player.best_score
 
 
 

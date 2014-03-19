@@ -1,8 +1,9 @@
 #infoModal-heading
-  %span.heading Mistrzowie Siorbania
+  #infoModal-btn{"data-target" => "#infoModal", "data-toggle" => "modal"}
+    = image_tag('rankingInfo.png')
 
-  %button.btn.btn-default.btn-xs#infoModal-btn{"data-target" => "#infoModal", "data-toggle" => "modal"}
-    O co chodzi ?
+  %span.heading
+    = image_tag('rankingHeading.png')
 
 #infoModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
   .modal-dialog
