@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true
   validates :email, uniqueness: true
-  validates :nickname, presence: true
+  validates :nickname, presence: true, on: :update
   validates :nickname, uniqueness: true
   validates :nickname, length: { maximum: MAX_NICKNAME_LENGTH }
 
