@@ -81,4 +81,11 @@ Siorbackend::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  ParagonParserV1::Application.config.middleware.use ExceptionNotification::Rack,
+    :email => {
+      :email_prefix => "[Siorbackend] ",
+      :sender_address => %{"Siorbackend error" <pabloweb358@gmail.com>},
+      :exception_recipients => ENV['ERROR_RECIPIENTS']
+  }
 end
