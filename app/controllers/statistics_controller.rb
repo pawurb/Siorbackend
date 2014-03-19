@@ -4,6 +4,8 @@ class StatisticsController < ApplicationController
     render text: 'OK'
   end
 
+  private
+
   def statistic_params
     params.require(:statistic).permit(:score, :duration)
   end
