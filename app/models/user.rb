@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   MAX_NICKNAME_LENGTH = 20
 
-  RANDOM_NICKNAMES = %w{Yerbochłon Poyerbany}
+  RANDOM_NICKNAMES = %w{Yerbochłon}
 
   scope :for_ranking, lambda { order('best_score DESC').first(20) }
 
@@ -41,18 +41,18 @@ class User < ActiveRecord::Base
       user.oauth_expires_at = Time.at(auth[:credentials][:expires_at])
       user.save!
 
-      user.generate_initial_nickname
+      begin
+        user.nickname = self.generate_initial_nickname
+      end while !user.valid?
+
+      user.save!
     end
   end
 
-  def generate_initial_nickname
-    begin
-      core = RANDOM_NICKNAMES.sample
-      digit = (1 + Random.rand(User.count + 1)).to_s
-      self.nickname = core + digit
-    end while !self.valid?
-
-    self.save!
+  def self.generate_initial_nickname
+    core = RANDOM_NICKNAMES.sample
+    digit = (1 + Random.rand(User.count + 1)).to_s
+    "#{core}#{digit}"
   end
 
   def set_birthday string_date
