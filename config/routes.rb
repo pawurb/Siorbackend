@@ -7,4 +7,5 @@ Siorbackend::Application.routes.draw do
 
   resource :user, only: [:update]
   resource :contact_messages, only: [:create]
+  resources :statistics, only: [:create]
 end
