@@ -1,0 +1,101 @@
+#ranking {
+  padding: 10px 0px 0px 30px;
+  height: 500px;
+  font-size: 16px;
+  background-image:url('rankingBg.png');
+  background-repeat: no-repeat;
+  background-position:140px 180px;
+
+  .bold {
+    font-weight: bold;
+  }
+
+  #user-data {
+    height: 100px;
+    padding: 10px 0px 15px 0px;
+
+    .place-in-ranking {
+      padding-top: 8px;
+
+    }
+
+    #nickname-form {
+      padding: 10px 0px 0px 0px;
+
+      input[type=text] {
+       padding-left: 5px;
+      }
+
+      .btn {
+        margin-bottom: 2px;
+        height: 22px;
+
+      }
+
+      #user_nickname {
+        border:1px solid #cccccc;
+        border-radius:3px;
+        height: 22px;
+        width: 180px;
+        font-size: 15px;
+      }
+    }
+
+    #facebook-login {
+      a {
+        color: #bbbbbb;
+      }
+
+      a:hover {
+        color: #000000;
+        text-decoration: none;
+      }
+      .sign-in-field {
+        background-image:url('fbIcon.png');
+        background-repeat: no-repeat;
+        background-position:76px -5px;
+      }
+      a {
+        padding-right: 22px;
+      }
+    }
+  }
+
+
+  #player-list {
+    padding: 140px 0px 0px 60px;
+    width: 330px;
+
+    .player-entry {
+      clear: both;
+      .place {
+        width: 30px;
+        float:left;
+      }
+
+      .nickname {
+        float:left;
+        width: 200px;
+      }
+
+      .score {
+        text-align: left;
+        float:right;
+      }
+    }
+  }
+
+  #infoModal-heading {
+    padding: 50px 0px 15px 15px;
+
+    #infoModal-btn {
+      margin: 5px 0px 0px 310px;
+    }
+  }
+
+  .modal-body {
+    text-align: justify;
+    font-size: 18px;
+  }
+}
+

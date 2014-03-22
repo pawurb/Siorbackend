@@ -18,6 +18,12 @@ window.fbAsyncInit = ->
     #prevent multiple clicking
     unless signInClicked
       signInClicked = true
+
+      #handle canceling login
+      setTimeout ->
+        signInClicked = false
+      , 3000
+
       FB.login ((response) ->
         window.location = '/auth/facebook/callback' if response.authResponse),
         scope: permissions
