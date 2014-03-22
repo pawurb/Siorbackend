@@ -1,6 +1,6 @@
 class ContactMessage
 
-  include ActiveModel::Validations #indirect inheritance. can be multiple
+  include ActiveModel::Validations
   include ActiveModel::Conversion
   extend ActiveModel::Naming
 
