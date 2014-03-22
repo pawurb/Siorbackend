@@ -26,10 +26,14 @@ gem 'underscore-rails'
 gem 'dotenv-rails'
 gem 'exception_notification'
 
+#for seeding
+gem 'factory_girl_rails'
+
+gem 'awesome_print'
+
 group :development do
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
-  gem 'awesome_print'
   gem 'zeus'
 end
 
@@ -42,10 +46,6 @@ group :test do
   gem 'rspec-rails', '~> 2.0'
 end
 
-#for seeding
-group :development, :test, :production do
-  gem 'factory_girl_rails'
-end
 
 
 # Use ActiveModel has_secure_password
