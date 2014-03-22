@@ -1,9 +1,8 @@
 #infoModal-heading
-  #infoModal-btn{"data-target" => "#infoModal", "data-toggle" => "modal"}
-    = image_tag('rankingInfo.png')
-
   %span.heading
     = image_tag('rankingHeading.png')
+  #infoModal-btn{"data-target" => "#infoModal", "data-toggle" => "modal"}
+    .btn.btn-xs.btn-default O co chodzi ?
 
 #infoModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
   .modal-dialog

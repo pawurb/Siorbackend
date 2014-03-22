@@ -62,10 +62,10 @@
   font-size: 16px;
   background-image:url('rankingBg.png');
   background-repeat: no-repeat;
-  background-position:140px 160px;
+  background-position:140px 180px;
 
   .bold {
-    font-weight: 600;
+    font-weight: bold;
   }
 
   #user-stuff {
@@ -77,9 +77,6 @@
     }
   }
 
-  #infoModal-heading {
-    padding-left: 15px;
-  }
 
   #player-list {
     padding: 140px 0px 0px 60px;
@@ -130,11 +127,10 @@
 
 
 #infoModal-heading {
-  padding: 10px 0px 15px 0px;
+  padding: 50px 0px 15px 15px;
 
   #infoModal-btn {
-    margin-left: 340px;
-    opacity:0.8;
+    margin: 5px 0px 0px 310px;
   }
 
   #infoModal-btn:hover {

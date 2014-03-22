@@ -41,15 +41,19 @@ class User < ActiveRecord::Base
       user.oauth_expires_at = Time.at(auth[:credentials][:expires_at])
       user.save!
 
-      begin
-        user.nickname = self.generate_initial_nickname
-      end while !user.valid?
-
-      user.save!
+      user.generate_initial_nickname if user.nickname.nil?
     end
   end
 
-  def self.generate_initial_nickname
+  def generate_initial_nickname
+    begin
+      self.nickname = User.random_nickname
+    end while !self.valid?
+
+    self.save!
+  end
+
+  def self.random_nickname
     core = RANDOM_NICKNAMES.sample
     digit = (1 + Random.rand(User.count + 1)).to_s
     "#{core}#{digit}"
