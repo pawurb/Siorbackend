@@ -15,4 +15,5 @@
 //= require underscore
 //= require bootstrap
 
-//= require_tree .
+//= require_directory .
+
