@@ -3,4 +3,10 @@ class Admin::PanelController < ApplicationController
 
   def home
   end
+
+  def users
+  end
+
+  def statistics
+  end
 end

@@ -3,6 +3,10 @@ Siorbackend::Application.routes.draw do
 
   namespace :admin do
     root to: "panel#home"
+
+    #angular partials
+    match "/users.html", to: "panel#users", via: [:get]
+    match "/statistics.html", to: "panel#statistics", via: [:get]
   end
 
 
