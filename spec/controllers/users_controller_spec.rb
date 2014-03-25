@@ -41,10 +41,12 @@ describe UsersController do
       json = JSON.parse(response.body)["users"]
       expect(json.size).to eq 1
       expect(json.last["id"]).to eq user.id
+      expect(json.last["name"]).to eq user.name
       expect(json.last["email"]).to eq user.email
       expect(json.last["nickname"]).to eq user.nickname
       expect(json.last["best_score"]).to eq user.best_score
       expect(json.last["gameplays"]).to eq user.gameplays
+      expect(json.last["image_url"]).to eq user.image_url
     end
   end
 

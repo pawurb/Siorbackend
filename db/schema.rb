@@ -11,35 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140325115104) do
+ActiveRecord::Schema.define(version: 20140319202442) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "accounts", force: true do |t|
-    t.integer  "user_id"
-    t.string   "password_digest"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "accounts", ["user_id"], name: "index_accounts_on_user_id", using: :btree
-
-  create_table "facebook_accounts", force: true do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "oauth_token"
-    t.string   "image_url"
-    t.string   "location"
-    t.string   "name"
-    t.datetime "oauth_expires_at"
-    t.datetime "birthday"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "facebook_accounts", ["user_id"], name: "index_facebook_accounts_on_user_id", using: :btree
 
   create_table "statistics", force: true do |t|
     t.integer  "score"
@@ -50,12 +25,20 @@ ActiveRecord::Schema.define(version: 20140325115104) do
   end
 
   create_table "users", force: true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
     t.string   "email"
-    t.integer  "best_score", default: 0
-    t.integer  "gameplays",  default: 0
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.integer  "best_score",       default: 0
+    t.integer  "gameplays",        default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_url"
+    t.string   "location"
     t.string   "nickname"
+    t.datetime "birthday"
   end
 
 end

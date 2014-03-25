@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe "Static pages" do
   let!(:user) do
-    FactoryGirl.create :user, best_score: 123, nickname: "Poyerbany"
+    FactoryGirl.create :user, name: "Pablo", best_score: 123, nickname: "Poyerbany"
   end
 
   before do
-    FactoryGirl.create :user, best_score: 358, nickname: "Poyerbany22"
+    FactoryGirl.create :user, name: "Pueblo", best_score: 358, nickname: "Poyerbany22"
   end
 
   context "as a guest user" do
@@ -37,7 +37,7 @@ describe "Static pages" do
     end
 
     it "displays user info" do
-      expect(page).to have_content "Jesteś zalogowany"
+      expect(page).to have_content "Witaj Pablo"
       expect(page).to have_content "wyloguj się"
       expect(page).to have_content "miejsce"
       expect(page).to have_content "Twoje miejsce w rankingu: 2"
@@ -59,10 +59,10 @@ describe "Static pages" do
 
       context "to the value which has already been taken" do
         before do
-          FactoryGirl.create :user, nickname: "Poyerbany12"
+          FactoryGirl.create :user, name: "Fernando", nickname: "Poyerbany12"
         end
 
-        it "does not change the nickname" do
+        it "does not change the nickname and displays error" do
           fill_in :user_nickname, with: "Poyerbany12"
           click_button 'Zmień nickname'
           expect(user.reload.nickname).to eq "Poyerbany"
