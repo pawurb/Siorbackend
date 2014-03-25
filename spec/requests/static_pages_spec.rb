@@ -62,7 +62,7 @@ describe "Static pages" do
           FactoryGirl.create :user, nickname: "Poyerbany12"
         end
 
-        it "does not change the nickname and displays error" do
+        it "does not change the nickname" do
           fill_in :user_nickname, with: "Poyerbany12"
           click_button 'Zmień nickname'
           expect(user.reload.nickname).to eq "Poyerbany"

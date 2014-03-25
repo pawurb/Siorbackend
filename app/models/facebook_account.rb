@@ -14,7 +14,7 @@ class FacebookAccount < ActiveRecord::Base
 
       if account.user
         account.user.email = auth[:info][:email]
-        accont.user.save!
+        account.user.save!
       else
         account.create_user!(email: auth[:info][:email])
       end

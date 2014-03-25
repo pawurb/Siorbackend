@@ -9,12 +9,12 @@ class User < ActiveRecord::Base
   has_one :account
   has_one :facebook_account
 
-  after_create :generate_initial_nickname
+  after_create :generate_initial_nickname, unless: "nickname"
 
   validates :email, presence: true
   validates :email, uniqueness: true
   validates :nickname, presence: true, on: :update
-  validates :nickname, uniqueness: true, on: :update
+  validates :nickname, uniqueness: true
   validates :nickname, length: { maximum: MAX_NICKNAME_LENGTH }
 
 
