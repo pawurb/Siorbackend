@@ -69,6 +69,9 @@ describe StatisticsController do
         expect(json.last["duration"]).to eq statistic.duration
         expect(json.last["score"]).to eq statistic.score
         expect(json.last["ip"]).to eq statistic.ip
+
+        date = statistic.created_at.strftime("%e-%m-%y %H:%M")
+        expect(json.last["date"]).to eq date
       end
     end
   end
