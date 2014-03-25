@@ -11,9 +11,42 @@ describe UsersController do
   end
 
   context "as a guest user" do
-    it "does not allow access" do
-      xhr :put, :update, js_request_data
-      response.status.should eq 403
+    describe "update action" do
+      it "does not allow access" do
+        xhr :put, :update, js_request_data
+        response.status.should eq 403
+      end
+    end
+
+    describe "get users json data" do
+      it "does not allow access" do
+        xhr :get, :index
+        response.status.should eq 401
+      end
+    end
+  end
+
+  context "as an admin user" do
+    let!(:user) do
+      FactoryGirl.create :user
+    end
+
+    before do
+      http_basic_admin_login
+    end
+
+    it "responds with correct data" do
+      xhr :get, :index
+      response.status.should eq 200
+      json = JSON.parse(response.body)["users"]
+      expect(json.size).to eq 1
+      expect(json.last["id"]).to eq user.id
+      expect(json.last["name"]).to eq user.name
+      expect(json.last["email"]).to eq user.email
+      expect(json.last["nickname"]).to eq user.nickname
+      expect(json.last["best_score"]).to eq user.best_score
+      expect(json.last["gameplays"]).to eq user.gameplays
+      expect(json.last["image_url"]).to eq user.image_url
     end
   end
 

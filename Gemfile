@@ -26,6 +26,8 @@ gem 'angularjs-rails'
 gem 'dotenv-rails'
 gem 'exception_notification'
 
+gem "active_model_serializers"
+
 #for seeding
 gem 'factory_girl_rails'
 
