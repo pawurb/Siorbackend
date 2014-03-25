@@ -6,10 +6,15 @@ class User < ActiveRecord::Base
 
   scope :for_ranking, lambda { order('best_score DESC').first(20) }
 
+  has_one :account
+  has_one :facebook_account
+
+  after_create :generate_initial_nickname
+
   validates :email, presence: true
   validates :email, uniqueness: true
   validates :nickname, presence: true, on: :update
-  validates :nickname, uniqueness: true
+  validates :nickname, uniqueness: true, on: :update
   validates :nickname, length: { maximum: MAX_NICKNAME_LENGTH }
 
 
@@ -28,22 +33,6 @@ class User < ActiveRecord::Base
   end
 
 
-  def self.from_omniauth(auth)
-    where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
-      user.provider = auth[:provider]
-      user.uid = auth[:uid]
-      user.name = auth[:info][:name]
-      user.email = auth[:info][:email]
-      user.location = auth[:info][:location]
-      user.set_birthday auth[:extra][:raw_info][:birthday]
-      user.image_url = auth[:info][:image]
-      user.oauth_token = auth[:credentials][:token]
-      user.oauth_expires_at = Time.at(auth[:credentials][:expires_at])
-      user.save!
-
-      user.generate_initial_nickname if user.nickname.nil?
-    end
-  end
 
   def generate_initial_nickname
     begin
@@ -59,11 +48,6 @@ class User < ActiveRecord::Base
     "#{core}#{digit}"
   end
 
-  def set_birthday string_date
-    month, day, year = string_date.split("/")
-    formatted_date = "#{year}-#{month}-#{day}"
-    self.birthday = formatted_date
-  end
 
   private
 

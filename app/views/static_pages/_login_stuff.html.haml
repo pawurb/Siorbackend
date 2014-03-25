@@ -1,11 +1,10 @@
 #login-stuff
   - if current_user
-    Witaj
-    = current_user.name
+    Jesteś zalogowany
     = link_to "wyloguj się", signout_path, id: "sign_out", data: { confirm: "Na pewno ?" }
   - else
     #signInModal-btn{"data-target" => "#signInModal", "data-toggle" => "modal"}
-      .btn.btn-xs.btn-default Zaloguj się
+      .btn.btn-sm.btn-default Zaloguj się
 
       aby dołączyć do Mistrzów Siorbania
 
