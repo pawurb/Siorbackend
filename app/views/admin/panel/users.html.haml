@@ -35,4 +35,4 @@
       %td
         {{user.location}}
       %td
-        .btn.btn-sm.btn-danger Usuń z bazy
+        .btn.btn-sm.btn-danger{'ng-click' => "removeUser(user.id)"} Usuń z bazy

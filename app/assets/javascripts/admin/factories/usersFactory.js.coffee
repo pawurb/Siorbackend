@@ -11,9 +11,16 @@ angular.module('SiorbStats').factory('Users', ['$http', ($http) ->
 
   #public intefrace
 
-  queryAsync: (callback) ->
+  asyncQuery: (callback) ->
     $http(
       method: "GET"
       url: "/users"
     ).success(callback)
+  remove: (id, success, error) ->
+    $http(
+      method: "DELETE"
+      url: "/users/#{id}")
+    .success(success)
+    .error(error)
+
 ])

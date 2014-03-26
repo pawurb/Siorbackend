@@ -1,4 +1,4 @@
-app = angular.module('SiorbStats', ['ngRoute'])
+app = angular.module('SiorbStats', ['ngRoute', 'ng-rails-csrf'])
 
 app.config [
   "$routeProvider"
