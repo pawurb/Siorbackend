@@ -12,8 +12,14 @@ app.config [
     ).otherwise redirectTo: "/users"
 ]
 
-app.run(['$rootScope', ($rootScope) ->
+app.run(['$http', ($http) ->
+  setCredentials = (username, password) ->
+    encoded = btoa(username + ':' + password)
+    $http.defaults.headers.common.Authorization = 'Basic ' + encoded
+  setCredentials(gon.admin_login, gon.admin_password)
+])
 
+app.run(['$rootScope', ($rootScope) ->
   # common sorting config
   $rootScope.order = {}
   $rootScope.order.reverse = true

@@ -1,14 +1,5 @@
 angular.module('SiorbStats').factory('Statistics', ['$http', ($http) ->
 
-  init = ->
-    setCredentials = (username, password) ->
-      encoded = btoa(username + ':' + password)
-      $http.defaults.headers.common.Authorization = 'Basic ' + encoded
-    setCredentials(gon.admin_login, gon.admin_password)
-
-  init()
-
-
   error = ->
     console.log 'Error'
 
