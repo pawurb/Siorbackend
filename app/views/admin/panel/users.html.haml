@@ -18,6 +18,8 @@
         .btn.btn-sm.btn-default Ilość gier
       %th{'ng-click' => "order.setAttr('date')" }
         .btn.btn-sm.btn-default Data rejestracji
+      %th{'ng-click' => "order.setAttr('birthday_date')" }
+        .btn.btn-sm.btn-default Data urodzin
       %th{'ng-click' => "order.setAttr('location')" }
         .btn.btn-sm.btn-default Lokalizacja
       %th
@@ -37,6 +39,8 @@
         {{user.gameplays}}
       %td
         {{user.date}}
+      %td
+        {{user.birthday_date}}
       %td
         {{user.location}}
       %td

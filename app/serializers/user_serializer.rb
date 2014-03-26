@@ -5,6 +5,10 @@ class UserSerializer < ActiveModel::Serializer
 
 
   def birthday_date
-    object.birthday.strftime("%e-%m-%y %H:%M")
+    if object.birthday
+      object.birthday.strftime("%e-%m-%Y")
+    else
+      nil
+    end
   end
 end
