@@ -8,22 +8,23 @@
     %tr
       %th
         Foto
+      %th{'ng-click' => "order.setAttr('name')" }
+        .btn.btn-sm.btn-default Imię
+      %th{'ng-click' => "order.setAttr('nickname')" }
+        .btn.btn-default Nickname
+      %th{'ng-click' => "order.setAttr('email')" }
+        .btn.btn-sm.btn-default Email
+      %th{'ng-click' => "order.setAttr('best_score')" }
+        .btn.btn-sm.btn-default Najlepszy wynik
+      %th{'ng-click' => "order.setAttr('gameplays')" }
+        .btn.btn-sm.btn-default Ilość gier
+      %th{'ng-click' => "order.setAttr('location')" }
+        .btn.btn-sm.btn-default Lokalizacja
       %th
-        Imię
-      %th
-        Nickname
-      %th
-        Email
-      %th
-        Najlepszy wynik
-      %th
-        Ilość gier
-      %th
-        Lokalizacja
   %tbody
-    %tr{'ng-repeat' => 'user in users | filter:userFilter'}
-      %td
-        %img{'ng-src' => "{{user.image_url}}", 'alt' => 'Brak'}
+    %tr{'ng-repeat' => 'user in users | orderBy:order.attr:order.reverse |  filter:userFilter'}
+      %td.image-cell
+        %img{'ng-src' => "{{user.image_url}}", 'alt' => ''}
       %td
         {{user.name}}
       %td
@@ -36,3 +37,5 @@
         {{user.gameplays}}
       %td
         {{user.location}}
+      %td
+        .btn.btn-sm.btn-danger Usuń z bazy

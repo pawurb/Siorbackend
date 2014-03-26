@@ -9,4 +9,21 @@
 
 .table {
   font-size: 16px;
+
+  tr > td {
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+  }
+
+  tr > td:not(.image-cell) {
+    padding-top: 6px !important;
+    padding-bottom: 3px !important;
+  }
+
+
+  img {
+    width:30px;
+    height:30px;
+  }
 }
+
