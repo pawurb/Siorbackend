@@ -10,5 +10,4 @@ angular.module('SiorbStats').filter "excludeIp", ->
     else
       input
 
-
   ipExcludingFunction

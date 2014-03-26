@@ -8,8 +8,10 @@
 }
 
 .form-control {
+  margin: 3px;
   width: 200px;
 }
+
 
 
 .table {
@@ -20,11 +22,14 @@
     padding-bottom: 3px !important;
   }
 
+  th {
+    width: 200px;
+  }
+
   tr > td:not(.image-cell) {
     padding-top: 6px !important;
     padding-bottom: 3px !important;
   }
-
 
   img {
     width:30px;
