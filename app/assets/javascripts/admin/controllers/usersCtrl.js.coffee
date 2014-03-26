@@ -1,4 +1,4 @@
-angular.module('SiorbStats').controller('UsersController', ($scope, $http) ->
+angular.module('SiorbStats').controller('UsersController', ['$scope', '$http', ($scope, $http) ->
   $scope.users = [
   ]
 
@@ -21,9 +21,7 @@ angular.module('SiorbStats').controller('UsersController', ($scope, $http) ->
   setCredentials(gon.admin_login, gon.admin_password)
   getData()
 
-
-
-)
+])
 
 
 
