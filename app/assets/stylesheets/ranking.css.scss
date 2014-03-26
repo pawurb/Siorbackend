@@ -88,8 +88,10 @@
   }
 
   .modal-body {
-    text-align: justify;
-    font-size: 18px;
+    font-size: 16px;
+    ul {
+      padding-top: 10px;
+    }
   }
 }
 
