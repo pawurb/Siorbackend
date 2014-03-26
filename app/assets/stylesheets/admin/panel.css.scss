@@ -32,7 +32,15 @@
     height:30px;
   }
 
-  .name-header, .nickname-header, .email-header {
+  .name-header {
+    width: 280px;
+  }
+
+  .nickname-header {
+    width: 150px;
+  }
+
+  .email-header {
     width: 200px;
   }
 }
