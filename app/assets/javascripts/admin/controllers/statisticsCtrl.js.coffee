@@ -15,16 +15,7 @@ angular.module('SiorbStats').controller('StatisticsController', ['$scope', 'Stat
 
 
   # sorting config
-  $scope.order =
-    attr:'date'
-    reverse: true
-
-  $scope.order.setAttr = (orderAttr) ->
-    if $scope.order.attr == orderAttr
-      $scope.order.reverse = !$scope.order.reverse
-    else
-      $scope.order.attr = orderAttr
-      $scope.order.reverse = true
+  $scope.order.attr = 'date'
 ])
 
 

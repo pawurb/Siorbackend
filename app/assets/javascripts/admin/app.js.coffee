@@ -11,3 +11,17 @@ app.config [
       controller: "StatisticsController"
     ).otherwise redirectTo: "/users"
 ]
+
+app.run(['$rootScope', ($rootScope) ->
+
+  # common sorting config
+  $rootScope.order = {}
+  $rootScope.order.reverse = true
+
+  $rootScope.order.setAttr = (orderAttr) ->
+    if $rootScope.order.attr == orderAttr
+      $rootScope.order.reverse = !$rootScope.order.reverse
+    else
+      $rootScope.order.attr = orderAttr
+      $rootScope.order.reverse = true
+])
