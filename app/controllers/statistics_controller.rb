@@ -1,5 +1,5 @@
 class StatisticsController < ApplicationController
-  http_basic_authenticate_with name: ENV['ADMIN_LOGIN'], password: ENV["ADMIN_PASSWORD"], only: [:index]
+  http_basic_authenticate_with name: ENV['ADMIN_LOGIN'], password: ENV["ADMIN_PASSWORD"], only: [:index, :destroy]
 
   def create
     Statistic.create_from_request statistic_params, request.ip

@@ -1,7 +1,7 @@
 class Statistic < ActiveRecord::Base
   validates :score, :duration, presence: true
   validates :score, :duration, numericality: { only_integer: true }
-  scope :recent, lambda { last(50) }
+  scope :recent, lambda { last(100) }
 
   def self.create_from_request params, ip
     statistic = Statistic.new(params)
