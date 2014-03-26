@@ -73,6 +73,13 @@ describe StatisticsController do
         date = statistic.created_at.strftime("%e-%m-%y %H:%M")
         expect(json.last["date"]).to eq date
       end
+
+      describe "delete action" do
+        it "deletes the target stat" do
+          xhr :delete, :destroy, id: statistic.id
+          expect(Statistic.find_by(id: statistic.id)).to be_nil
+        end
+      end
     end
   end
 end

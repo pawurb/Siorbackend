@@ -10,6 +10,11 @@ class StatisticsController < ApplicationController
     render json: Statistic.all
   end
 
+  def destroy
+    Statistic.find_by(id: params[:id]).delete
+    render text: 'Stat deleted'
+  end
+
   private
 
   def statistic_params

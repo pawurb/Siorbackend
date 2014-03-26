@@ -18,5 +18,5 @@ Siorbackend::Application.routes.draw do
   resources :users, only: [:index, :destroy]
 
   resource :contact_messages, only: [:create]
-  resources :statistics, only: [:index, :create]
+  resources :statistics, only: [:index, :create, :destroy]
 end

@@ -1,1 +1,24 @@
-statistickasaa
+%table.table.table-striped
+  %thead
+    %tr
+      %th{'ng-click' => "order.setAttr('ip')" }
+        .btn.btn-sm.btn-default Adres ip
+      %th{'ng-click' => "order.setAttr('duration')" }
+        .btn.btn-sm.btn-default Czas gry
+      %th{'ng-click' => "order.setAttr('score')" }
+        .btn.btn-sm.btn-default Wynik
+      %th{'ng-click' => "order.setAttr('date')" }
+        .btn.btn-sm.btn-default Data
+      %th
+  %tbody
+    %tr{'ng-repeat' => 'stat in statistics | orderBy:order.attr:order.reverse'}
+      %td
+        {{stat.ip}}
+      %td
+        {{stat.duration}}
+      %td
+        {{stat.score}}
+      %td
+        {{stat.date}}
+      %td
+        .btn.btn-sm.btn-danger{'ng-click' => "removeStat(stat.id)", 'confirm-click' => 'Usunąć dane statystyki ?'} Usuń
