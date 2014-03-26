@@ -1,14 +1,14 @@
 angular.module('SiorbStats').controller('StatisticsController', ['$scope', 'Statistics', ($scope, Statistics) ->
 
-  syncUsers = ->
+  syncStats = ->
     success = (results) ->
       $scope.statistics = results['statistics']
     Statistics.asyncQuery(success)
-  syncUsers()
+  syncStats()
 
   $scope.removeStat = (id) ->
     success = ->
-      syncUsers()
+      syncStats()
     error = ->
       console.log 'error'
     Statistics.remove(id, success, error)

@@ -15,6 +15,8 @@
         .btn.btn-sm.btn-default Najlepszy wynik
       %th{'ng-click' => "order.setAttr('gameplays')" }
         .btn.btn-sm.btn-default Ilość gier
+      %th{'ng-click' => "order.setAttr('date')" }
+        .btn.btn-sm.btn-default Data rejestracji
       %th{'ng-click' => "order.setAttr('location')" }
         .btn.btn-sm.btn-default Lokalizacja
       %th
@@ -32,6 +34,8 @@
         {{user.best_score}}
       %td
         {{user.gameplays}}
+      %td
+        {{user.date}}
       %td
         {{user.location}}
       %td

@@ -1,7 +1,5 @@
 class StatisticSerializer < ActiveModel::Serializer
-  attributes :id, :duration, :score, :ip, :date
+  include ::SerializerDateFormatter
 
-  def date
-    object.created_at.strftime("%e-%m-%y %H:%M")
-  end
+  attributes :id, :duration, :score, :ip, :date
 end

@@ -1,8 +1,8 @@
 angular.module('SiorbStats').filter "excludeIp", ->
   ipExcludingFunction = (input, query) ->
 
-    #filters when query is at least 3 chars
-    if input && query && query.ip.length >= 3
+    #filters when query is at least 5 chars
+    if input && query && query.ip.length >= 5
       excludeIp = (stat) ->
         stat.ip.toString().indexOf(query.ip) == -1
 

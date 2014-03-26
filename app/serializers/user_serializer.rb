@@ -1,3 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :email, :name, :nickname, :best_score, :gameplays, :image_url, :location
+  include ::SerializerDateFormatter
+
+  attributes :id, :email, :name, :nickname, :best_score, :gameplays, :image_url, :location, :date
 end
