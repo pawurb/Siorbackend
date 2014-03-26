@@ -3,7 +3,7 @@
   font-size: 16px;
   background-image:url('rankingBg.png');
   background-repeat: no-repeat;
-  background-position:140px 180px;
+  background-position:140px 150px;
 
   .bold {
     font-weight: bold;
@@ -13,13 +13,8 @@
     height: 100px;
     padding: 10px 0px 15px 0px;
 
-    .place-in-ranking {
-      padding-top: 8px;
-
-    }
-
     #nickname-form {
-      padding: 10px 0px 0px 0px;
+      padding: 4px 0px 0px 0px;
 
       input[type=text] {
        padding-left: 5px;
@@ -85,7 +80,7 @@
   }
 
   #infoModal-heading {
-    padding: 50px 0px 15px 15px;
+    padding: 0px 0px 15px 15px;
 
     #infoModal-btn {
       margin: 5px 0px 0px 310px;
