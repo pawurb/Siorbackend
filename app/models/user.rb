@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   RANDOM_NICKNAMES = %w{Yerbochłon}
 
-  scope :for_ranking, lambda { order('best_score DESC').first(15) }
+  scope :for_ranking, lambda { |page| paginate(per_page: 10, page: page).order('best_score DESC') }
 
   validates :email, presence: true
   validates :email, uniqueness: true

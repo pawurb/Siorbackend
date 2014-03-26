@@ -1,0 +1,12 @@
+- @players.each do |player|
+  .player-entry
+    .place{class: "#{nickname_class(player)}"}
+      = "#{player.place_in_ranking}."
+    .nickname{class: "#{nickname_class(player)}"}
+      = "#{player.nickname}"
+    .score{class: "#{nickname_class(player)}"}
+      = player.best_score
+
+
+= will_paginate @players
+

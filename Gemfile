@@ -10,6 +10,7 @@ gem 'omniauth-facebook', '1.4.0'
 gem "koala", "~> 1.8.0rc1"
 gem 'gon'
 gem 'bootstrap-sass', '~> 3.1.1'
+gem 'will_paginate', '~> 3.0'
 
 gem 'pg'
 gem 'haml'
