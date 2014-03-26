@@ -22,10 +22,6 @@
     padding-bottom: 3px !important;
   }
 
-  th {
-    width: 200px;
-  }
-
   tr > td:not(.image-cell) {
     padding-top: 6px !important;
     padding-bottom: 3px !important;
@@ -34,6 +30,10 @@
   img {
     width:30px;
     height:30px;
+  }
+
+  .name-header, .nickname-header, .email-header {
+    width: 200px;
   }
 }
 

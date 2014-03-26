@@ -5,11 +5,11 @@
     %tr
       %th
         Foto
-      %th{'ng-click' => "order.setAttr('name')" }
+      %th.name-header{'ng-click' => "order.setAttr('name')" }
         .btn.btn-sm.btn-default Imię
-      %th{'ng-click' => "order.setAttr('nickname')" }
+      %th.nickname-header{'ng-click' => "order.setAttr('nickname')" }
         .btn.btn-sm.btn-default Nickname
-      %th{'ng-click' => "order.setAttr('email')" }
+      %th.email-header{'ng-click' => "order.setAttr('email')" }
         .btn.btn-sm.btn-default Email
       %th{'ng-click' => "order.setAttr('best_score')" }
         .btn.btn-sm.btn-default Najlepszy wynik
