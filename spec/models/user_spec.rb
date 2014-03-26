@@ -54,7 +54,7 @@ describe User do
       expect(user.nickname).not_to be_nil
       expect(user.best_score).to eq 0
       expect(user.gameplays).to eq 0
-      expect(user.birthday).to eq "26/04/1989".to_datetime
+      expect(user.birthday).to eq Time.zone.parse("26/04/1989")
     end
   end
 

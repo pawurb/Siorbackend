@@ -7,7 +7,7 @@ class StatisticsController < ApplicationController
   end
 
   def index
-    render json: Statistic.all
+    render json: Statistic.recent
   end
 
   def destroy

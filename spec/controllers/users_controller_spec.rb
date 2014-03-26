@@ -35,7 +35,7 @@ describe UsersController do
 
   context "as an admin user" do
     let!(:user) do
-      FactoryGirl.create :user
+      FactoryGirl.create :user, birthday: '19.03.1990'
     end
 
     before do
@@ -55,6 +55,8 @@ describe UsersController do
       expect(json.last["gameplays"]).to eq user.gameplays
       expect(json.last["image_url"]).to eq user.image_url
       expect(json.last["location"]).to eq user.location
+      birthday = user.birthday.strftime("%e-%m-%y %H:%M")
+      expect(json.last["birthday_date"]).to eq birthday
       date = user.created_at.strftime("%e-%m-%y %H:%M")
       expect(json.last["date"]).to eq date
     end
