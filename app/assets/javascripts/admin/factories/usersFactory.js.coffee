@@ -1,4 +1,4 @@
-angular.module('SiorbStats').factory('Users', ['$http', ($http) ->
+angular.module('SiorbStats').factory('Users', ['$http', ($http, $q) ->
 
   init = ->
     setCredentials = (username, password) ->
@@ -8,19 +8,13 @@ angular.module('SiorbStats').factory('Users', ['$http', ($http) ->
 
   init()
 
+  #promises approach
+  error = (response) ->
+    console.log 'Error'
+    $q.reject(response.data)
 
-  #public intefrace
-
-  asyncQuery: (callback) ->
-    $http(
-      method: "GET"
-      url: "/users"
-    ).success(callback)
-  remove: (id, success, error) ->
-    $http(
-      method: "DELETE"
-      url: "/users/#{id}")
-    .success(success)
-    .error(error)
-
+  query: (success) ->
+    $http.get('/users').then(success, error)
+  remove: (id, success) ->
+    $http.delete("/users/#{id}").then(success, error)
 ])

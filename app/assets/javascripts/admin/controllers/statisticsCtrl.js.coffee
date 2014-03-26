@@ -3,15 +3,13 @@ angular.module('SiorbStats').controller('StatisticsController', ['$scope', 'Stat
   syncStats = ->
     success = (results) ->
       $scope.statistics = results['statistics']
-    Statistics.asyncQuery(success)
+    Statistics.query(success)
   syncStats()
 
   $scope.removeStat = (id) ->
     success = ->
       syncStats()
-    error = ->
-      console.log 'error'
-    Statistics.remove(id, success, error)
+    Statistics.remove(id, success)
 
 
   # sorting config

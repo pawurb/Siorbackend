@@ -9,14 +9,16 @@ angular.module('SiorbStats').factory('Statistics', ['$http', ($http) ->
   init()
 
 
-  #public interface
+  error = ->
+    console.log 'Error'
 
-  asyncQuery: (callback) ->
+  #callbacks approach
+  query: (success) ->
     $http(
       method: "GET"
       url: "/statistics"
-    ).success(callback)
-  remove: (id, success, error) ->
+    ).success(success)
+  remove: (id, success) ->
     $http(
       method: "DELETE"
       url: "/statistics/#{id}")
