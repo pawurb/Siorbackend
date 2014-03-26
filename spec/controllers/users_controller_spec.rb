@@ -47,6 +47,7 @@ describe UsersController do
       expect(json.last["best_score"]).to eq user.best_score
       expect(json.last["gameplays"]).to eq user.gameplays
       expect(json.last["image_url"]).to eq user.image_url
+      expect(json.last["location"]).to eq user.location
     end
   end
 

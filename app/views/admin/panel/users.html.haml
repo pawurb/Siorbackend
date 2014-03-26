@@ -1,11 +1,38 @@
-usersa
 
 %button.btn.btn-default{'ng-click' => 'getData()'} clicka me
 
-%input{'ng-model'=> 'userFilter'}
-%ul
-  %li{'ng-repeat' => 'user in users | filter:userFilter'}
-    {{user.name}}
-    {{user.nickname}}
+%input{'ng-model'=> 'userFilter.name'}
 
-%table.table.table-stripped
+%table.table.table-striped
+  %thead
+    %tr
+      %th
+        Foto
+      %th
+        Imię
+      %th
+        Nickname
+      %th
+        Email
+      %th
+        Najlepszy wynik
+      %th
+        Ilość gier
+      %th
+        Lokalizacja
+  %tbody
+    %tr{'ng-repeat' => 'user in users | filter:userFilter'}
+      %td
+        %img{'ng-src' => "{{user.image_url}}", 'alt' => 'Brak'}
+      %td
+        {{user.name}}
+      %td
+        {{user.nickname}}
+      %td
+        {{user.email}}
+      %td
+        {{user.best_score}}
+      %td
+        {{user.gameplays}}
+      %td
+        {{user.location}}
