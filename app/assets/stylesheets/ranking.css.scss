@@ -1,3 +1,5 @@
+$greyColor: #bbbbbb;
+
 #ranking {
   padding: 10px 0px 100px 30px;
   font-size: 16px;
@@ -27,7 +29,7 @@
       }
 
       #user_nickname {
-        border:1px solid #cccccc;
+        border:1px solid $greyColor;
         border-radius:3px;
         height: 22px;
         width: 180px;
@@ -37,7 +39,7 @@
 
     #facebook-login {
       a {
-        color: #bbbbbb;
+        color: $greyColor;
       }
 
       a:hover {
@@ -77,8 +79,27 @@
         float:right;
       }
     }
+
+    #scores-list {
+      height:230px;
+    }
+
     .pagination {
       padding-left: 110px;
+      font-size: 18px;
+      color: $greyColor;
+
+      .current {
+        color: #000000;
+      }
+
+      .disabled {
+        color: #000000;
+      }
+
+      a {
+        color: $greyColor;
+      }
     }
 
   }

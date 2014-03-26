@@ -32,7 +32,7 @@ jQuery ->
 
   # ajax pagination
   $(document).on('click', '.pagination a', ->
-    $(".pagination").html "Ładowanie"
+    $(".pagination").html "Ładowanie..."
     $.getScript @href
     false)
 
