@@ -10,6 +10,8 @@ angular.module('SiorbStats').controller('UsersController', ['$scope', 'Users', (
     success = ->
       syncUsers()
     Users.remove(id, success)
+  $scope.reloadData = ->
+    syncUsers()
 
   # sorting config
   $scope.order.attr = 'best_score'

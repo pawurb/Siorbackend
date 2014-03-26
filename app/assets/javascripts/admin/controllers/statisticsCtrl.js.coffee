@@ -11,6 +11,9 @@ angular.module('SiorbStats').controller('StatisticsController', ['$scope', 'Stat
       syncStats()
     Statistics.remove(id, success)
 
+  $scope.reloadData = ->
+    syncStats()
+
 
   # sorting config
   $scope.order.attr = 'date'
