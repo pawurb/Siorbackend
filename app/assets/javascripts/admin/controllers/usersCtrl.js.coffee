@@ -6,21 +6,21 @@ angular.module('SiorbStats').controller('UsersController', ($scope, $http) ->
     encoded = btoa(username + ':' + password)
     $http.defaults.headers.common.Authorization = 'Basic ' + encoded
     # $cookieStore.put('authdata', encoded)
-
-  setCredentials(gon.admin_login, gon.admin_password)
-
-  $scope.getData = ->
-
-
+  getData = ->
     $http(
       method: "GET"
       url: "/users"
 
     ).success((data, status, headers, config) ->
-      console.log 'succesa'
       console.log data
+      $scope.users = data['users']
     ).error (data, status, headers, config) ->
       console.log 'errora'
+
+
+  setCredentials(gon.admin_login, gon.admin_password)
+  getData()
+
 
 
 )

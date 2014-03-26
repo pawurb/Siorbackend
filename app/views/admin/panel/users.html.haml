@@ -1,7 +1,11 @@
 usersa
 
-%button{'ng-click' => 'getData()'} clicka me
+%button.btn.btn-default{'ng-click' => 'getData()'} clicka me
 
+%input{'ng-model'=> 'userFilter'}
 %ul
-  %li{'ng-repeat' => 'user in users'}
+  %li{'ng-repeat' => 'user in users | filter:userFilter'}
     {{user.name}}
+    {{user.nickname}}
+
+%table.table.table-stripped
