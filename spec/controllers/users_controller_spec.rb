@@ -24,6 +24,13 @@ describe UsersController do
         response.status.should eq 401
       end
     end
+
+    describe "delete action" do
+      it "does not allow access" do
+        xhr :delete, :destroy, id: 2
+        response.status.should eq 401
+      end
+    end
   end
 
   context "as an admin user" do
@@ -49,6 +56,13 @@ describe UsersController do
       expect(json.last["image_url"]).to eq user.image_url
       expect(json.last["location"]).to eq user.location
     end
+
+    describe "delete action" do
+      it "deletes the target user" do
+        xhr :delete, :destroy, id: user.id
+        expect(User.find_by(id: user.id)).to be_nil
+      end
+    end
   end
 
   context "as logged in user" do
@@ -73,6 +87,13 @@ describe UsersController do
       xhr :put, :update, { "user" => { "noturbusiness" => '500'} }
       user.gameplays.should eq 5
       user.best_score.should eq 123
+    end
+
+    describe "delete action" do
+      it "does not allow access" do
+        xhr :delete, :destroy, id: 2
+        response.status.should eq 401
+      end
     end
   end
 end

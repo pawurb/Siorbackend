@@ -15,7 +15,7 @@ Siorbackend::Application.routes.draw do
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
   resource :user, only: [:update]
-  resources :users, only: [:index]
+  resources :users, only: [:index, :destroy]
 
   resource :contact_messages, only: [:create]
   resources :statistics, only: [:index, :create]
