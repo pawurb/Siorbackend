@@ -28,7 +28,6 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     addressable (2.3.5)
-    angularjs-rails (1.2.14)
     arel (4.0.2)
     atomic (1.1.15)
     awesome_print (1.2.0)
@@ -228,7 +227,6 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
-  angularjs-rails
   awesome_print
   bootstrap-sass (~> 3.1.1)
   capybara (~> 2.2.1)

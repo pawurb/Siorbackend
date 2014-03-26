@@ -22,7 +22,6 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'jquery-rails'
 gem 'underscore-rails'
-gem 'angularjs-rails'
 
 gem 'dotenv-rails'
 gem 'exception_notification'

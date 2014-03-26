@@ -7,7 +7,7 @@ angular.module('SiorbStats').controller('UsersController', ($scope, $http) ->
     $http.defaults.headers.common.Authorization = 'Basic ' + encoded
     # $cookieStore.put('authdata', encoded)
 
-  setCredentials('admin', 'secret')
+  setCredentials(gon.admin_login, gon.admin_password)
 
   $scope.getData = ->
 
