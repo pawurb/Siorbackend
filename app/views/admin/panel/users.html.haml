@@ -1,6 +1,3 @@
-
-%button.btn.btn-default{'ng-click' => 'getData()'} clicka me
-
 %input{'ng-model'=> 'userFilter.name'}
 
 %table.table.table-striped
@@ -11,7 +8,7 @@
       %th{'ng-click' => "order.setAttr('name')" }
         .btn.btn-sm.btn-default Imię
       %th{'ng-click' => "order.setAttr('nickname')" }
-        .btn.btn-default Nickname
+        .btn.btn-sm.btn-default Nickname
       %th{'ng-click' => "order.setAttr('email')" }
         .btn.btn-sm.btn-default Email
       %th{'ng-click' => "order.setAttr('best_score')" }
