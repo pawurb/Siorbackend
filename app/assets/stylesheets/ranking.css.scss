@@ -5,7 +5,7 @@ $greyColor: #bbbbbb;
   font-size: 16px;
   background-image:url('rankingBg.png');
   background-repeat: no-repeat;
-  background-position:140px 150px;
+  background-position:155px 110px;
 
   .bold {
     font-weight: bold;
@@ -13,7 +13,7 @@ $greyColor: #bbbbbb;
 
   #user-data {
     height: 100px;
-    padding: 10px 0px 15px 0px;
+    padding: 10px 0px 0px 0px;
 
     #nickname-form {
       padding: 4px 0px 0px 0px;
@@ -59,7 +59,7 @@ $greyColor: #bbbbbb;
 
 
   #player-list {
-    padding: 140px 0px 0px 60px;
+    padding: 20px 0px 0px 60px;
     width: 330px;
 
     .player-entry {
@@ -85,7 +85,8 @@ $greyColor: #bbbbbb;
     }
 
     .pagination {
-      padding-left: 110px;
+      margin-top:5px;
+      padding-left: 115px;
       font-size: 18px;
       color: $greyColor;
 
