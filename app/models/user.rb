@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 
   MAX_NICKNAME_LENGTH = 15
 
-  RANDOM_NICKNAMES = %w{Yerbochłon}
+  RANDOM_NICKNAMES = %w{Yerbochłon Nayerbany Siorbacz}
 
   scope :for_ranking, lambda { |page| paginate(per_page: 10, page: page).order('best_score DESC') }
 
