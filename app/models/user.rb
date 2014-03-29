@@ -58,7 +58,7 @@ class User < ActiveRecord::Base
 
   def self.random_nickname
     core = RANDOM_NICKNAMES.sample
-    digit = (1 + Random.rand(User.count + 1)).to_s
+    digit = (1 + Random.rand(User.count + 500)).to_s
     "#{core}#{digit}"
   end
 
