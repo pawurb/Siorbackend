@@ -38,11 +38,10 @@ describe User do
       },
       :extra => {
         :raw_info =>
-          {
-            :birthday => "04/26/1989"
-          }
+        {
+          :birthday => "04/26/1989"
+        }
       }
-
     }
     end
 
