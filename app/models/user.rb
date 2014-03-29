@@ -6,8 +6,7 @@ class User < ActiveRecord::Base
 
   scope :for_ranking, lambda { |page| paginate(per_page: 10, page: page).order('best_score DESC') }
 
-  validates :email, presence: true
-  validates :email, uniqueness: true
+  validates :email, uniqueness: true, allow_blank: true
   validates :nickname, presence: true, on: :update
   validates :nickname, uniqueness: true
   validates :nickname, length: { maximum: MAX_NICKNAME_LENGTH }
