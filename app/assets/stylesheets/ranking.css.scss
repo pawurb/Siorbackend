@@ -5,7 +5,7 @@ $greyColor: #bbbbbb;
   font-size: 16px;
   background-image:url('rankingBg.png');
   background-repeat: no-repeat;
-  background-position:155px 110px;
+  background-position:150px 110px;
 
   .bold {
     font-weight: bold;
@@ -13,7 +13,7 @@ $greyColor: #bbbbbb;
 
   #user-data {
     height: 100px;
-    padding: 10px 0px 0px 0px;
+    padding: 10px 0px 0px 5px;
 
     #nickname-form {
       padding: 4px 0px 0px 0px;
@@ -96,7 +96,7 @@ $greyColor: #bbbbbb;
       }
 
       .disabled {
-        color: #000000;
+        color: #FFFFFF; //invisible
       }
 
       a {
@@ -107,10 +107,10 @@ $greyColor: #bbbbbb;
   }
 
   #infoModal-heading {
-    padding: 0px 0px 15px 15px;
+    padding: 0px 0px 15px 5px;
 
     #infoModal-btn {
-      margin: 5px 0px 0px 310px;
+      margin: 5px 0px 0px 305px;
     }
   }
 
