@@ -22,7 +22,8 @@
   %tbody
     %tr{'ng-repeat' => 'user in users | orderBy:order.attr:order.reverse |  filter:userFilter'}
       %td.image-cell
-        %img{'ng-src' => "{{user.image_url}}", 'alt' => ''}
+        %a{'ng-href' => "https://www.facebook.com/{{user.fb_nickname}}", 'target' => '_blank'}
+          %img{'ng-src' => "{{user.image_url}}", 'alt' => ''}
       %td
         {{user.name}}
       %td

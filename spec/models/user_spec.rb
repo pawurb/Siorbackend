@@ -13,6 +13,7 @@ describe User do
     it { should respond_to(:oauth_expires_at) }
     it { should respond_to(:best_score) }
     it { should respond_to(:gameplays) }
+    it { should respond_to(:fb_nickname) }
 
     it { should_not respond_to(:birthday) }
     it { should_not respond_to(:location) }
@@ -51,6 +52,7 @@ describe User do
     it "creates User with correct data values" do
       user = User.from_omniauth(omniauth_hash, '127.0.0.1')
       expect(user.name).to eq 'Joe Bloggs'
+      expect(user.fb_nickname).to eq 'jbloggs'
       expect(user.ip).to eq '127.0.0.1'
       expect(user.image_url).to eq 'http://graph.facebook.com/1234567/picture?type=square'
       expect(user.nickname).not_to be_nil

@@ -9,5 +9,8 @@ FactoryGirl.define do
     sequence :nickname do |n|
       "nickname#{n}"
     end
+    sequence :fb_nickname do |n|
+      "fb_nickname#{n}"
+    end
   end
 end

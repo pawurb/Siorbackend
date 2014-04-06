@@ -31,6 +31,7 @@ class User < ActiveRecord::Base
       user.provider = auth[:provider]
       user.uid = auth[:uid]
       user.name = auth[:info][:name]
+      user.fb_nickname = auth[:info][:nickname]
       user.email = auth[:info][:email]
       user.ip = ip
 
