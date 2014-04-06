@@ -9,7 +9,7 @@ jQuery ->
 window.fbAsyncInit = ->
   FB.init(appId: gon.facebook_id, cookie: true)
 
-  permissions = "email, user_location, user_birthday"
+  permissions = "email"
   signInClicked = false
 
   $('#sign_in').click (e) ->

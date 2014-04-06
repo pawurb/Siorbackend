@@ -9,6 +9,5 @@ FactoryGirl.define do
     sequence :nickname do |n|
       "nickname#{n}"
     end
-    location 'Koluszki'
   end
 end

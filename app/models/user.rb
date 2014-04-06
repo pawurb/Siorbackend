@@ -26,18 +26,13 @@ class User < ActiveRecord::Base
     User.where('best_score > ?', self.best_score).count + 1
   end
 
-
-  def self.from_omniauth(auth)
+  def self.from_omniauth(auth, ip)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       user.provider = auth[:provider]
       user.uid = auth[:uid]
       user.name = auth[:info][:name]
       user.email = auth[:info][:email]
-      user.location = auth[:info][:location]
-
-      if auth[:extra] && auth[:extra][:raw_info]
-        user.set_birthday auth[:extra][:raw_info][:birthday]
-      end
+      user.ip = ip
 
       user.image_url = auth[:info][:image]
       user.oauth_token = auth[:credentials][:token]
@@ -60,12 +55,6 @@ class User < ActiveRecord::Base
     core = RANDOM_NICKNAMES.sample
     digit = (1 + Random.rand(User.count + 500)).to_s
     "#{core}#{digit}"
-  end
-
-  def set_birthday string_date
-    month, day, year = string_date.split("/")
-    formatted_date = "#{year}-#{month}-#{day}"
-    self.birthday = formatted_date
   end
 
   private
