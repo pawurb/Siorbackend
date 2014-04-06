@@ -30,4 +30,7 @@ app.run(['$rootScope', ($rootScope) ->
     else
       $rootScope.order.attr = orderAttr
       $rootScope.order.reverse = true
+
+  $rootScope.setUnixDate = (object) ->
+    object.unix_date = Date.parse(object.date).getTime()
 ])
