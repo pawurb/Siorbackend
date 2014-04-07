@@ -71,7 +71,8 @@ describe StatisticsController do
         expect(json.last["ip"]).to eq statistic.ip
 
         date = statistic.created_at.strftime("%e-%m-%y %H:%M")
-        expect(json.last["date"]).to eq date
+        expect(json.last["created_at"]).to eq date
+        expect(json.last["created_at_unix"]).to eq statistic.created_at.to_i
       end
 
       describe "delete action" do

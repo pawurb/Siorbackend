@@ -56,7 +56,10 @@ describe UsersController do
       expect(json.last["gameplays"]).to eq user.gameplays
       expect(json.last["image_url"]).to eq user.image_url
       date = user.created_at.strftime("%e-%m-%y %H:%M")
-      expect(json.last["date"]).to eq date
+      expect(json.last["created_at"]).to eq date
+      expect(json.last["created_at_unix"]).to eq user.created_at.to_i
+      expect(json.last["updated_at"]).to eq date
+      expect(json.last["updated_at_unix"]).to eq user.updated_at.to_i
     end
 
     describe "delete action" do
