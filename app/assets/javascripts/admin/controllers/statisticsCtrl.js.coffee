@@ -2,9 +2,7 @@ angular.module('SiorbStats').controller('StatisticsController', ['$scope', 'Stat
 
   syncStats = ->
     success = (results) ->
-      statistics = results['statistics']
-      _.each statistics, $scope.setUnixDate
-      $scope.statistics = statistics
+      $scope.statistics = results['statistics']
     Statistics.query(success)
   syncStats()
 
@@ -17,7 +15,7 @@ angular.module('SiorbStats').controller('StatisticsController', ['$scope', 'Stat
     syncStats()
 
   # sorting config
-  $scope.order.attr = 'unix_date'
+  $scope.order.attr = 'created_at_unix'
 ])
 
 

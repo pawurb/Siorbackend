@@ -16,8 +16,10 @@
         .btn.btn-sm.btn-default Rekord
       %th{'ng-click' => "order.setAttr('gameplays')" }
         .btn.btn-sm.btn-default Podejścia
-      %th{'ng-click' => "order.setAttr('unix_date')" }
+      %th{'ng-click' => "order.setAttr('created_at_unix')" }
         .btn.btn-sm.btn-default Data rejestracji
+      %th{'ng-click' => "order.setAttr('updated_at_unix')" }
+        .btn.btn-sm.btn-default Ostatnia aktywność
       %th
   %tbody
     %tr{'ng-repeat' => 'user in users | orderBy:order.attr:order.reverse |  filter:userFilter'}
@@ -35,6 +37,8 @@
       %td
         {{user.gameplays}}
       %td
-        {{user.date}}
+        {{user.created_at}}
+      %td
+        {{user.updated_at}}
       %td
         .btn.btn-sm.btn-danger{'ng-click' => "removeUser(user.id)", 'confirm-click' => 'Usunąć dane użytkownika?'} Usuń z bazy

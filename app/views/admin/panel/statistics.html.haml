@@ -12,7 +12,7 @@
         .btn.btn-sm.btn-default Czas gry
       %th{'ng-click' => "order.setAttr('score')" }
         .btn.btn-sm.btn-default Wynik
-      %th{'ng-click' => "order.setAttr('unix_date')" }
+      %th{'ng-click' => "order.setAttr('created_at_unix')" }
         .btn.btn-sm.btn-default Data
       %th
   %tbody
@@ -24,6 +24,6 @@
       %td
         {{stat.score}}
       %td
-        {{stat.date}}
+        {{stat.created_at}}
       %td
         .btn.btn-sm.btn-danger{'ng-click' => "removeStat(stat.id)", 'confirm-click' => 'Usunąć dane statystyki ?'} Usuń

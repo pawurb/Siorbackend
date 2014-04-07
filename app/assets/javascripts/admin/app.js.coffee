@@ -31,17 +31,4 @@ app.run(['$rootScope', ($rootScope) ->
       $rootScope.order.attr = orderAttr
       $rootScope.order.reverse = true
 
-  $rootScope.setUnixDate = (object) ->
-    array = object.date.trim().split(' ')
-    dateData = array[0]
-    timeData = array[1]
-    dateArray = dateData.split('-')
-    timeArray = timeData.split(':')
-    year = '20' + dateArray[2]
-    month = parseInt(dateArray[1]) - 1
-    day = dateArray[0]
-    hours = timeArray[0]
-    minutes = timeArray[1]
-    date = new Date(year, month, day, hours, minutes)
-    object.unix_date = date.getTime()
 ])
