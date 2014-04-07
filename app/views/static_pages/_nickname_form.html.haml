@@ -1,4 +1,4 @@
 = form_for current_user, html: { id: "nickname-form"} do |f|
   Nickname:
   = f.text_field :nickname, maxlength: User::MAX_NICKNAME_LENGTH, value: '', placeholder: current_user.nickname
-  = f.submit "Zmień nickname", class: 'btn btn-default btn-xs'
+  = f.submit "Zmień", class: 'btn btn-default btn-xs'
