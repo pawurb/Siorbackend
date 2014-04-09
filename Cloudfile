@@ -5,6 +5,7 @@ siorb:
   domains:
     - siorb.shellyapp.com
     - siorb.dobreziele.pl
+    - www.siorb.dobreziele.pl
   servers:
     app1:
       size: large
