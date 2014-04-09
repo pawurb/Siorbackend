@@ -4,7 +4,6 @@ siorb:
   monitoring_email: p.urbanek89@gmail.com
   domains:
     - siorb.shellyapp.com
-    - www.siorb.dobreziele.pl
     - siorb.dobreziele.pl
   servers:
     app1:
