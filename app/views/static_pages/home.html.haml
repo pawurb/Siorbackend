@@ -8,9 +8,7 @@
     Game.start();
 
   .row
-    #shelly-logo.col-lg-6
-      = link_to image_tag('shellyLogo.png'), 'https://shellycloud.com/', target: '_blank'
-      = link_to image_tag('craftyLogo.png'), 'http://craftyjs.com/', target: '_blank'
+    .col-lg-6
 
     #contact-message.col-lg-6
       =render 'contact_message_form'
