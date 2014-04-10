@@ -52,7 +52,7 @@ describe "Static pages" do
       context "to the valid nickname" do
         it "can change the nickname using form" do
           fill_in :user_nickname, with: 'Yerbochłon'
-          click_button 'Zmień nickname'
+          click_button 'Zmień'
           expect(user.reload.nickname).to eq 'Yerbochłon'
         end
       end
@@ -64,7 +64,7 @@ describe "Static pages" do
 
         it "does not change the nickname and displays error" do
           fill_in :user_nickname, with: "Poyerbany12"
-          click_button 'Zmień nickname'
+          click_button 'Zmień'
           expect(user.reload.nickname).to eq "Poyerbany"
         end
       end

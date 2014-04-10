@@ -8,4 +8,8 @@ class Statistic < ActiveRecord::Base
     statistic.ip = ip
     statistic.save
   end
+
+  def self.uniq_count
+    Statistic.pluck(:ip).uniq.count
+  end
 end

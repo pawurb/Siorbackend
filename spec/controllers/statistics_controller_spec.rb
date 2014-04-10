@@ -1,19 +1,18 @@
 require 'spec_helper'
 
 describe StatisticsController do
+  let(:js_request_data) do
+    {
+      "statistic" =>
+      {
+        "score" => '123',
+        "duration" => '60'
+      }
+    }
+  end
 
   describe "create statistics data" do
     context "correct data sent" do
-      let(:js_request_data) do
-        {
-          "statistic" =>
-          {
-            "score" => '123',
-            "duration" => '60'
-          }
-        }
-      end
-
       it "creates a new statictics data" do
         xhr :post, :create, js_request_data
         expect(response).to be_success
@@ -47,7 +46,7 @@ describe StatisticsController do
     context "as a guest user" do
       it "does not allow access" do
         xhr :get, :index
-        response.status.should eq 401
+        expect(response.status).to eq 401
       end
     end
 
@@ -62,7 +61,7 @@ describe StatisticsController do
 
       it "responds with correct data" do
         xhr :get, :index
-        response.status.should eq 200
+        expect(response.status).to eq 200
         json = JSON.parse(response.body)["statistics"]
         expect(json.size).to eq 1
         expect(json.last["id"]).to eq statistic.id
@@ -71,7 +70,7 @@ describe StatisticsController do
         expect(json.last["ip"]).to eq statistic.ip
 
         date = statistic.created_at.strftime("%e-%m-%y %H:%M")
-        expect(json.last["created_at"]).to eq date
+        expect(json.last["created_at_txt"]).to eq date
         expect(json.last["created_at_unix"]).to eq statistic.created_at.to_i
       end
 
@@ -80,6 +79,36 @@ describe StatisticsController do
           xhr :delete, :destroy, id: statistic.id
           expect(Statistic.find_by(id: statistic.id)).to be_nil
         end
+      end
+    end
+  end
+
+  describe  "get uniq ip's count" do
+    before do
+      http_basic_admin_login
+    end
+
+    context "there are no statistics" do
+      it "returns correct uniq ip's count" do
+        xhr :get, :uniq_count
+        expect(response.status).to eq 200
+        json = JSON.parse(response.body)["count"]
+        expect(json).to eq 0
+      end
+    end
+
+    context "there are some statistics" do
+      before do
+        3.times do
+          xhr :post, :create, js_request_data
+        end
+      end
+
+      it "returns correct uniq ip's count" do
+        xhr :get, :uniq_count
+        expect(response.status).to eq 200
+        json = JSON.parse(response.body)["count"]
+        expect(json).to eq 1
       end
     end
   end

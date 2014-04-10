@@ -19,4 +19,5 @@ Siorbackend::Application.routes.draw do
 
   resource :contact_messages, only: [:create]
   resources :statistics, only: [:index, :create, :destroy]
+  match "uniq_count", to: 'statistics#uniq_count', via: [:get]
 end

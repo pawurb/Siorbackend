@@ -1,5 +1,5 @@
 module SerializerDateFormatter
-  def created_at
+  def created_at_txt
     object.created_at.strftime("%e-%m-%y %H:%M")
   end
 
@@ -7,7 +7,7 @@ module SerializerDateFormatter
     object.created_at.to_i
   end
 
-  def updated_at
+  def updated_at_txt
     object.updated_at.strftime("%e-%m-%y %H:%M")
   end
 

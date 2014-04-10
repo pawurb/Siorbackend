@@ -37,8 +37,8 @@
       %td
         {{user.gameplays}}
       %td
-        {{user.created_at}}
+        {{user.created_at_txt}}
       %td
-        {{user.updated_at}}
+        {{user.updated_at_txt}}
       %td
         .btn.btn-sm.btn-danger{'ng-click' => "removeUser(user.id)", 'confirm-click' => 'Usunąć dane użytkownika?'} Usuń z bazy
