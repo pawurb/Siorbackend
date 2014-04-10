@@ -89,4 +89,12 @@ Siorbackend::Application.configure do
       :sender_address => %{"Siorbackend error" <pabloweb358@gmail.com>},
       :exception_recipients => [ENV['ERROR_RECIPIENT']]
   }
+
+
+  #redirect www to non www
+  config.middleware.insert_before(::Rack::Runtime, ::Rack::Rewrite) do
+    r301 %r{.*}, 'http://siorb.dobreziele.pl$&', :if => Proc.new { |rack_env|
+      rack_env['SERVER_NAME'] == 'www.siorb.dobreziele.pl'
+    }
+  end
 end

@@ -3,7 +3,10 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
 
-gem "shelly-dependencies", :group => :production
+group :production do
+  gem "shelly-dependencies"
+  gem "rack-rewrite"
+end
 
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
