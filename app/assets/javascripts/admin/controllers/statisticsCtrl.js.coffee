@@ -1,9 +1,14 @@
 angular.module('SiorbStats').controller('StatisticsController', ['$scope', 'Statistics', ($scope, Statistics) ->
 
   syncStats = ->
-    success = (results) ->
+    successQuery = (results) ->
       $scope.statistics = results['statistics']
-    Statistics.query(success)
+    successUniqCount = (results) ->
+      $scope.uniqCount = results['count']
+    Statistics.query(successQuery)
+    Statistics.uniqCount(successUniqCount)
+
+
   syncStats()
 
   $scope.removeStat = (id) ->
