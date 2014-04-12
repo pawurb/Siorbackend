@@ -50,6 +50,7 @@ group :test do
   gem 'capybara','~> 2.2.1'
   gem 'timecop'
   gem 'rack-test', require: 'rack/test'
+  gem 'minitest'
   gem 'shoulda-matchers', '~> 2.4.0'
   gem 'rspec-rails', '~> 2.0'
 end
