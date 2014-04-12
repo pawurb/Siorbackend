@@ -13,3 +13,14 @@ siorb:
       databases:
         - postgresql
 
+siorb-staging:
+  ruby_version: 2.0.0
+  environment: production
+  domains:
+    - siorb-staging.shellyapp.com
+  servers:
+    app1:
+      size: large
+      thin: 4
+      databases:
+        - postgresql
