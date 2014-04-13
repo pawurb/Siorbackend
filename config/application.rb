@@ -23,7 +23,7 @@ module Siorbackend
     config.time_zone = 'Warsaw'
 
     # load lib folder
-    config.autoload_paths += %W(#{config.root}/lib/modules)
+    config.autoload_paths += %W(#{config.root}/lib/modules #{config.root}/lib)
   end
 end
 
