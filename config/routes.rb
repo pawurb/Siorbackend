@@ -9,6 +9,8 @@ Siorbackend::Application.routes.draw do
     match "/statistics.html", to: "panel#statistics", via: [:get]
   end
 
+  #disallow google robots from staging env
+  get '/robots.txt' => RobotsTxt
 
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
