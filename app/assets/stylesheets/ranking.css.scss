@@ -106,11 +106,20 @@ $greyColor: #bbbbbb;
 
   }
 
-  #infoModal-heading {
+  #modals-heading {
     padding: 0px 0px 15px 5px;
+    width: 390px;
 
     #infoModal-btn {
-      margin: 5px 0px 0px 305px;
+      float: right;
+    }
+
+    #competitionModal-btn {
+      float: left;
+      margin-left: 12px;
+    }
+    .btn {
+      margin-top: 5px;
     }
   }
 
