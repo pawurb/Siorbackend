@@ -9,6 +9,10 @@
   background-repeat:repeat-x;
 }
 
+.fb-share-button {
+  margin-top: 5px;
+}
+
 /* Crafty styling end */
 
 .shelly-logo {
