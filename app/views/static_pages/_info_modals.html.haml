@@ -3,8 +3,8 @@
     = image_tag('rankingHeading.png')
   %span#infoModal-btn{"data-target" => "#infoModal", "data-toggle" => "modal"}
     .btn.btn-xs.btn-default O co chodzi ?
-  // %span#competitionModal-btn{"data-target" => "#competitionModal", "data-toggle" => "modal"}
-  //   .btn.btn-xs.btn-warning Uwaga konkurs !
+  %span#competitionModal-btn{"data-target" => "#competitionModal", "data-toggle" => "modal"}
+    .btn.btn-xs.btn-warning Uwaga konkurs !
 
 #infoModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
   .modal-dialog
@@ -29,12 +29,40 @@
     .modal-content
       .modal-header
         %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
-        %h3#myModalLabel.modal-title Mistrzowie Siorbania VOL I
+        %h3#myModalLabel.modal-title Wejdź do gry i zostań Mistrzem Siorbania!
       .modal-body
-        Szczegóły konkursu:
-        %ul
-          %li nagrody
-          %li zasady
-          %li i takie takie
+
+        %p
+          Do 5.05
+          = link_to "zaloguj się przez Facebooka.", "/auth/facebook", id: "sign_in"
+          Aplikacja nie udostępni żadnych informacji na twoim profilu - tak, my też tego nie lubimy...
+        %p
+          Zawalcz o miejsce w czołówce wirtualnych Yerbochłonów. Do graczy z 5ciu pierwszych miejsc pojadą naczynka, rurki,
+          %strong guaranina
+          i oczywiście najlepsze ziele Yerba Mate!
+        %strong Do zdobycia:
+        %ol
+          %li
+            %strong kompletny zestaw yerba mate:
+            tykwa, bombilla nierdzewna INOX 18/8, yerba Amanda w lnianym woreczku + 50g guarany
+          %li bombilla nierdzewna INOX 18/8, yerba Amanda w lnianym woreczku + 50g guarany
+          %li bombilla nierdzewna Anel, yerba Pajarito 250g + 50g guarany
+          %li bombilla Hexagonal, próbka yerby + 25g guarany
+          %li bombilla Bamboo, próbka yerby + 25g guarany
+        %p
+          Wśród wszystkich zarejestrowanych, aktywnych graczy rozlosujemy 10 bonów o wartości 15zł do zrealizowania na
+          %a{'href'=>'http://www.dobreziele.pl', 'target'=>'_blank'} www.dobreziele.pl
+
+        %strong UWAGA!
+        %p
+          Pomóż Panu Siorbowi przejąć władzę nad internetem! :) Zaproś znajomych do gry,
+          %strong udostępnij info
+          przy pomocy przycisku z lewego dolnego rogu menu głównego.
+        Także, klawiatura w dłoń, łyk yerby i...
+        %strong Jedzieeeemy!
+
+        = image_tag('prizes1.jpg')
+
       .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Zamknij
+

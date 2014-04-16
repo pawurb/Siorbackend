@@ -121,6 +121,14 @@ $greyColor: #bbbbbb;
       margin-top: 4px;
     }
   }
+  #competitionModal {
+    img {
+      padding:20px 0px 0px 80px;
+    }
+    ol {
+      list-style-type: upper-roman;
+    }
+  }
 
   .modal-body {
     font-size: 16px;
