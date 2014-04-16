@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:update]
   http_basic_authenticate_with name: ENV['ADMIN_LOGIN'], password: ENV["ADMIN_PASSWORD"], only: [:index, :destroy]
 
+  skip_before_action :verify_authenticity_token, only: [:update]
 
   def update
     current_user.update params["user"]
