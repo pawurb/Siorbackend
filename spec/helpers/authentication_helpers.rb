@@ -5,8 +5,8 @@ module AuthenticationHelpers
   end
 
   def http_basic_admin_login
-    user = ENV['ADMIN_LOGIN']
-    password = ENV['ADMIN_PASSWORD']
+    user = Settings[:ADMIN_LOGIN]
+    password = Settings[:ADMIN_PASSWORD]
     request.env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthentication::Basic.encode_credentials(user,password)
   end
 end
