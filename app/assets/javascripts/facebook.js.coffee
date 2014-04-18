@@ -43,7 +43,6 @@ window.fbAsyncInit = ->
       method: "feed"
       redirect_uri: 'www.wp.pl'
       picture: "http://#{window.location.host}/assets/siorbIcon200.png"
-      description: 'Siorb: najbardziej zyerbolona gra w Polsce'
       link: "http://siorb.dobreziele.pl"
       caption: "A czy ty grałeś już w Siorba?"
     , (response) ->
