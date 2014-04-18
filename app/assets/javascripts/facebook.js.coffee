@@ -32,3 +32,25 @@ window.fbAsyncInit = ->
     FB.getLoginStatus (response) ->
       FB.logout() if response.authResponse
     true
+
+
+  FB.Event.subscribe('edge.create', (response) ->
+    console.log 'clicka lajka'
+  )
+
+  $(".share-button").click ->
+    FB.ui
+      method: "feed"
+      redirect_uri: 'www.wp.pl'
+      picture: "http://#{window.location.host}/assets/siorbIcon200.png"
+      link: "http://siorb.dobreziele.pl"
+      caption: "A czy ty grałeś już w Siorba?"
+    , (response) ->
+      if response is null
+        false
+        window.alert('Nie to nie...')
+      else
+        localStorage.setItem('sharedOnFB', true)
+        window.alert('Dzięki!')
+
+

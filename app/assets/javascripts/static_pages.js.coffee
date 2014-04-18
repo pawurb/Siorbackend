@@ -29,10 +29,11 @@ jQuery ->
 
   $(contactForm).on('submit', showMessageSentInfo)
 
-
   # ajax pagination
   $(document).on('click', '.pagination a', ->
     $(".pagination").html "Ładowanie..."
     $.getScript @href
     false)
+
+
 

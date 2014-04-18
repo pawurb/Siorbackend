@@ -7,6 +7,11 @@ $greyColor: #bbbbbb;
   background-repeat: no-repeat;
   background-position:150px 115px;
 
+
+  #masters-heading {
+    padding-bottom: 40px;
+  }
+
   .bold {
     font-weight: bold;
   }
@@ -86,7 +91,7 @@ $greyColor: #bbbbbb;
     }
 
     .pagination {
-      margin:0px 0px 80px 0px !important;
+      margin:0px 0px 10px 0px !important;
       padding-left: 90px;
       font-size: 18px;
       color: $greyColor;
@@ -111,12 +116,13 @@ $greyColor: #bbbbbb;
     width: 397px;
 
     #infoModal-btn {
-      float: right;
+      padding-left: 80px;
     }
 
     #competitionModal-btn {
-      float: left;
+      padding-left: 30px;
     }
+
     .btn {
       margin-top: 4px;
     }
