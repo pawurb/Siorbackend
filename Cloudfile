@@ -15,7 +15,7 @@ siorb:
 
 siorb-staging:
   ruby_version: 2.0.0
-  environment: production
+  environment: staging
   domains:
     - siorb-staging.shellyapp.com
   servers:

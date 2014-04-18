@@ -10,7 +10,7 @@ class RobotsTxt
     response['Cache-Control'] = 'public, max-age=31557600' # cache for 1 year
 
     # disallow all robots if staging version
-    if Settings[:STAGING]
+    if Rails.env.staging?
       # disallow access to the whole site (/) for all agents (*)
       response.write "User-agent: *\nDisallow: /"
     end
