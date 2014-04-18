@@ -5,18 +5,19 @@ $greyColor: #bbbbbb;
   font-size: 16px;
   background-image:url('rankingBg.png');
   background-repeat: no-repeat;
-  background-position:150px 110px;
+  background-position:150px 115px;
 
   .bold {
     font-weight: bold;
   }
 
   #user-data {
-    height: 100px;
+    height: 110px;
     padding: 10px 0px 0px 5px;
 
     #nickname-form {
       padding: 4px 0px 0px 0px;
+      height: 25px;
 
       input[type=text] {
        padding-left: 5px;
@@ -25,7 +26,6 @@ $greyColor: #bbbbbb;
       .btn {
         margin-bottom: 2px;
         height: 22px;
-
       }
 
       #user_nickname {
