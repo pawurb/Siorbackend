@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
 
-group :production do
+group :production, :staging do
   gem "shelly-dependencies"
   gem "rack-rewrite"
 end
@@ -27,12 +27,11 @@ gem 'jquery-rails'
 gem 'underscore-rails'
 
 gem 'ng-rails-csrf'
+gem 'rails_config'
 
-
-gem 'dotenv-rails'
 gem 'exception_notification'
 
-gem "active_model_serializers"
+gem 'active_model_serializers', '~> 0.8.1'
 
 #for seeding
 gem 'factory_girl_rails'

@@ -1,5 +1,5 @@
 class StatisticsController < ApplicationController
-  http_basic_authenticate_with name: ENV['ADMIN_LOGIN'], password: ENV["ADMIN_PASSWORD"], except: [:create]
+  http_basic_authenticate_with name: Settings[:ADMIN_LOGIN], password: Settings[:ADMIN_PASSWORD], except: [:create]
 
   #fix issue with authenticity_token getting cached and going invalid
   skip_before_action :verify_authenticity_token, only: [:create]
