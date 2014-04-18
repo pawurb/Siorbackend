@@ -2,10 +2,12 @@
   #user-data
     = render 'flash_messages'
     = render 'user_info'
-  = render 'info_modals'
 
+  #masters-heading
+    = image_tag('rankingHeading.png')
   #player-list
     = render 'players'
+  = render 'info_modals'
   %hr
   #logos
     = link_to image_tag('shellyLogo.png'), 'https://shellycloud.com/', target: '_blank'
