@@ -5,8 +5,11 @@ angular.module('SiorbStats').controller('StatisticsController', ['$scope', 'Stat
       $scope.statistics = results['statistics']
     successUniqCount = (results) ->
       $scope.uniqCount = results['count']
+    successSharesCount = (results) ->
+      $scope.sharesCount = results['shares']
     Statistics.query(successQuery)
     Statistics.uniqCount(successUniqCount)
+    Statistics.sharesCount(successSharesCount)
 
 
   syncStats()

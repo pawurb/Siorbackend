@@ -50,6 +50,7 @@ window.fbAsyncInit = ->
         false
         window.alert('Nie to nie...')
       else
+        $('.share-image').fadeOut('slow')
         localStorage.setItem('sharedOnFB', true)
         window.alert('Dzięki!')
 
