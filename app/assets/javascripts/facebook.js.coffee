@@ -41,7 +41,6 @@ window.fbAsyncInit = ->
   $(".share-button").click ->
     FB.ui
       method: "feed"
-      redirect_uri: 'www.wp.pl'
       picture: "http://#{window.location.host}/assets/siorbIcon200.png"
       link: "http://siorb.dobreziele.pl"
       caption: "A czy ty grałeś już w Siorba?"
