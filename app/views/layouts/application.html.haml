@@ -7,7 +7,9 @@
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body.container
-    .row
-      = yield
+  %body
+    .container#main-content
+      .row
+        = yield
+
   = render 'analytics'

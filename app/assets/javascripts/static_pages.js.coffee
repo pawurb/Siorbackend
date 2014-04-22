@@ -35,5 +35,18 @@ jQuery ->
     $.getScript @href
     false)
 
+  #cookie disclaimer footer
+  unless localStorage.getItem('cookiesConfirm') == 'true'
+    cookiesFooter = "<div id='footer'><div class='container'>
+      Ta strona używa ciasteczek.<div id='cookies-all-right' class='btn btn-danger btn-sm'>Ciasteczka są ok.</div></div>"
+
+    $('#main-content').after(cookiesFooter)
+
+  #cookie confirmation click
+  $('#cookies-all-right').on('click', ->
+    $('#footer').slideUp()
+    localStorage.setItem('cookiesConfirm', 'true')
+  )
+
 
 
