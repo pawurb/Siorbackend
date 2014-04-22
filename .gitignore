@@ -15,4 +15,7 @@
 
 /config/database.yml
 
-/config/settings/*
+/config/settings/test.yml
+/config/settings/development.yml
+/config/settings/production.yml
+/config/settings/staging.yml
