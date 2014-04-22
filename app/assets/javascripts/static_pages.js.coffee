@@ -38,7 +38,7 @@ jQuery ->
   #cookie disclaimer footer
   unless localStorage.getItem('cookiesConfirm') == 'true'
     cookiesFooter = "<div id='footer'><div class='container'>
-      Ta strona używa ciasteczek.<div id='cookies-all-right' class='btn btn-danger btn-sm'>Ciasteczka są ok.</div></div>"
+      Ta strona używa ciasteczek.<div id='cookies-all-right' class='btn btn-danger btn-sm'>Ok</div></div>"
 
     $('#main-content').after(cookiesFooter)
 
