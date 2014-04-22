@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: Siorbackend_development
+  pool: 5
+  username: user
+  password: secret
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: Siorbackend_test
+  pool: 5
+  username: user
+  password: secret
