@@ -3,6 +3,9 @@
 
 %input.form-control{'ng-model'=> 'userFilter', 'placeholder' => 'Szukaj'}
 
+%input{'type' => 'text', 'ng-user'=>"city" }
+
+
 %table.table.table-striped
   %thead
     %tr
@@ -26,8 +29,7 @@
   %tbody
     %tr{'ng-repeat' => 'user in users | orderBy:order.attr:order.reverse |  filter:userFilter'}
       %td.image-cell
-        %a{'facebook-link' => '{{user.fb_nickname}}'}
-          %img{'ng-src' => "{{user.image_url}}", 'alt' => ''}
+        .image-link{'facebook-link' => '', 'ng-user' => 'user'}
       %td
         {{user.name}}
       %td
