@@ -44,6 +44,7 @@ window.fbAsyncInit = ->
       picture: "http://#{window.location.host}/assets/siorbIcon200.png"
       link: "http://siorb.dobreziele.pl"
       caption: "Grałeś już w Siorba?"
+      description: ""
     , (response) ->
       if response is null
         false
