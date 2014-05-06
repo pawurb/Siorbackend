@@ -2,7 +2,7 @@
   %span#infoModal-btn{"data-target" => "#infoModal", "data-toggle" => "modal"}
     .btn.btn-sm.btn-default O co chodzi ?
   %span#competitionModal-btn{"data-target" => "#competitionModal", "data-toggle" => "modal"}
-    .btn.btn-sm.btn-warning Uwaga konkurs !
+    .btn.btn-sm.btn-warning Wyniki konkursu
 
 #infoModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
   .modal-dialog
@@ -30,40 +30,18 @@
         %h3#myModalLabel.modal-title Wejdź do gry i zostań Mistrzem Siorbania!
       .modal-body
 
+        = image_tag('podiumVol1.jpg')
         %p
-          Do 5.05
-          = link_to "zaloguj się przez Facebooka.", "/auth/facebook", id: "sign_in"
-          Aplikacja nie udostępni żadnych informacji na twoim profilu - tak, my też tego nie lubimy...
-        %p Zawalcz o miejsce w czołówce wirtualnych Yerbochłonów. Do graczy z 5ciu pierwszych miejsc pojadą naczynka, rurki, guaranina i oczywiście najlepsze ziele Yerba Mate!
-        %strong Do zdobycia:
-        %ol
-          %li
-            %strong kompletny zestaw yerba mate:
-            tykwa, bombilla nierdzewna INOX 18/8, yerba Amanda w lnianym woreczku + 50g guarany
-          %li bombilla nierdzewna INOX 18/8, yerba Amanda w lnianym woreczku + 50g guarany
-          %li bombilla nierdzewna Anel, yerba Pajarito 250g + 50g guarany
-          %li bombilla Hexagonal, próbka yerby + 25g guarany
-          %li bombilla Bamboo, próbka yerby + 25g guarany
-        %p
-          Wśród wszystkich zarejestrowanych, aktywnych graczy rozlosujemy 10 bonów o wartości 15zł do zrealizowania na
+          Bony o wartości 15zł na zakupy w
           %a{'href'=>'http://www.dobreziele.pl', 'target'=>'_blank'} www.dobreziele.pl
-
-        %p
-          Także, klawiatura w dłoń, łyk yerby i...
-          %strong Jedzieeeemy!
-
-        .disclaimer
-          %strong UWAGA:
+          lecą do:
           %p
-            Pomóż Panu Siorbowi przejąć władzę nad internetami! :) Zaproś znajomych do gry,
-            %strong udostępnij info
-            przy pomocy przycisku z lewego dolnego rogu menu głównego.
+            %strong nikaaa, miedzianobrody, Ursus, SzymonCz, małgorzałka, SmG, MiKi, Broda, Super Slurper, Znachor
+        %p
+          Kolejna edycja już wkrótce !
+          = link_to "Zaloguj się przez Facebooka", "/auth/facebook", id: "sign_in"
+          aby być na bieżąco z konkursami i promocjami.
 
-        .disclaimer
-          %strong UWAGA 2:
-          %p Do rankingu Mistrzów Siorbania zostaną zapisane tylko te wyniki, które zostały osiągnięte po zalogowaniu. Ze względu na bezpieczeństwo danych i wszechświata, punkty zdobyte przed zalogowaniem, po utworzeniu konta ulegną wyzerowaniu.
-
-        = image_tag('prizes1.jpg')
 
       .modal-footer
         %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Zamknij
