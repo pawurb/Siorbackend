@@ -27,12 +27,6 @@
   }
 }
 
-.share-image {
-  padding-left: 65px;
-  display: none;
-}
-
-
 /* Sticky footer styles */
 html {
   position: relative;
@@ -56,5 +50,24 @@ body {
   }
 }
 
+/* Pimp My Siorb stuff */
+.share-image {
+  padding-left: 65px;
+  display: none;
+}
+
+.share-button {
+  padding: 10px 0px 0px 10px;
+  font-size: 16px;
+
+  .btn {
+    margin: 5px;
+  }
+
+  img {
+    padding-top: 20px;
+    margin-left: 100px;
+  }
+}
 
 
