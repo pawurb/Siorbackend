@@ -38,7 +38,7 @@ window.fbAsyncInit = ->
     console.log 'clicka lajka'
   )
 
-  $(".share-button").click ->
+  $(".share-button-off").click -> # TODO turn on
     FB.ui
       method: "feed"
       picture: "http://#{window.location.host}/assets/siorbIcon200.png"

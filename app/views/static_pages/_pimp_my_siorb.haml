@@ -1,0 +1,15 @@
+%span#sharingModal-btn{"data-target" => "#sharingModal", "data-toggle" => "modal"}
+  .btn.btn-sm.btn-danger Pimp My Siorb!
+
+#sharingModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
+        %h3#myModalLabel.modal-title Pimp My Siorb
+      .modal-body
+        %p
+          Skoro możesz to przeczytać to znaczy, że wyższe stany nayerbolenia nie są ci obce. Pomóż panu Siorbowi przejąć władzę nad internetami ! Udostępnii info o gierce przy pomocy tego przycisku. W zamian poprawimy stylówę twojego yerbowego ludka i siorbanie już nigdy nie będzie takie samo ...
+        = image_tag 'sharingSiorbMeme.png'
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", type: "button"} Zamknij

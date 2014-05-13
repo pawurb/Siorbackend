@@ -32,7 +32,18 @@
 
 //share button overflowing the game
 .share-button {
-  position: absolute;
-  left: 20px;
-  top: -30px;
+  padding: 10px 0px 0px 10px;
+  font-size: 16px;
+
+  .btn {
+    margin: 5px;
+  }
+
+  img {
+    padding-top: 20px;
+    margin-left: 100px;
+    width: 350px;
+    height: 350px;
+  }
+
 }
