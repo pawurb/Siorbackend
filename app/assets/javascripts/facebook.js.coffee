@@ -37,6 +37,8 @@ window.fbAsyncInit = ->
   FB.Event.subscribe('edge.create', (response) ->
     console.log 'clicka lajka'
   )
+  $("#pimpMySiorb").html(JST["templates/pimpMySiorb"]({ name: "Sam" }));
+
 
   $(".share-button-off").click -> # TODO turn on
     FB.ui

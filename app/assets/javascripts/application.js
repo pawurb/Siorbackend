@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require underscore
 //= require bootstrap
+//= require templates/pimpMySiorb
 
 //= require_directory .
 

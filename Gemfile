@@ -15,8 +15,12 @@ gem 'gon'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'will_paginate', '~> 3.0'
 
+gem 'sprockets'
+
 gem 'pg'
 gem 'haml'
+
+gem 'eco'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
