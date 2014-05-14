@@ -11,10 +11,10 @@
 // about supported directives.
 //
 //= require jquery
+//= require views/cookieInfo
 //= require jcarousel
 //= require underscore
 //= require bootstrap
-//= require templates/pimpMySiorb
 
 //= require_directory .
 
