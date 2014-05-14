@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+
+#TODO cleanup group etc.
 gem 'rails', '4.1.0'
 
 group :production, :staging do
@@ -18,17 +20,22 @@ gem 'will_paginate', '~> 3.0'
 gem 'sprockets'
 
 gem 'pg'
-gem 'haml'
 
+gem 'haml'
 gem 'eco'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
-gem 'jquery-rails'
-gem 'underscore-rails'
+gem 'rails-assets-jquery'
+gem 'rails-assets-underscore'
+gem 'rails-assets-angular', '~> 1.2.15'
+gem 'rails-assets-angular-animate', '~> 1.2.15'
+gem 'rails-assets-angular-route', '~> 1.2.15'
+gem 'rails-assets-jcarousel'
 
 gem 'ng-rails-csrf'
 gem 'rails_config'
@@ -37,9 +44,7 @@ gem 'exception_notification'
 
 gem 'active_model_serializers', '~> 0.8.1'
 
-#for seeding
 gem 'factory_girl_rails'
-
 gem 'awesome_print'
 
 group :development do

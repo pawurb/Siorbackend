@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
+//= require jcarousel
 //= require underscore
 //= require bootstrap
 //= require templates/pimpMySiorb

@@ -1,7 +1,9 @@
 //admin area manifest file
 
 //= require jquery
-//= require jquery_ujs
+//= require angular
+//= require angular-route
+//= require angular-animate
 //= require bootstrap
 //= require underscore
 //= require ng-rails-csrf
