@@ -14,6 +14,8 @@ class Statistic < ActiveRecord::Base
   end
 
   def get_location
-
+    response = RestClient.get("http://freegeoip.net/json/#{ip}")
+    self.city = JSON.parse(response)['city']
+    save
   end
 end
