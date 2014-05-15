@@ -23,6 +23,8 @@ siorb-staging:
   servers:
     app1:
       size: large
-      thin: 4
+      thin: 3
+      sidekiq: 1
       databases:
         - postgresql
+        - redis
