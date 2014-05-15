@@ -17,5 +17,7 @@ class Statistic < ActiveRecord::Base
     response = RestClient.get("http://freegeoip.net/json/#{ip}")
     self.city = JSON.parse(response)['city']
     save
+  rescue => e
+    Rails.logger.error "Failed to get statistic location because of: #{e.response}"
   end
 end

@@ -11,6 +11,8 @@
     %tr
       %th{'ng-click' => "order.setAttr('ip')" }
         .btn.btn-sm.btn-default Adres ip
+      %th{'ng-click' => "order.setAttr('city')" }
+        .btn.btn-sm.btn-default Miasto
       %th{'ng-click' => "order.setAttr('duration')" }
         .btn.btn-sm.btn-default Czas gry
       %th{'ng-click' => "order.setAttr('score')" }
@@ -22,6 +24,8 @@
     %tr{'ng-repeat' => "stat in statistics | filter:statFilter | excludeIp:ipFilter | orderBy:order.attr:order.reverse" }
       %td
         {{stat.ip}}
+      %td
+        {{stat.city}}
       %td
         {{stat.duration}}
       %td
