@@ -44,7 +44,6 @@ window.fbAsyncInit = ->
       if response is null
         false
       else
-        $('.share-image').fadeOut('slow')
         localStorage.setItem('sharedOnFB', true)
         alert('Odśwież stronę żeby nacieszyć się nową stylówą Siorbka :)')
 

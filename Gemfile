@@ -46,6 +46,7 @@ gem 'active_model_serializers', '~> 0.8.1'
 
 gem 'factory_girl_rails'
 gem 'awesome_print'
+gem 'rest-client'
 
 group :development do
   gem 'guard-livereload', require: false

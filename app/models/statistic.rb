@@ -12,4 +12,8 @@ class Statistic < ActiveRecord::Base
   def self.uniq_count
     Statistic.pluck(:ip).uniq.count
   end
+
+  def get_location
+
+  end
 end

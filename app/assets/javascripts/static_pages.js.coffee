@@ -1,7 +1,4 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
-
+#contact form stuff
 messageSentInfo = "<span class='contact-form-info'>Twoja wiadomość została wysłana</span>"
 contactForm = '#contact-message form'
 contactFormInfo = '.contact-form-info'
@@ -13,7 +10,6 @@ showMessageSentInfo = ->
   setTimeout ->
     $(contactFormInfo).slideUp('slow')
   , 1500
-
 
 jQuery ->
   $(contactForm).hide()
