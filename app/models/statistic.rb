@@ -1,6 +1,8 @@
 class Statistic < ActiveRecord::Base
   validates :score, :duration, presence: true
   validates :score, :duration, numericality: { only_integer: true }
+  after_create :get_location
+
   scope :recent, lambda { last(100) }
 
   def self.create_from_request params, ip
@@ -14,10 +16,6 @@ class Statistic < ActiveRecord::Base
   end
 
   def get_location
-    response = RestClient.get("http://freegeoip.net/json/#{ip}")
-    self.city = JSON.parse(response)['city']
-    save
-  rescue => e
-    Rails.logger.error "Failed to get statistic location because of: #{e.response}"
+    LocationWorker.perform_async(id)
   end
 end

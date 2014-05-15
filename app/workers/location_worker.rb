@@ -1,0 +1,14 @@
+class LocationWorker
+  include Sidekiq::Worker
+  sidekiq_options queue: "high"
+  # sidekiq_options retry: false
+
+  def perform(statistic_id)
+    stat = Statistic.find(statistic_id)
+    response = RestClient.get("http://freegeoip.net/json/#{ip}")
+    stat.city = JSON.parse(response)['city']
+    save
+  rescue => e
+    Rails.logger.error "Failed to get statistic location because of: #{e.response}"
+  end
+end

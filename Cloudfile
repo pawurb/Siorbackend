@@ -9,9 +9,11 @@ siorb:
   servers:
     app1:
       size: large
-      thin: 4
+      thin: 3
+      sidekiq: 1
       databases:
         - postgresql
+        - redis
 
 siorb-staging:
   ruby_version: 2.0.0
