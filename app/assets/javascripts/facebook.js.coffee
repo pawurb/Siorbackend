@@ -29,7 +29,11 @@ window.fbAsyncInit = ->
     console.log 'clicka lajka'
   )
 
-  $(".share-button-off").click -> # TODO turn on
+  # pimp my siorb partial
+  if localStorage.getItem('highScore') > 50 and !(localStorage.getItem('sharedOnFB') == 'true')
+    $("#pimpMySiorb").html(JST["partials/pimpMySiorb"]({ name: "Sam" }));
+
+  $("#shareButton").click ->
     FB.ui
       method: "feed"
       picture: "http://#{window.location.host}/assets/siorbIcon200.png"
@@ -42,5 +46,6 @@ window.fbAsyncInit = ->
       else
         $('.share-image').fadeOut('slow')
         localStorage.setItem('sharedOnFB', true)
+        alert('Odśwież stronę żeby nacieszyć się nową stylówą Siorbka :)')
 
 

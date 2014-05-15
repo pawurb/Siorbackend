@@ -45,9 +45,5 @@ jQuery ->
     localStorage.setItem('cookiesConfirm', 'true')
   )
 
-  # pimp my siorb partial
-  unless localStorage.getItem('sharedOnFB') == 'true'
-    $("#pimpMySiorb").html(JST["partials/pimpMySiorb"]({ name: "Sam" }));
-
 
 
