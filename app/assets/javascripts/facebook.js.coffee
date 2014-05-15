@@ -1,11 +1,3 @@
-jQuery ->
-  # done in siorb.js code already
-  # $('body').prepend('<div id="fb-root"></div>')
-  # $.ajax
-  #   url: "#{window.location.protocol}//connect.facebook.net/en_US/all.js"
-  #   dataType: 'script'
-  #   cache: true
-
 window.fbAsyncInit = ->
   FB.init(appId: gon.facebook_id, cookie: true)
 
@@ -33,12 +25,9 @@ window.fbAsyncInit = ->
       FB.logout() if response.authResponse
     true
 
-
   FB.Event.subscribe('edge.create', (response) ->
     console.log 'clicka lajka'
   )
-  $("#pimpMySiorb").html(JST["templates/pimpMySiorb"]({ name: "Sam" }));
-
 
   $(".share-button-off").click -> # TODO turn on
     FB.ui

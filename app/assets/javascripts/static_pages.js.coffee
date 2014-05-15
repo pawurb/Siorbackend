@@ -37,16 +37,17 @@ jQuery ->
 
   #cookie disclaimer footer
   unless localStorage.getItem('cookiesConfirm') == 'true'
-    cookiesFooter = "<div id='footer'><div class='container'>
-      Ta strona używa ciasteczek.<div id='cookies-all-right' class='btn btn-danger btn-sm'>Ok</div></div>"
-
-    $('#main-content').after(cookiesFooter)
+    $('#main-content').after(JST["partials/cookieInfo"]({ name: "Sam" }));
 
   #cookie confirmation click
   $('#cookies-all-right').on('click', ->
     $('#footer').slideUp()
     localStorage.setItem('cookiesConfirm', 'true')
   )
+
+  # pimp my siorb partial
+  unless localStorage.getItem('sharedOnFB') == 'true'
+    $("#pimpMySiorb").html(JST["partials/pimpMySiorb"]({ name: "Sam" }));
 
 
 

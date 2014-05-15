@@ -11,7 +11,8 @@
 // about supported directives.
 //
 //= require jquery
-//= require views/cookieInfo
+//= require partials/cookieInfo
+//= require partials/pimpMySiorb
 //= require jcarousel
 //= require underscore
 //= require bootstrap

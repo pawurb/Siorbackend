@@ -1,5 +1,5 @@
 #contact-message {
-  padding-top: 15px;
+  padding-top: 5px;
   width: 415px;
 
   .contact-form-btn {
@@ -56,17 +56,19 @@ body {
   display: none;
 }
 
-.share-button {
-  padding: 10px 0px 0px 10px;
-  font-size: 16px;
-
+#sharingModal-btn {
+  padding: 10px 0px 0px 2px;
   .btn {
     margin: 5px;
   }
+}
+
+#sharingModal {
+  font-size: 16px;
 
   img {
     padding-top: 20px;
-    margin-left: 100px;
+    margin-left: 120px;
   }
 }
 
