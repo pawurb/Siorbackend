@@ -1,6 +1,5 @@
 class LocationWorker
   include Sidekiq::Worker
-  sidekiq_options queue: "high"
   # sidekiq_options retry: false
 
   def perform(statistic_id)
