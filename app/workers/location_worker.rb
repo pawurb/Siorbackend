@@ -4,7 +4,7 @@ class LocationWorker
 
   def perform(statistic_id)
     stat = Statistic.find(statistic_id)
-    response = RestClient.get("http://freegeoip.net/json/#{ip}")
+    response = RestClient.get("http://freegeoip.net/json/#{stat.ip}")
     stat.city = JSON.parse(response)['city']
     stat.save
   rescue => e
