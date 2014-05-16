@@ -5,7 +5,8 @@ class StatisticsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:create]
 
   def create
-    Statistic.create_from_request statistic_params, request.ip
+    stat = Statistic.create_from_request statistic_params, request.ip
+    LocationWorker.perform_async(stat.id)
     render text: 'OK'
   end
 
