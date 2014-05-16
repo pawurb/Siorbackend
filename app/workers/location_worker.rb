@@ -6,7 +6,7 @@ class LocationWorker
     stat = Statistic.find(statistic_id)
     response = RestClient.get("http://freegeoip.net/json/#{ip}")
     stat.city = JSON.parse(response)['city']
-    save
+    stat.save
   rescue => e
     Rails.logger.error "Failed to get statistic location because of: #{e.response}"
   end
