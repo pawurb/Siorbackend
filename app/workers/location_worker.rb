@@ -8,6 +8,6 @@ class LocationWorker
     stat.city = JSON.parse(response)['city']
     stat.save
   rescue => e
-    Rails.logger.error "Failed to get statistic location because of: #{e.response}"
+    Rails.logger.error "Failed to get statistic location because of: #{e.message}"
   end
 end

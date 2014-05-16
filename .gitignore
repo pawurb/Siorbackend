@@ -8,6 +8,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+dump.rdb
 
 .env.development
 .env.test
