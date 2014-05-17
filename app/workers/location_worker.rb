@@ -4,7 +4,7 @@ class LocationWorker
 
   def perform(statistic_id)
     stat = Statistic.find(statistic_id)
-    url = "http://freegeoip.net/json/#{stat.ip}"
+    url = "http://ip-api.com/json/#{stat.ip}"
     RestClient::Request.execute method: :get, url: url, timeout: 10, open_timeout: 10
     stat.city = JSON.parse(response)['city']
     stat.save
