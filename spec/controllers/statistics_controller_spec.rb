@@ -1,6 +1,11 @@
 require 'spec_helper'
 
 describe StatisticsController do
+  before do
+    #skip sidekiq bg job
+    Statistic::LocationWorker.stub(:perform_async) { nil }
+  end
+
   let(:js_request_data) do
     {
       "statistic" =>
