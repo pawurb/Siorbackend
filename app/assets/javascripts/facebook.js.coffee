@@ -30,7 +30,7 @@ window.fbAsyncInit = ->
   )
 
   # pimp my siorb partial
-  if localStorage.getItem('highScore') > 70 and !(localStorage.getItem('sharedOnFB') == 'true')
+  if localStorage.getItem('highScore') > 99 and !(localStorage.getItem('sharedOnFB') == 'true')
     $("#pimpMySiorb").html(JST["partials/pimpMySiorb"]({ name: "Sam" }));
 
   $("#shareButton").click ->
