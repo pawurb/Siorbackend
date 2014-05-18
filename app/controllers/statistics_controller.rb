@@ -6,7 +6,7 @@ class StatisticsController < ApplicationController
 
   def create
     stat = Statistic.create_from_request statistic_params, request.ip
-    LocationWorker.perform_async(stat.id)
+    Statistic::LocationWorker.perform_async(stat.id)
     render text: 'OK'
   end
 

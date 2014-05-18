@@ -20,7 +20,7 @@ describe StatisticsController do
         expect(statistic.score).to eq 123
         expect(statistic.duration).to eq 60
         expect(statistic.ip).not_to be_nil
-        expect(statistic.city).to be_nil
+        expect(statistic.city).to eq '...'
       end
     end
 

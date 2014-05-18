@@ -7,6 +7,7 @@ class Statistic < ActiveRecord::Base
   def self.create_from_request params, ip
     statistic = Statistic.new(params)
     statistic.ip = ip
+    statistic.city = '...'
     statistic.save
     statistic
   end
