@@ -12,7 +12,8 @@
 //
 //= require jquery
 //= require partials/cookieInfo
-//= require partials/pimpMySiorb
+//= require partials/pimpingOn
+//= require partials/pimpingOff
 //= require jcarousel
 //= require underscore
 //= require bootstrap

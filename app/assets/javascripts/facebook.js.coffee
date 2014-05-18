@@ -31,7 +31,11 @@ window.fbAsyncInit = ->
 
   # pimp my siorb partial
   if localStorage.getItem('highScore') > 99 and !(localStorage.getItem('sharedOnFB') == 'true')
-    $("#pimpMySiorb").html(JST["partials/pimpMySiorb"]({ name: "Sam" }));
+    $("#pimpMySiorb").html(JST["partials/pimpingOn"]());
+  else if localStorage.getItem('highScore') < 99 and !(localStorage.getItem('sharedOnFB') == 'true')
+    $("#pimpMySiorb").html(JST["partials/pimpingOff"]({ title: "Zdobądź 100 pkt. żeby odblokować" }));
+    $('#pimpingOff').tooltip()
+
 
   $("#shareButton").click ->
     FB.ui
