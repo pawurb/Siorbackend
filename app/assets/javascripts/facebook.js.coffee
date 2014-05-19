@@ -45,10 +45,10 @@ window.fbAsyncInit = ->
       caption: "Grałeś już w Siorba?"
       description: "..."
     , (response) ->
-      if response is null
-        false
-      else
+      if response and response.post_id
         localStorage.setItem('sharedOnFB', true)
         alert('Odśwież stronę żeby nacieszyć się nową stylówą Siorbka :)')
+      else
+        false
 
 
