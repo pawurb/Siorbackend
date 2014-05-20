@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery_ujs
 //= require partials/cookieInfo
 //= require partials/pimpingOn
 //= require partials/pimpingOff

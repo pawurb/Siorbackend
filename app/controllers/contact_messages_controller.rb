@@ -1,6 +1,4 @@
 class ContactMessagesController < ApplicationController
-  skip_before_action :verify_authenticity_token, only: [:create]
-
   def create
     @message = ContactMessage.new params[:contact_message]
 

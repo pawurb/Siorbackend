@@ -30,7 +30,8 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
-gem 'rails-assets-jquery'
+gem 'jquery-rails'
+
 gem 'rails-assets-underscore'
 gem 'rails-assets-angular', '~> 1.2.15'
 gem 'rails-assets-angular-animate', '~> 1.2.15'

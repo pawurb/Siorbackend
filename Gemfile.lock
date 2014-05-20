@@ -101,6 +101,9 @@ GEM
     http_parser.rb (0.6.0)
     httpauth (0.2.1)
     i18n (0.6.9)
+    jquery-rails (3.1.0)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
     json (1.8.1)
     jwt (0.1.13)
       multi_json (>= 1.5)
@@ -265,6 +268,7 @@ DEPENDENCIES
   gon
   guard-livereload
   haml
+  jquery-rails
   koala (~> 1.8.0rc1)
   minitest
   ng-rails-csrf
@@ -279,7 +283,6 @@ DEPENDENCIES
   rails-assets-angular-animate (~> 1.2.15)
   rails-assets-angular-route (~> 1.2.15)
   rails-assets-jcarousel
-  rails-assets-jquery
   rails-assets-underscore
   rails_config
   rest-client
