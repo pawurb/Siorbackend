@@ -1,5 +1,5 @@
 <span data-target="#sharingModal" data-toggle="modal" id="sharingModal-btn">
-  <div class="btn btn-sm btn-danger">Pimp My Siorb!</div>
+  <div class="btn btn-xs btn-danger">Pimp My Siorb!</div>
 </span>
 <div aria-hidden="true" aria-labelledby="myModalLabel" class="modal fade" id="sharingModal" role="dialog" tabindex="-1">
   <div class="modal-dialog">
