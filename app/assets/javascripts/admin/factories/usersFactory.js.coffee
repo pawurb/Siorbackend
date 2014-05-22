@@ -6,7 +6,7 @@ angular.module('SiorbStats').factory('Users', ['$http', ($http, $q) ->
     $q.reject(response.data)
 
   query: (success) ->
-    $http.get('/users').then(success, error)
+    $http.get('/api/users').then(success, error)
   remove: (id, success) ->
-    $http.delete("/users/#{id}").then(success, error)
+    $http.delete("/api/users/#{id}").then(success, error)
 ])

@@ -7,12 +7,12 @@ angular.module('SiorbStats').factory('Statistics', ['$http', ($http) ->
   query: (success) ->
     $http(
       method: "GET"
-      url: "/statistics"
+      url: "/api/statistics"
     ).success(success).error(error)
   uniqCount: (success) ->
     $http(
       method: "GET"
-      url: "/statistics/uniq_count"
+      url: "/api/statistics/uniq_count"
     ).success(success).error(error)
   sharesCount: (success) ->
     $http(
@@ -23,7 +23,7 @@ angular.module('SiorbStats').factory('Statistics', ['$http', ($http) ->
   remove: (id, success) ->
     $http(
       method: "DELETE"
-      url: "/statistics/#{id}")
+      url: "/api/statistics/#{id}")
     .success(success).error(error)
 
 ])
