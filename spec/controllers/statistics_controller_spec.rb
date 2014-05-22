@@ -1,11 +1,9 @@
 require 'spec_helper'
+require 'sidekiq/testing'
+Sidekiq::Testing.fake!
+
 
 describe StatisticsController do
-  before do
-    #skip sidekiq bg job
-    Statistic::LocationWorker.stub(:perform_async) { nil }
-  end
-
   let(:js_request_data) do
     {
       "statistic" =>
