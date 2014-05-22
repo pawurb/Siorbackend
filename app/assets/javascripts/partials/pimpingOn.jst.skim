@@ -1,5 +1,5 @@
 span#sharingModal-btn data-target="#sharingModal" data-toggle="modal"
-  .btn.btn-xs.btn-danger Pimp My Siorb!
+  #pimpingOn.btn.btn-xs.btn-danger Pimp My Siorb!
 #sharingModal.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1"
   .modal-dialog
     .modal-content
