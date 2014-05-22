@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe UsersController do
+describe API::UsersController do
   let(:js_request_data) do
     {
       "user" =>

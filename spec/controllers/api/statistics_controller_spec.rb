@@ -1,9 +1,6 @@
 require 'spec_helper'
-require 'sidekiq/testing'
-Sidekiq::Testing.fake!
 
-
-describe StatisticsController do
+describe API::StatisticsController do
   let(:js_request_data) do
     {
       "statistic" =>

@@ -16,10 +16,12 @@ Siorbackend::Application.routes.draw do
   match 'auth/failure', to: redirect('/'), via: [:get, :post]
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 
-  resource :user, only: [:update] # not REST-ful because game does not have reference to current user id
-  resources :users, only: [:index, :destroy]
 
   resource :contact_messages, only: [:create]
-  resources :statistics, only: [:index, :create, :destroy]
-  match "statistics/uniq_count", to: 'statistics#uniq_count', via: [:get]
+  namespace :api do
+    resource :user, only: [:update] # not REST-ful because game does not have reference to current user id
+    resources :users, only: [:index, :destroy]
+    resources :statistics, only: [:index, :create, :destroy]
+    match "statistics/uniq_count", to: 'statistics#uniq_count', via: [:get]
+  end
 end

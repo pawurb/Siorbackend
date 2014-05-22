@@ -5,7 +5,8 @@ require 'rspec/rails'
 require 'rspec/autorun'
 require 'capybara/rspec'
 require 'helpers/authentication_helpers'
-
+require 'sidekiq/testing'
+Sidekiq::Testing.fake!
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
