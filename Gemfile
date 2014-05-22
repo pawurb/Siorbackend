@@ -22,7 +22,7 @@ gem 'sprockets'
 gem 'pg'
 
 gem 'haml'
-gem 'eco'
+gem 'skim'
 
 
 # Use SCSS for stylesheets

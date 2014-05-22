@@ -1,0 +1,5 @@
+#footer
+  .container
+    | Ta strona używa ciasteczek.
+    #cookies-all-right.btn.btn-danger.btn-sm
+      | Ok

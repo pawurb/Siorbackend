@@ -1,3 +1,0 @@
-<span id="sharingModal-btn">
-  <div id='pimpingOff' class="btn btn-xs btn-default" data-toggle="tooltip" data-placement="top" title="<%= @title %>">Pimp My Siorb!</div>
-</span>
