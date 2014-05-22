@@ -30,6 +30,11 @@ jQuery ->
     $(".pagination").html "Ładowanie..."
     $.getScript @href
     false)
+  $(document).on('Siorb:Gameplay', ->
+    $('.share-image').fadeOut('slow')
+    $('.share-button').fadeOut('slow')
+    $('#sharingModal').remove()
+  )
 
   #cookie disclaimer footer
   unless localStorage.getItem('cookiesConfirm') == 'true'
