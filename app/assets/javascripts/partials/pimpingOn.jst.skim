@@ -11,7 +11,7 @@ span#sharingModal-btn data-target="#sharingModal" data-toggle="modal"
           | Skoro możesz to przeczytać to znaczy, że wyższe stany nayerbolenia nie są ci obce. Pomóż panu Siorbowi przejąć władzę nad internetami! Udostępnii info o gierce przy pomocy
           span#shareButton.btn.btn-default.btn-xs
             | tego przycisku
-          | W zamian poprawimy stylówę twojego yerbowego ludka i siorbanie już nigdy nie będzie takie samo.
+          |  W zamian poprawimy stylówę twojego yerbowego ludka i siorbanie już nigdy nie będzie takie samo.
         img src="/assets/sharingSiorbMeme.png"
       .modal-footer
         button.btn.btn-default data-dismiss="modal" type="button"  Zamknij
