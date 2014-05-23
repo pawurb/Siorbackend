@@ -5,6 +5,7 @@ angular.module('SiorbStats').controller('UsersController', ['$scope', 'Users', (
   syncUsers = ->
     success = (response) ->
       $scope.users = response.data['users']
+    $scope.users = []
     Users.query(success)
   syncUsers()
 
