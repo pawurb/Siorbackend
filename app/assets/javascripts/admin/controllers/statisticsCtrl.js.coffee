@@ -13,8 +13,8 @@ angular.module('SiorbStats').controller('StatisticsController', ['$scope', 'Stat
       $scope.sharesCount = results['shares']
 
     $scope.statistics = []
-    $scope.uniqCount = []
-    $scope.sharesCount = []
+    $scope.uniqCount = 0
+    $scope.sharesCount = 0
 
     Statistics.query(successQuery)
     Statistics.uniqCount(successUniqCount)
