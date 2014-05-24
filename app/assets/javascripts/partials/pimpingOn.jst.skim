@@ -8,10 +8,10 @@ span#sharingModal-btn data-target="#sharingModal" data-toggle="modal"
         h3#myModalLabel.modal-title Pimp My Siorb!
       .modal-body
         p
-          | Skoro możesz to przeczytać to znaczy, że wyższe stany nayerbolenia nie są ci obce. Pomóż panu Siorbowi przejąć władzę nad internetami! Udostępnii info o gierce przy pomocy
-          span#shareButton.btn.btn-default.btn-xs
-            | tego przycisku
-          |  W zamian poprawimy stylówę twojego yerbowego ludka i siorbanie już nigdy nie będzie takie samo.
+          | Neyerbalanie pozwala Ci na chwilę relaksu? Pomożesz Siorbowi przejąć władzę nad internetami ?
+          span#shareButton.btn.btn-warning.btn-xs
+            | Udostępnij
+          |  info o gierce a w zamian odpicujemy stylówę twojego ludka. Poczujesz się jeszcze bardziej siorbastycznie !
         img src="/assets/sharingSiorbMeme.png"
       .modal-footer
         button.btn.btn-default data-dismiss="modal" type="button"  Zamknij
