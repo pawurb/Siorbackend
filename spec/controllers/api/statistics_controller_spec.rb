@@ -13,12 +13,22 @@ describe API::StatisticsController do
 
   describe "create statistics data" do
     context "correct data sent" do
-      it "creates a new statictics data" do
+      it "creates a new statictics data and then increments the attempts count" do
         xhr :post, :create, js_request_data
         expect(response).to be_success
         statistic = Statistic.last
         expect(statistic.score).to eq 123
         expect(statistic.duration).to eq 60
+        expect(statistic.attempts).to eq 1
+        expect(statistic.ip).not_to be_nil
+        expect(statistic.city).to eq '...'
+
+        xhr :post, :create, js_request_data
+        expect(response).to be_success
+        statistic = Statistic.last
+        expect(statistic.score).to eq 123
+        expect(statistic.duration).to eq 60
+        expect(statistic.attempts).to eq 2
         expect(statistic.ip).not_to be_nil
         expect(statistic.city).to eq '...'
       end
@@ -69,6 +79,7 @@ describe API::StatisticsController do
         expect(json.last["duration"]).to eq statistic.duration
         expect(json.last["score"]).to eq statistic.score
         expect(json.last["ip"]).to eq statistic.ip
+        expect(json.last["attempts"]).to eq statistic.attempts
         expect(json.last["city"]).to eq statistic.city
 
         date = statistic.created_at.strftime("%e-%m-%y %H:%M")
