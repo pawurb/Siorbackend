@@ -5,9 +5,14 @@ class Statistic < ActiveRecord::Base
   scope :recent, lambda { last(100) }
 
   def self.create_from_request params, ip
-    statistic = Statistic.new(params)
-    statistic.ip = ip
-    statistic.city = '...'
+    if Statistic.last && Statistic.last.ip == ip
+      statistic = Statistic.last
+      statistic.attempts += 1
+    else
+      statistic = Statistic.new(params)
+      statistic.ip = ip
+      statistic.city = '...'
+    end
     statistic.save
     statistic
   end
