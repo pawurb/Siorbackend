@@ -21,7 +21,7 @@ module API
     end
 
     def index
-      render json: User.all
+      render json: User.all.order('updated_at DESC')
     end
   end
 end

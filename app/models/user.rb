@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 
   RANDOM_NICKNAMES = %w{Yerbochłon Nayerbany Siorbacz}
 
+  #model should not be responsible for pagination logic...
   scope :for_ranking, lambda { |page| order('best_score DESC').paginate(per_page: 10, page: page, total_entries: 50) }
 
   validates :email, uniqueness: true, allow_blank: true
