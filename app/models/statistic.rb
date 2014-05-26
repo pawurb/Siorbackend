@@ -14,7 +14,6 @@ class Statistic < ActiveRecord::Base
       statistic.city = '...'
     end
     statistic.save
-    statistic
   end
 
   def self.uniq_count
