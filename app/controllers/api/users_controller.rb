@@ -3,7 +3,7 @@ module API
     before_action :authenticate_user!, only: [:update]
     http_basic_authenticate_with name: Settings[:ADMIN_LOGIN], password: Settings[:ADMIN_PASSWORD], only: [:index, :destroy]
 
-    #fix issue with authenticity_token getting cached and going invalid
+    #fix issue with authenticity_token getting cached
     skip_before_action :verify_authenticity_token, only: [:update]
 
     def update
@@ -21,7 +21,7 @@ module API
     end
 
     def index
-      render json: User.all.order('updated_at DESC')
+      render json: User.for_admin
     end
   end
 end

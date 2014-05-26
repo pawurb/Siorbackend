@@ -7,11 +7,12 @@ class User < ActiveRecord::Base
   #model should not be responsible for pagination logic...
   scope :for_ranking, lambda { |page| order('best_score DESC').paginate(per_page: 10, page: page, total_entries: 50) }
 
+  scope :for_admin, lambda { order('updated_at DESC').all }
+
   validates :email, uniqueness: true, allow_blank: true
   validates :nickname, presence: true, on: :update
   validates :nickname, uniqueness: true
   validates :nickname, length: { maximum: MAX_NICKNAME_LENGTH }
-
 
   def update params
     if params["noturbusiness"]

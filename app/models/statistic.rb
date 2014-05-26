@@ -5,6 +5,7 @@ class Statistic < ActiveRecord::Base
   scope :recent, lambda { order('updated_at DESC').last(100) }
 
   def self.create_from_request params, ip
+    statistic = nil
     if Statistic.last && Statistic.last.ip == ip
       statistic = Statistic.last
       statistic.attempts += 1
