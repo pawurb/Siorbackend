@@ -20,7 +20,9 @@
       %th{'ng-click' => "order.setAttr('score')" }
         .btn.btn-sm.btn-default Wynik
       %th{'ng-click' => "order.setAttr('created_at_unix')" }
-        .btn.btn-sm.btn-default Data
+        .btn.btn-sm.btn-default Start
+      %th{'ng-click' => "order.setAttr('updated_at_unix')" }
+        .btn.btn-sm.btn-default Koniec
       %th
   %tbody
     %tr{'ng-repeat' => "stat in statistics | filter:statFilter | excludeIp:ipFilter | orderBy:order.attr:order.reverse" }
@@ -36,5 +38,7 @@
         {{stat.score}}
       %td
         {{stat.created_at_txt}}
+      %td
+        {{stat.updated_at_txt}}
       %td
         .btn.btn-sm.btn-danger{'ng-click' => "removeStat(stat.id)", 'confirm-click' => 'Usunąć dane statystyki ?'} Usuń

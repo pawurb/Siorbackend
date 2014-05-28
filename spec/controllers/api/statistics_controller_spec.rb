@@ -82,9 +82,13 @@ describe API::StatisticsController do
         expect(json.last["attempts"]).to eq statistic.attempts
         expect(json.last["city"]).to eq statistic.city
 
-        date = statistic.created_at.strftime("%e-%m-%y %H:%M")
-        expect(json.last["created_at_txt"]).to eq date
+        date_created = statistic.created_at.strftime("%e-%m-%y %H:%M")
+        date_updated = statistic.updated_at.strftime("%e-%m-%y %H:%M")
+
+        expect(json.last["created_at_txt"]).to eq date_created
         expect(json.last["created_at_unix"]).to eq statistic.created_at.to_i
+        expect(json.last["updated_at_txt"]).to eq date_created
+        expect(json.last["updated_at_unix"]).to eq statistic.updated_at.to_i
       end
 
       describe "delete action" do
