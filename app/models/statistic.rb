@@ -2,7 +2,7 @@ class Statistic < ActiveRecord::Base
   validates :score, :duration, presence: true
   validates :score, :duration, numericality: { only_integer: true }
 
-  scope :recent, lambda { order('updated_at DESC').last(100) }
+  scope :recent, lambda { order('updated_at DESC').first(100) }
 
   def self.create_from_request params, ip
     statistic = nil
