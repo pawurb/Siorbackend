@@ -31,7 +31,7 @@ window.fbAsyncInit = ->
 
   # pimp my siorb partial
   if localStorage.getItem('highScore') > 99 and !(localStorage.getItem('sharedOnFB') == 'true')
-    $("#pimpMySiorb").html(JST["partials/pimpingOn"]({ title: "Odpicuj mi Siorba !" }));
+    $("#pimpMySiorb").html(JST["partials/pimpingOn"]({ title: "Odpicuj mi Siorba!" }));
     $('#pimpingOn').tooltip()
     $('#pimpingOn').on('click', ->
       $('.tooltip').hide()

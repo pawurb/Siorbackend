@@ -1,2 +1,2 @@
 span#sharingModal-btn
-  #pimpingOff.btn.btn-xs.btn-default data-placement="top" data-toggle="tooltip" title="#{@title}"  Pimp My Siorb !
+  #pimpingOff.btn.btn-xs.btn-default data-placement="top" data-toggle="tooltip" title="#{@title}"  Pimp My Siorb!
