@@ -33,6 +33,9 @@ window.fbAsyncInit = ->
   if localStorage.getItem('highScore') > 99 and !(localStorage.getItem('sharedOnFB') == 'true')
     $("#pimpMySiorb").html(JST["partials/pimpingOn"]({ title: "Odpicuj mi Siorba !" }));
     $('#pimpingOn').tooltip()
+    $('#pimpingOn').on('click', ->
+      $('.tooltip').fadeOut('slow')
+    )
   else if localStorage.getItem('highScore') < 99 and !(localStorage.getItem('sharedOnFB') == 'true')
     $("#pimpMySiorb").html(JST["partials/pimpingOff"]({ title: "Zdobądź 100 pkt. żeby odblokować" }));
     $('#pimpingOff').tooltip()
