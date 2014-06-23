@@ -32,13 +32,13 @@ jQuery ->
     false)
 
   #cookie disclaimer footer
-  unless localStorage.getItem('cookiesConfirm') == 'true'
+  unless localStorage.getItem('cookiesConfirm2') == 'true'
     $('#main-content').after(JST["partials/cookieInfo"]({ name: "Sam" }));
 
   #cookie confirmation click
   $('#cookies-all-right').on('click', ->
     $('#footer').slideUp()
-    localStorage.setItem('cookiesConfirm', 'true')
+    localStorage.setItem('cookiesConfirm2', 'true')
   )
 
 
