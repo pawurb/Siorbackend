@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :detect_device_format
+
 
   private
 
@@ -11,6 +13,11 @@ class ApplicationController < ActionController::Base
     unless current_user
       render text: "Access denied", status: 403
     end
+  end
+
+  def detect_device_format
+    mobile_devices = /Mobile|webOS|iPad|iPhone|Android|Windows Phone/
+    request.variant = :mobile if request.user_agent =~ mobile_devices
   end
 
   helper_method :current_user
