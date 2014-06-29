@@ -3,7 +3,7 @@ source 'https://rails-assets.org'
 
 
 #TODO cleanup group etc.
-gem 'rails', '4.1.0'
+gem 'rails', '4.1.2'
 
 group :production, :staging do
   gem "shelly-dependencies"
