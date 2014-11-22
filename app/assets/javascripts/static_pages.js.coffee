@@ -12,6 +12,7 @@ showMessageSentInfo = ->
   , 1500
 
 jQuery ->
+  $('.js-mushrooms-ad').tooltip({placement: 'right'})
   $(contactForm).hide()
   $(contactFormInfo).hide()
 
