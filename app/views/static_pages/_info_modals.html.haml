@@ -2,7 +2,7 @@
   %span#infoModal-btn{"data-target" => "#infoModal", "data-toggle" => "modal"}
     .btn.btn-sm.btn-default O co chodzi ?
   %span#competitionModal-btn{"data-target" => "#competitionModal", "data-toggle" => "modal"}
-    .btn.btn-sm.btn-warning Wyniki konkursu
+    .btn.btn-sm.btn-danger Uwaga konkurs!
 
 #infoModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", role: "dialog", tabindex: "-1"}
   .modal-dialog
@@ -27,20 +27,28 @@
     .modal-content
       .modal-header
         %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", type: "button"} ×
-        %h3#myModalLabel.modal-title Wyniki
+        %h3#myModalLabel.modal-title Mistrzostwa siorbania - edycja mikołajkowa
       .modal-body
-
-        = image_tag('podiumVol1.jpg')
         %p
-          Bony o wartości 15zł na zakupy w
-          %a{'href'=>'http://www.dobreziele.pl', 'target'=>'_blank'} www.dobreziele.pl
-          lecą do:
-          %p
-            %strong nikaaa, miedzianobrody, Ursus, SzymonCz, małgorzałka, SmG, MiKi, Broda, Super Slurper, Znachor
-        %p
-          Kolejna edycja już wkrótce !
+          Siorb założył czapkę Mikołaja i rozdaje prezenty. Ale trzeba się postarać o jego względy! Rozpoczynamy mikołajkową edycję Mistrzów SIORBania.
           = link_to "Zaloguj się przez Facebooka", "/auth/facebook", id: "sign_in"
-          aby być na bieżąco z konkursami i promocjami.
+          , i nabijaj punkty! Masz czas do 7.12.
+        %p
+          Aplikacja nie udostępni żadnych informacji na twoim profilu - tak, my też tego nie lubimy...
+
+        %p
+          Trzy osoby z najlepszymi wynikami dostaną przenty od SIORBowatego Mikołaja:
+        %ul
+          %li
+            I miejsce - naczynie z Palo Santo + bombilla Bambus Extra + 0,5kg Yerba Mate
+          %li
+            II miejsce - agentyńska tykwa + bombilla Anel nierdzewna + 0,5kg Yerba Mate
+          %li
+            III miejsce - 2 x 0,5kg Yerba Mate
+
+        %p
+          %strong *WAŻNE:
+          Do rankingu Mistrzów Siorbania zostaną zapisane tylko te wyniki, które zostały osiągnięte po zalogowaniu. Ze względu na bezpieczeństwo danych i wszechświata, punkty zdobyte przed zalogowaniem, po utworzeniu konta ulegną wyzerowaniu.
 
 
       .modal-footer
