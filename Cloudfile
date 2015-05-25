@@ -8,22 +8,8 @@ siorb:
     - www.siorb.dobreziele.pl
   servers:
     app1:
-      size: large
-      thin: 3
-      sidekiq: 1
-      databases:
-        - postgresql
-        - redis
-
-siorb-staging:
-  ruby_version: 2.1.1
-  environment: staging
-  domains:
-    - siorb-staging.shellyapp.com
-  servers:
-    app1:
-      size: large
-      thin: 3
+      size: small
+      puma: 1
       sidekiq: 1
       databases:
         - postgresql

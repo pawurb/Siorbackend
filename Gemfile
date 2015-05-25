@@ -23,6 +23,7 @@ gem 'pg'
 
 gem 'haml'
 gem 'skim'
+gem 'puma'
 
 
 # Use SCSS for stylesheets

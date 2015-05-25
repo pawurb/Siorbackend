@@ -20,3 +20,5 @@ dump.rdb
 /config/settings/development.yml
 /config/settings/production.yml
 /config/settings/staging.yml
+
+public/bower_components
