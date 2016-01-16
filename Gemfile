@@ -24,6 +24,7 @@ gem 'pg'
 gem 'haml'
 gem 'skim'
 gem 'puma'
+gem 'nio4r', '~> 1.1'
 
 
 # Use SCSS for stylesheets
