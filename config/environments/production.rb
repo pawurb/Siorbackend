@@ -1,5 +1,5 @@
 Siorbackend::Application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
+  # ENV specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -87,7 +87,7 @@ Siorbackend::Application.configure do
     :email => {
       :email_prefix => "[Siorbackend] ",
       :sender_address => %{"Siorbackend error" <pabloweb358@gmail.com>},
-      :exception_recipients => Settings[:ERROR_RECIPIENT]
+      :exception_recipients => ENV['ERROR_RECIPIENT']
   }
 
 

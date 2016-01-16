@@ -1,7 +1,7 @@
 module API
   class UsersController < ApplicationController
     before_action :authenticate_user!, only: [:update]
-    http_basic_authenticate_with name: Settings[:ADMIN_LOGIN], password: Settings[:ADMIN_PASSWORD], only: [:index, :destroy]
+    http_basic_authenticate_with name: ENV['ADMIN_LOGIN'], password: ENV['ADMIN_PASSWORD'], only: [:index, :destroy]
 
     #fix issue with authenticity_token getting cached
     skip_before_action :verify_authenticity_token, only: [:update]

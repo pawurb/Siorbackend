@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    gon.facebook_id = Settings[:FACEBOOK_ID]
+    gon.facebook_id = ENV['FACEBOOK_ID']
     set_highscore_data if current_user
 
     @players = User.for_ranking(params[:page])

@@ -3,6 +3,6 @@ class SiorbMailer < ActionMailer::Base
 
   def contact_message(message)
     @message = message
-    mail to: Settings[:MAILER_RECIPIENT], subject: 'Siorb - gracz uważa że'
+    mail to: ENV['MAILER_RECIPIENT'], subject: 'Siorb - gracz uważa że'
   end
 end

@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Siorbackend::Application.config.secret_key_base = Settings[:SECRET_KEY]
+Siorbackend::Application.config.secret_key_base = ENV['SECRET_KEY']
