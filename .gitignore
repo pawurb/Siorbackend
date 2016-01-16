@@ -22,3 +22,4 @@ dump.rdb
 /config/settings/staging.yml
 
 public/bower_components
+docker-compose.yml
