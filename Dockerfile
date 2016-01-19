@@ -5,6 +5,5 @@ WORKDIR /app
 ADD Gemfile /app/Gemfile
 ADD Gemfile.lock /app/Gemfile.lock
 RUN bundle install
-VOLUME ["/app/public"]
 COPY . /app
 
