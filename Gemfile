@@ -16,6 +16,7 @@ gem "koala", "~> 1.8.0rc1"
 gem 'gon'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'will_paginate', '~> 3.0'
+gem 'newrelic_rpm'
 
 gem 'sprockets'
 
