@@ -12,7 +12,7 @@ dump.rdb
 
 .env.development
 .env.test
-.env.production
+.env
 
 /config/database.yml
 
