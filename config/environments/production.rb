@@ -84,12 +84,15 @@ Siorbackend::Application.configure do
 
   # Exception notification
   config.middleware.use ExceptionNotification::Rack,
-    :email => {
-      :email_prefix => "[Siorbackend] ",
-      :sender_address => %{"Siorbackend error" <pabloweb358@gmail.com>},
-      :exception_recipients => ENV['ERROR_RECIPIENT']
-  }
-
+    slack: {
+      webhook_url: ENV.fetch('SLACK_WEBHOOK'),
+      channel: '#slacker',
+      username: "Siorbackend",
+      additional_parameters: {
+        icon_emoji: ':thumbsdown::skin-tone-6:',
+        mrkdwn: true
+      }
+    }
 
   #redirect www to non www
   config.middleware.insert_before(::Rack::Runtime, ::Rack::Rewrite) do

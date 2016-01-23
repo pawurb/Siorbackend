@@ -17,6 +17,7 @@ gem 'gon'
 gem 'bootstrap-sass', '~> 3.1.1'
 gem 'will_paginate', '~> 3.0'
 gem 'newrelic_rpm'
+gem 'slack-notifier'
 
 gem 'sprockets'
 
@@ -42,7 +43,7 @@ gem 'rails-assets-angular-route', '~> 1.2.15'
 gem 'rails-assets-jcarousel'
 
 gem 'ng-rails-csrf'
-gem 'rails_config'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'exception_notification'
 
