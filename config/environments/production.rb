@@ -93,11 +93,4 @@ Siorbackend::Application.configure do
         mrkdwn: true
       }
     }
-
-  #redirect www to non www
-  config.middleware.insert_before(::Rack::Runtime, ::Rack::Rewrite) do
-    r301 %r{.*}, 'http://siorb.dobreziele.pl$&', :if => Proc.new { |rack_env|
-      rack_env['SERVER_NAME'] == 'www.siorb.dobreziele.pl'
-    }
-  end
 end

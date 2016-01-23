@@ -7,7 +7,6 @@ gem 'rails', '4.1.2'
 
 group :production, :staging do
   gem "shelly-dependencies"
-  gem "rack-rewrite"
 end
 
 gem 'omniauth'
