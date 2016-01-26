@@ -85,7 +85,7 @@ Siorbackend::Application.configure do
   # Exception notification
   config.middleware.use ExceptionNotification::Rack,
     slack: {
-      webhook_url: ENV.fetch('SLACK_WEBHOOK'),
+      webhook_url: ENV['SLACK_WEBHOOK'],
       channel: '#slacker',
       username: "Siorbackend",
       additional_parameters: {
