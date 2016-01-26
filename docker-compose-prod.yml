@@ -10,7 +10,7 @@ redis:
     - siorb-redis:/var/lib/redis/data
 web:
   image: pawurb/siorbackend_web
-  command: bash -c "service nginx start & bundle exec puma -e production -p 3000"
+  command: bash -c "service nginx start & bundle exec thin start -e production"
   links:
     - db
     - redis
