@@ -10,7 +10,7 @@ redis:
     - siorb-postgres:/var/lib/postgresql/data
 web:
   build: .
-  command: bundle exec puma -e production -p 3000
+  command: bash -c "service nginx start & bundle exec puma -e production -p 3000"
   volumes:
     - .:/app
   ports:

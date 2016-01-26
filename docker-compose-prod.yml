@@ -10,12 +10,12 @@ redis:
     - siorb-redis:/var/lib/redis/data
 web:
   image: pawurb/siorbackend_web
-  command: bundle exec puma -p 3000
+  command: bash -c "service nginx start & bundle exec puma -e production -p 3000"
   links:
     - db
     - redis
   ports:
-    - "3000:3000"
+    - "3000:80"
   env_file:
     - .env
 worker:
