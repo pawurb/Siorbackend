@@ -12,6 +12,6 @@ span#sharingModal-btn data-target="#sharingModal" data-toggle="modal"
           span#shareButton.btn.btn-warning.btn-xs
             | Udostępnij
           |  info o gierce a w zamian odpicujemy stylówę twojego ludka. Poczujesz się jeszcze bardziej siorbastycznie!
-        img src="/assets/sharingSiorbMeme.png"
+        = image_tag "sharingSiorbMeme.png"
       .modal-footer
         button.btn.btn-default data-dismiss="modal" type="button"  Zamknij
