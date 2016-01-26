@@ -15,7 +15,7 @@ web:
     - db
     - redis
   ports:
-    - "3000:80"
+    - "81:80"
   env_file:
     - .env
 worker:

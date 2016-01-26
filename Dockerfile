@@ -17,4 +17,3 @@ COPY . /app
 ADD nginx-sites.conf /etc/nginx/sites-enabled/default
 
 RUN cd /app && RAILS_ENV=production bundle exec rake assets:precompile
-RUN service nginx start &
