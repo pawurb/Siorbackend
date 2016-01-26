@@ -22,4 +22,5 @@ dump.rdb
 /config/settings/staging.yml
 
 public/bower_components
+public/assets
 

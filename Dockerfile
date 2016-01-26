@@ -13,7 +13,6 @@ ADD Gemfile /app/Gemfile
 ADD Gemfile.lock /app/Gemfile.lock
 RUN bundle install --without development test
 COPY . /app
-
+RUN cd app/ && RAILS_ENV=production bundle exec rake assets:precompile
 ADD nginx-sites.conf /etc/nginx/sites-enabled/default
 
-RUN cd /app && RAILS_ENV=production bundle exec rake assets:precompile
