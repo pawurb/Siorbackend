@@ -21,7 +21,7 @@ class ContactMessagesController < ApplicationController
     message_content = "Siorba gracz uważa że: #{content}"
     notifier = Slack::Notifier.new ENV.fetch("SLACK_WEBHOOK")
     notifier.username = "Slacker"
-    notifier.channel = '#slacker'
+    notifier.channel = '#tracky'
     notifier.ping Slack::Notifier::LinkFormatter.format(message_content), icon_emoji: ":goat:"
   end
 end
