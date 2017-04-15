@@ -26,7 +26,7 @@ gem 'rails-assets-angular-animate', '~> 1.2.15'
 gem 'rails-assets-angular-route', '~> 1.2.15'
 gem 'rails-assets-jcarousel'
 gem 'ng-rails-csrf'
-gem 'dotenv-rails', :groups => [:development, :test]
+gem 'dotenv-rails'
 gem 'exception_notification'
 gem 'active_model_serializers', '~> 0.8.1'
 gem 'factory_girl_rails'
