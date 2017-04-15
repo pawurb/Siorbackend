@@ -1,6 +1,5 @@
 class Statistic::LocationWorker
-  include Sidekiq::Worker
-  # sidekiq_options retry: false
+  include SuckerPunch::Job
 
   def perform(statistic_id)
     stat = Statistic.find(statistic_id)

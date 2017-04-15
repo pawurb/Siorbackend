@@ -14,7 +14,7 @@ gem 'sprockets'
 gem 'pg'
 gem 'haml'
 gem 'skim'
-gem 'thin'
+gem 'puma'
 gem 'nio4r', '~> 1.1'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -32,14 +32,13 @@ gem 'active_model_serializers', '~> 0.8.1'
 gem 'factory_girl_rails'
 gem 'awesome_print'
 gem 'rest-client'
-gem 'sidekiq', ">= 2.7.0"
+gem 'sucker_punch'
 
 group :development do
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
   gem 'zeus'
 end
-
 
 group :test do
   gem 'capybara','~> 2.2.1'
@@ -49,4 +48,6 @@ group :test do
   gem 'shoulda-matchers', '~> 2.4.0'
   gem 'rspec-rails', '~> 2.0'
 end
+
+ruby '2.4.0'
 
