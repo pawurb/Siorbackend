@@ -49,5 +49,5 @@ group :test do
   gem 'rspec-rails', '~> 2.0'
 end
 
-ruby '2.4.0'
+ruby '2.3.3'
 
