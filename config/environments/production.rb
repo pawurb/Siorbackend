@@ -22,7 +22,7 @@ Siorbackend::Application.configure do
   # Disable Rails's static asset server (Apache or nginx will already do this).
 
   #custom setup for shelly
-  config.serve_static_assets = true
+  config.serve_static_files = false
   config.static_cache_control = "public, max-age=31536000"
 
 
