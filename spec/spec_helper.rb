@@ -4,8 +4,6 @@ require 'rspec/rails'
 require 'rspec/autorun'
 require 'capybara/rspec'
 require 'helpers/authentication_helpers'
-require 'sidekiq/testing'
-Sidekiq::Testing.fake! #do not run sidekiq workers in specs (set inline! to run them)
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 

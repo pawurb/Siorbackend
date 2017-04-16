@@ -29,7 +29,7 @@ Siorbackend::Application.configure do
   config.assets.debug = true
 
   # to avoid flickering images
-  config.serve_static_assets = true
+  config.serve_static_files = true
   config.static_cache_control = "public, max-age=31536000"
 
   # Automatically inject JavaScript needed for LiveReload

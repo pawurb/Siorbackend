@@ -47,27 +47,5 @@ describe "Static pages" do
     it "shows nickname field" do
       expect(page).to have_content "Nickname"
     end
-
-    describe "changing the nickname" do
-      context "to the valid nickname" do
-        it "can change the nickname using form" do
-          fill_in :user_nickname, with: 'Yerbochłon'
-          click_button 'Zmień'
-          expect(user.reload.nickname).to eq 'Yerbochłon'
-        end
-      end
-
-      context "to the value which has already been taken" do
-        before do
-          FactoryGirl.create :user, name: "Fernando", nickname: "Poyerbany12"
-        end
-
-        it "does not change the nickname and displays error" do
-          fill_in :user_nickname, with: "Poyerbany12"
-          click_button 'Zmień'
-          expect(user.reload.nickname).to eq "Poyerbany"
-        end
-      end
-    end
   end
 end
