@@ -5,7 +5,7 @@ class ContactMessagesController < ApplicationController
     @message = ContactMessage.new params.fetch(:contact_message)
     @sent = if @message.valid?
       send_message(@message.content)
-      Comment(content: @message.content)
+      Comment.create(content: @message.content)
       true
     else
       false
