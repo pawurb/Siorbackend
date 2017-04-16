@@ -24,6 +24,6 @@ class ContactMessagesController < ApplicationController
       defaults username: 'Siorb', channel: '#tracky'
     end
 
-    notifier.ping Slack::Notifier::LinkFormatter.format(message_content), icon_emoji: ":goat:"
+    notifier.post text: message_content, icon_emoji: ":goat:"
   end
 end
