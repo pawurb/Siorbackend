@@ -4,6 +4,7 @@ class StaticPagesController < ApplicationController
     set_highscore_data if current_user
 
     @players = User.for_ranking(params[:page])
+    @comments = Comment.approved
   end
 
   private

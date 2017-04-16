@@ -1,0 +1,14 @@
+#comment-box {
+  .heading {
+    padding-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .box-wrapper {
+    height:100px;
+    padding: 5px 0px 0px 10px;
+    overflow-y: scroll;
+    overflow: -moz-scrollbars-vertical;
+  }
+}
