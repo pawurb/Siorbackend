@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
-gem 'rails', '4.1.2'
+gem 'mime-types', '~> 2.6', require: 'mime/types/columnar'
+gem 'rails', '4.2.8'
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 gem "koala", "~> 1.8.0rc1"
@@ -10,7 +11,7 @@ gem 'bootstrap-sass', '~> 3.1.1'
 gem 'will_paginate', '~> 3.0'
 gem 'newrelic_rpm'
 gem 'slack-notifier'
-gem 'sprockets'
+gem 'sprockets-rails', require: 'sprockets/railtie'
 gem 'pg'
 gem 'haml'
 gem 'skim'
@@ -29,8 +30,6 @@ gem 'ng-rails-csrf'
 gem 'dotenv-rails'
 gem 'exception_notification'
 gem 'active_model_serializers', '~> 0.8.1'
-gem 'factory_girl_rails'
-gem 'awesome_print'
 gem 'rest-client'
 gem 'sucker_punch'
 
@@ -38,9 +37,11 @@ group :development do
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
   gem 'zeus'
+  gem 'awesome_print'
 end
 
 group :test do
+  gem 'factory_girl_rails'
   gem 'capybara','~> 2.2.1'
   gem 'timecop'
   gem 'rack-test', require: 'rack/test'
