@@ -12,6 +12,7 @@ module API
       respond_to do |format|
         format.any(:js, :json) { render text: 'User statistics updated' }
         format.html { redirect_to root_path }
+        format.text { redirect_to root_path }
       end
     end
 
