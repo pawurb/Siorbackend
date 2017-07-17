@@ -7,7 +7,7 @@ module API
     skip_before_action :verify_authenticity_token, only: [:update]
 
     def update
-      current_user.update params["user"]
+      current_user.update user_params
 
       respond_to do |format|
         format.js { render text: 'User statistics updated' }
@@ -22,6 +22,12 @@ module API
 
     def index
       render json: User.for_admin
+    end
+
+    private
+
+    def user_params
+      params.require(:user).permit(:nickname, :noturbusiness)
     end
   end
 end
