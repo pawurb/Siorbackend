@@ -29,17 +29,19 @@ class User < ActiveRecord::Base
   end
 
   def self.from_omniauth(auth, ip)
-    where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
-      user.provider = auth[:provider]
-      user.uid = auth[:uid]
-      user.name = auth[:info][:name]
-      user.fb_nickname = auth[:info][:nickname]
-      user.email = auth[:info][:email]
+    params = ActiveSupport::HashWithIndifferentAccess.new(auth)
+    Rails.logger.error auth
+    where(params.slice(:provider, :uid)).first_or_initialize.tap do |user|
+      user.provider = params[:provider]
+      user.uid = params[:uid]
+      user.name = params[:info][:name]
+      user.fb_nickname = params[:info][:nickname]
+      user.email = params[:info][:email]
       user.ip = ip
 
-      user.image_url = auth[:info][:image]
-      user.oauth_token = auth[:credentials][:token]
-      user.oauth_expires_at = Time.at(auth[:credentials][:expires_at])
+      user.image_url = params[:info][:image]
+      user.oauth_token = params[:credentials][:token]
+      user.oauth_expires_at = Time.at(params[:credentials][:expires_at])
       user.save!
 
       user.generate_initial_nickname if user.nickname.nil?
