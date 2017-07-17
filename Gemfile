@@ -4,7 +4,7 @@ source 'https://rails-assets.org'
 gem 'mime-types', '~> 2.6', require: 'mime/types/columnar'
 gem 'rails', '4.2.8'
 gem 'omniauth'
-gem 'omniauth-facebook', '1.4.0'
+gem 'omniauth-facebook', '4.0.0'
 gem "koala", "~> 1.8.0rc1"
 gem 'gon'
 gem 'bootstrap-sass', '~> 3.1.1'
