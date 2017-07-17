@@ -18,7 +18,7 @@ Siorbackend::Application.routes.draw do
 
   resource :contact_messages, only: [:create]
   namespace :api do
-    resource :user, only: [:update] # not REST-ful because game does not have reference to current user id
+    resource :user, only: [:update], defaults: { format: :html } # not REST-ful because game does not have reference to current user id
     resources :users, only: [:index, :destroy]
     resources :statistics, only: [:index, :create, :destroy]
     match "statistics/uniq_count", to: 'statistics#uniq_count', via: [:get]
