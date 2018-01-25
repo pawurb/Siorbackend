@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
 gem 'mime-types', '~> 2.6', require: 'mime/types/columnar'
-gem 'rails', '4.2.8'
+gem 'rails', '4.2.10'
 gem 'omniauth'
 gem 'omniauth-facebook', '4.0.0'
 gem "koala", "~> 1.8.0rc1"
@@ -20,7 +20,7 @@ gem 'nio4r', '~> 1.1'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'jquery-rails', '~> 2.1'
+gem 'jquery-rails', '~> 3.1.3'
 gem 'rails-assets-underscore'
 gem 'rails-assets-angular', '~> 1.2.15'
 gem 'rails-assets-angular-animate', '~> 1.2.15'
@@ -32,6 +32,7 @@ gem 'exception_notification'
 gem 'active_model_serializers', '~> 0.8.1'
 gem 'rest-client'
 gem 'sucker_punch'
+gem 'nokogiri', '~> 1.8.1'
 
 group :development do
   gem 'guard-livereload', require: false
@@ -50,5 +51,5 @@ group :test do
   gem 'rspec-rails', '~> 2.0'
 end
 
-ruby '2.3.3'
+ruby '2.3.6'
 

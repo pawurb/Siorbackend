@@ -26,28 +26,28 @@ ActiveRecord::Schema.define(version: 20170416113520) do
   create_table "statistics", force: :cascade do |t|
     t.integer  "score"
     t.integer  "duration"
-    t.string   "ip",         limit: 255
+    t.string   "ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "city",       limit: 255
-    t.integer  "attempts",               default: 1
+    t.string   "city"
+    t.integer  "attempts",   default: 1
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "provider",         limit: 255
-    t.string   "uid",              limit: 255
-    t.string   "name",             limit: 255
-    t.string   "email",            limit: 255
-    t.string   "oauth_token",      limit: 255
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "email"
+    t.string   "oauth_token"
     t.datetime "oauth_expires_at"
-    t.integer  "best_score",                   default: 0
-    t.integer  "gameplays",                    default: 0
+    t.integer  "best_score",       default: 0
+    t.integer  "gameplays",        default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_url",        limit: 255
-    t.string   "nickname",         limit: 255
-    t.string   "ip",               limit: 255
-    t.string   "fb_nickname",      limit: 255
+    t.string   "image_url"
+    t.string   "nickname"
+    t.string   "ip"
+    t.string   "fb_nickname"
   end
 
 end
