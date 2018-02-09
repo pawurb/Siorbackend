@@ -39,13 +39,13 @@ body {
   margin-bottom: 60px;
 }
 #footer {
-  padding-top: 15px;
+  padding-top: 5px;
   position: absolute;
-  bottom: 0;
+  top: 0;
   width: 100%;
+  color: #eee;
   /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
+  height: 50px;
 
   #cookies-all-right {
     margin-left: 10px;
