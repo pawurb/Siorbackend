@@ -1,13 +1,22 @@
 !!!
 %html
   %head
-    %title Siorb - Droga do Rozbudzenia (Gra Yerba Mate Kraków)
+    %title #{@title}
     %meta{content: "sZ4--LsbNoGYW6P98faBBMim2UyNyZH6j11cCAxXHEo", name: "google-site-verification"}/
+    %meta{property: "og:title", content: "#{@title}"}/
+    %meta{property: "og:description", content: "#{@description}" }/
+    %meta{name: "description", content: "#{@description}" }/
+    %meta{name: "og:image", content: "http://siorb.dobreziele.pl/siorbIcon200.png" }/
+    %meta{name: "twitter:image", content: "http://siorb.dobreziele.pl/siorbIcon200.png" }/
+    %meta{name: "twitter:card", content: "summary" }/
+    %meta{name: "twitter:title", content: "#{@title}" }/
+
     = include_gon
     = favicon_link_tag
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
+
   %body
     .container#main-content
       .row
