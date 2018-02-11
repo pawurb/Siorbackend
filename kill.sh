@@ -1,1 +1,1 @@
-PID=$(ps -aux | grep Siorbackend | awk '{print $2; exit};') && kill -9 $PID
+PID=$(cat /home/deploy/Siorbackend/tmp/pids/server.pid) && kill -9 $PID
