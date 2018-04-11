@@ -1,33 +1,33 @@
 /* Crafty styling */
 #game {
-  background-image: url("http://yerba.shellyapp.com/assets/images/gameplayBg.jpg"); }
+  background-image: url("https://siorb.dobreziele.pl/assets/images/gameplayBg.jpg"); }
 
 .Platform {
   background-repeat: repeat-x; }
 
 .level1 {
-  background-image: url("http://yerba.shellyapp.com/assets/images/platform1.png"); }
+  background-image: url("https://siorb.dobreziele.pl/assets/images/platform1.png"); }
 
 .level2 {
-  background-image: url("http://yerba.shellyapp.com/assets/images/platform2.png"); }
+  background-image: url("https://siorb.dobreziele.pl/assets/images/platform2.png"); }
 
 .level3 {
-  background-image: url("http://yerba.shellyapp.com/assets/images/platform3.png"); }
+  background-image: url("https://siorb.dobreziele.pl/assets/images/platform3.png"); }
 
 .level4 {
-  background-image: url("http://yerba.shellyapp.com/assets/images/platform4.png"); }
+  background-image: url("https://siorb.dobreziele.pl/assets/images/platform4.png"); }
 
 .level5 {
-  background-image: url("http://yerba.shellyapp.com/assets/images/platform5.png"); }
+  background-image: url("https://siorb.dobreziele.pl/assets/images/platform5.png"); }
 
 .level6 {
-  background-image: url("http://yerba.shellyapp.com/assets/images/platform6.png"); }
+  background-image: url("https://siorb.dobreziele.pl/assets/images/platform6.png"); }
 
 .level7 {
-  background-image: url("http://yerba.shellyapp.com/assets/images/platform7.png"); }
+  background-image: url("https://siorb.dobreziele.pl/assets/images/platform7.png"); }
 
 .level8 {
-  background-image: url("http://yerba.shellyapp.com/assets/images/platform8.png"); }
+  background-image: url("https://siorb.dobreziele.pl/assets/images/platform8.png"); }
 
 .fb-share-button {
   margin-top: 360px; }
