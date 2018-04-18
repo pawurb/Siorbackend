@@ -25,7 +25,7 @@ module Siorbackend
 
     # load lib folder
     config.autoload_paths += %W(#{config.root}/lib/modules #{config.root}/lib)
-    config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+    config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
       r301 'https://www.siorb.dobreziele.pl',  'https://siorb.dobreziele.pl'
     end
   end
