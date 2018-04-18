@@ -26,7 +26,7 @@ module Siorbackend
     # load lib folder
     config.autoload_paths += %W(#{config.root}/lib/modules #{config.root}/lib)
     config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
-      r301 'https://www.siorb.dobreziele.pl',  'https://siorb.dobreziele.pl'
+      r301 /.*/,  Proc.new {|path, rack_env| "https://www.#{rack_env['SERVER_NAME']}#{path}" }, :if => Proc.new {|rack_env| ! (rack_env['SERVER_NAME'] =~ /www\./i)}
     end
   end
 end
