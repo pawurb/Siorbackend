@@ -178,6 +178,7 @@ GEM
     rack (1.6.9)
     rack-livereload (0.3.16)
       rack
+    rack-rewrite (1.5.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.10)
@@ -314,6 +315,7 @@ DEPENDENCIES
   passenger
   pg (= 0.18)
   rack-livereload
+  rack-rewrite
   rack-test
   rails (= 4.2.10)
   rails-assets-angular (~> 1.2.15)
