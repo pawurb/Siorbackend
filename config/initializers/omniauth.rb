@@ -4,5 +4,5 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   provider :facebook, ENV['FACEBOOK_ID'], ENV['FACEBOOK_SECRET']
 end
 
-ROOT_PATH = "http://siorb.dobreziele.pl" # :(
+ROOT_PATH = "https://siorb.dobreziele.pl" # :(
 

@@ -45,7 +45,7 @@ window.fbAsyncInit = ->
     FB.ui
       method: "feed"
       picture: "http://#{window.location.host}/assets/siorbIcon200.png"
-      link: "http://siorb.dobreziele.pl"
+      link: "https://siorb.dobreziele.pl"
       caption: "Grałeś już w Siorba?"
       description: "..."
     , (response) ->

@@ -17,7 +17,7 @@ angular.module('SiorbStats').factory('Statistics', ['$http', ($http) ->
   sharesCount: (success) ->
     $http(
       method: "GET"
-      url: "http://graph.facebook.com/?id=http://siorb.dobreziele.pl"
+      url: "http://graph.facebook.com/?id=https://siorb.dobreziele.pl"
     ).success(success).error(error)
 
   remove: (id, success) ->
