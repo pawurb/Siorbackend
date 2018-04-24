@@ -12,7 +12,6 @@ class Statistic < ActiveRecord::Base
     else
       statistic = Statistic.new(params)
       statistic.ip = ip
-      statistic.city = '...'
     end
     statistic.save
   end

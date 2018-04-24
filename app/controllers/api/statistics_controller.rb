@@ -7,7 +7,6 @@ module API
 
     def create
       if Statistic.create_from_request(statistic_params, request.ip)
-        Statistic::LocationWorker.perform_async(Statistic.last.id)
       end
       render text: 'OK'
     end

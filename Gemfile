@@ -34,6 +34,7 @@ gem 'rest-client'
 gem 'sucker_punch'
 gem 'nokogiri', '~> 1.8.1'
 gem 'rack-rewrite'
+gem 'rake', '< 11.0'
 
 group :development do
   gem 'guard-livereload', require: false

@@ -21,7 +21,6 @@ describe API::StatisticsController do
         expect(statistic.duration).to eq 60
         expect(statistic.attempts).to eq 1
         expect(statistic.ip).not_to be_nil
-        expect(statistic.city).to eq '...'
 
         xhr :post, :create, js_request_data
         expect(response).to be_success
@@ -30,7 +29,6 @@ describe API::StatisticsController do
         expect(statistic.duration).to eq 60
         expect(statistic.attempts).to eq 2
         expect(statistic.ip).not_to be_nil
-        expect(statistic.city).to eq '...'
       end
     end
 
@@ -80,7 +78,6 @@ describe API::StatisticsController do
         expect(json.last["score"]).to eq statistic.score
         expect(json.last["ip"]).to eq statistic.ip
         expect(json.last["attempts"]).to eq statistic.attempts
-        expect(json.last["city"]).to eq statistic.city
 
         date_created = statistic.created_at.strftime("%e-%m-%y %H:%M")
         date_updated = statistic.updated_at.strftime("%e-%m-%y %H:%M")

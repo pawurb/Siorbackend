@@ -13,8 +13,6 @@
         .btn.btn-sm.btn-default Adres ip
       %th{'ng-click' => "order.setAttr('attempts')" }
         .btn.btn-sm.btn-default Podejścia
-      %th{'ng-click' => "order.setAttr('city')" }
-        .btn.btn-sm.btn-default Miasto
       %th{'ng-click' => "order.setAttr('duration')" }
         .btn.btn-sm.btn-default Czas gry
       %th{'ng-click' => "order.setAttr('score')" }
@@ -30,8 +28,6 @@
         {{stat.ip}}
       %td
         {{stat.attempts}}
-      %td
-        {{stat.city}}
       %td
         {{stat.duration}}
       %td
