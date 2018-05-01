@@ -4,22 +4,6 @@ window.fbAsyncInit = ->
   permissions = "email"
   signInClicked = false
 
-  $('#sign_in').click (e) ->
-    e.preventDefault()
-
-    #prevent multiple clicking
-    unless signInClicked
-      signInClicked = true
-
-      #handle canceling login
-      setTimeout ->
-        signInClicked = false
-      , 3000
-
-      FB.login ((response) ->
-        window.location = '/auth/facebook/callback' if response.authResponse),
-        scope: permissions
-
   $('#sign_out').click (e) ->
     FB.getLoginStatus (response) ->
       FB.logout() if response.authResponse
