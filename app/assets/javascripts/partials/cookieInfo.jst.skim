@@ -1,5 +1,5 @@
 #footer
-  .container
+  #cookies-all-right-text
     | Ta strona używa ciasteczek.
-    #cookies-all-right.btn.btn-danger.btn-sm
-      | Om nom nom
+  #cookies-all-right.btn.btn-danger.btn-sm
+    | Om nom nom

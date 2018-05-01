@@ -43,13 +43,18 @@ body {
   padding-top: 5px;
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 60%;
   color: #eee;
   /* Set the fixed height of the footer here */
   height: 50px;
 
+  #cookies-all-right-text {
+    margin-left: 590px;
+  }
+
   #cookies-all-right {
-    margin-left: 10px;
+    margin-top: 5px;
+    margin-left: 670px;
   }
 }
 
