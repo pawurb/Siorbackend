@@ -50,10 +50,9 @@ describe User do
     end
 
     it "creates User with correct data values" do
-      user = User.from_omniauth(omniauth_hash, '127.0.0.1')
+      user = User.from_omniauth(omniauth_hash)
       expect(user.name).to eq 'Joe Bloggs'
       expect(user.fb_nickname).to eq 'jbloggs'
-      expect(user.ip).to eq '127.0.0.1'
       expect(user.image_url).to eq 'http://graph.facebook.com/1234567/picture?type=square'
       expect(user.nickname).not_to be_nil
       expect(user.best_score).to eq 0

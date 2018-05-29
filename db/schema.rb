@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180424183959) do
+ActiveRecord::Schema.define(version: 20180529155650) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,15 +21,6 @@ ActiveRecord::Schema.define(version: 20180424183959) do
     t.text     "content",                    null: false
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
-  end
-
-  create_table "statistics", force: :cascade do |t|
-    t.integer  "score"
-    t.integer  "duration"
-    t.string   "ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "attempts",   default: 1
   end
 
   create_table "users", force: :cascade do |t|
@@ -45,7 +36,6 @@ ActiveRecord::Schema.define(version: 20180424183959) do
     t.datetime "updated_at"
     t.string   "image_url"
     t.string   "nickname"
-    t.string   "ip"
     t.string   "fb_nickname"
   end
 

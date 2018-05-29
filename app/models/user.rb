@@ -28,7 +28,7 @@ class User < ActiveRecord::Base
     User.where('best_score > ?', self.best_score).count + 1
   end
 
-  def self.from_omniauth(auth, ip)
+  def self.from_omniauth(auth)
     params = ActiveSupport::HashWithIndifferentAccess.new(auth)
     Rails.logger.error auth
     where(params.slice(:provider, :uid)).first_or_initialize.tap do |user|
@@ -37,7 +37,6 @@ class User < ActiveRecord::Base
       user.name = params[:info][:name]
       user.fb_nickname = params[:info][:nickname]
       user.email = params[:info][:email]
-      user.ip = ip
 
       user.image_url = params[:info][:image]
       user.oauth_token = params[:credentials][:token]
