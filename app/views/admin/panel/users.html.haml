@@ -24,8 +24,6 @@
       %th
   %tbody
     %tr{'ng-repeat' => 'user in users | orderBy:order.attr:order.reverse |  filter:userFilter'}
-      %td.image-cell
-        .image-link{'facebook-link' => '', 'ng-user' => 'user'}
       %td
         {{user.name}}
       %td

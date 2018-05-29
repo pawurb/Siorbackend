@@ -1,0 +1,11 @@
+{
+  "name": "Siorb",
+  "description": "Droga do rozbudzenia",
+  "keywords": [
+  ],
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate"
+    }
+  }
+}

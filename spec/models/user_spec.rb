@@ -7,8 +7,6 @@ describe User do
     it { should respond_to(:name) }
     it { should respond_to(:email) }
     it { should respond_to(:nickname) }
-    it { should respond_to(:image_url) }
-    it { should respond_to(:image_url) }
     it { should respond_to(:oauth_token) }
     it { should respond_to(:oauth_expires_at) }
     it { should respond_to(:best_score) }
@@ -53,7 +51,6 @@ describe User do
       user = User.from_omniauth(omniauth_hash)
       expect(user.name).to eq 'Joe Bloggs'
       expect(user.fb_nickname).to eq 'jbloggs'
-      expect(user.image_url).to eq 'http://graph.facebook.com/1234567/picture?type=square'
       expect(user.nickname).not_to be_nil
       expect(user.best_score).to eq 0
       expect(user.gameplays).to eq 0

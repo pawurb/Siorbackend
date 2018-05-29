@@ -38,7 +38,6 @@ class User < ActiveRecord::Base
       user.fb_nickname = params[:info][:nickname]
       user.email = params[:info][:email]
 
-      user.image_url = params[:info][:image]
       user.oauth_token = params[:credentials][:token]
       user.oauth_expires_at = Time.at(params[:credentials][:expires_at])
       user.save!

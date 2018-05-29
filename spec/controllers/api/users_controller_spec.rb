@@ -54,7 +54,6 @@ describe API::UsersController do
       expect(json.last["fb_nickname"]).to eq user.fb_nickname
       expect(json.last["best_score"]).to eq user.best_score
       expect(json.last["gameplays"]).to eq user.gameplays
-      expect(json.last["image_url"]).to eq user.image_url
       date = user.created_at.strftime("%e-%m-%y %H:%M")
       expect(json.last["created_at_txt"]).to eq date
       expect(json.last["created_at_unix"]).to eq user.created_at.to_i
