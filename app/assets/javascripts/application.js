@@ -18,6 +18,5 @@
 //= require jcarousel
 //= require underscore
 //= require bootstrap
-
 //= require_directory .
 
