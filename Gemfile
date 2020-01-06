@@ -32,7 +32,7 @@ gem 'exception_notification'
 gem 'active_model_serializers', '~> 0.8.1'
 gem 'rest-client'
 gem 'sucker_punch'
-gem 'nokogiri', '~> 1.8.1'
+gem 'nokogiri', '~> 1.10.4'
 gem 'rack-rewrite'
 gem 'rake', '< 11.0'
 
