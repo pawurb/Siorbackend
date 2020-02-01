@@ -4,7 +4,6 @@ class ContactMessagesController < ApplicationController
   def create
     @message = ContactMessage.new params.fetch(:contact_message)
     @sent = if @message.valid?
-      send_message(@message.content) if Comment.count % 10 == 0
       Comment.create(content: @message.content)
       true
     else
@@ -14,16 +13,5 @@ class ContactMessagesController < ApplicationController
     respond_to do |format|
       format.js
     end
-  end
-
-  private
-
-  def send_message(content)
-    message_content = "Siorba gracz uważa że: #{content}"
-    notifier = Slack::Notifier.new ENV.fetch("SLACK_WEBHOOK") do
-      defaults username: 'Siorb', channel: '#tracky'
-    end
-
-    notifier.post text: message_content, icon_emoji: ":goat:"
   end
 end
